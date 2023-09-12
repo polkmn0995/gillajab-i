@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://gillajab-i.vercel.app
+
+# Sitemaps
+Sitemap: https://gillajab-i.vercel.app/sitemap.xml
