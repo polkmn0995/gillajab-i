@@ -1,6 +1,25 @@
 window.addEventListener("load", function () {
-      // 비주얼 슬라이드
-  // 1.슬라이드 (.swiper-slide)개수 만큼 li생성하기
+  // a태그 클릭시 해당페이지의 해당위치값 정해주는 기능
+  const hash = window.location.hash.substring(1); // URL에서 # 제거
+
+  if (hash) {
+    console.log("Hash found:", hash); // 확인을 위해 콘솔에 출력
+
+    const targetElement = document.getElementById(hash);
+
+    if (targetElement) {
+      console.log("Target element found:", targetElement); // 확인을 위해 콘솔에 출력
+
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    } else {
+      console.error("Target element not found");
+    }
+  }
+  // 비주얼 슬라이드
+  // 1.슬라이드 (.swiper-slide)개수 만큼 li생성하기v
   const swSlideCount = document.querySelectorAll(
     ".sw-visual .swiper-slide"
   ).length;
@@ -54,5 +73,4 @@ window.addEventListener("load", function () {
       }
     });
   });
-
 });
