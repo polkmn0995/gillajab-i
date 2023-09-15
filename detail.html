@@ -81,6 +81,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52PHBFFL"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<!-- animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <div class="wrap">
       <!-- 헤더 -->
       <header>
@@ -113,12 +115,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             사람에게도 <br> 운전하는 사람에게도 편리한
             예약 서비스, <br>간편하게 예약해 보세요. 
           </p>
+          <button class="reservation-btn"><a href="reservation.html">예약하기</a></button>
         </div>
-        <button class="reservation-btn"><a href="reservation.html">예약하기</a></button>
-        <img src="images/detail/detaim-img001.png" alt="예약하기">
+        <div class="detail-img">
+          <img src="images/detail/detaim-img001.png" alt="예약하기" class="animate__animated animate__fadeInLeft">
+        </div>
       </section>
+
       <!-- section02 -->
       <section class="detailmain02">
+        <div class="detail02-img">
+          <img src="images/detail/detaim-img02.png" alt="사람">
+        </div>
         <div class="onfoot-txt">
           <p class="titlename02">도보 동행 서비스</p> 
           <p class="explane02">
@@ -130,10 +138,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             가까운 <br>거리를 이동하거나 집 근처 목적지로 이동할 때 이용하기 적합한
             서비스 입니다.<br> 길라잡이만의 친절하고 편안한 동행 서비스를 만나보세요.
           </p>
+          <button class="reservation-btn02"><a href="reservation.html">도보 동행 서비스 예약하기</a></button>
         </div>
-        <button class="reservation-btn"><a href="reservation.html">도보 동행 서비스 예약하기</a></button>
-        <img src="images/detail/detaim-img02.png" alt="사람">
       </section>
+
       <!-- section03 -->
       <section class="detailmain03">
         <div class="car-txt">
@@ -144,55 +152,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
           <p class="explane"><span>차량 동행 서비스란?</span> 도보로 이동하기 먼 거리를 길라잡이 드라이버와 함께 <br>
             차량으로 이동하는 서비스입니다. 택시처럼 쉽게 불러 자가용처럼 편하게 이동해보세요.</p>
+            <button class="reservation-btn"><a href="reservation.html">차량 동행 서비스 예약하기</a></button>
         </div>
-        <button class="reservation-btn"><a href="reservation.html">차량 동행 서비스 예약하기</a></button>
-        <img src="images/detail/detaim-img03.png" alt="자동차">
+        <div class="detail-img">
+          <img src="images/detail/detaim-img03.png" alt="자동차">
       </section>
-
-      <!-- 안내 -->
-      <section class="introduction">
-        <div class="introduction-txt">
-          <p>길라잡이<br>서비스 소개</p>
-          <p>길라잡이가 제공하는 <br>다양한 서비스를<br> 소개합니다.</p>
-        </div> 
-        <div class="introduction01">
-          <img src="images/detail/detail-icon01.png" alt="교통약자">
-          <h2>교통약자 지원<br>서비스란?</h2>
-          <button>자세히보기</button>
-        </div>
-
-        <div class="introduction02">
-          <img src="images/detail/detail-icon02.png" alt="도보동행서비스">
-          <h2>도보 동행 서비스</h2>
-          <button>보호자 예약하기</button>
-          <button>이용자 예약하기</button>
-        </div>
-
-        <div class="introduction03">
-          <img src="images/detail/detail-icon03.png" alt="차량동행서비스">
-          <h2>차량 동행 서비스</h2>
-          <button>보호자 예약하기</button>
-          <button>이용자 예약하기</button>
-        </div>
-      </section>
-      
 
       <section class="area">
-        <div class="area-txt">
-          <h1>서비스이용 가능지역</h1>
-          <p>
-            길라잡이는 대구광역시, 경상북도 지역에서<br>
-            서비스 이용이 가능합니다.
-          </p>
-        </div>
-        <div class="area-info">
-          <i class="fa-solid fa-location-dot"></i><p>대구광역시 전지역</p>
-          <i class="fa-solid fa-location-dot"></i><p>경상북도 전지역</p>
-          <i class="fa-solid fa-circle-check"></i><p>지역별 추가요금 없이 서비스 이용 가능합니다.</p>
-        </div>
-        <div class="map-area">
-          <p>대구경북 지역</p>
-          <img src="images/detail/map0.png" alt="지도">
+        <div class="inner">
+          <div class="area-txt">
+            <p class="areatitle">서비스이용 가능지역</p>
+            <p class="explane">
+              길라잡이는 대구광역시, 경상북도 지역에서<br>
+              서비스 이용이 가능합니다.
+            </p>
+            <div class="area-info">
+              <i class="fa-solid fa-location-dot"></i><p>대구광역시 전지역</p>
+              <i class="fa-solid fa-location-dot"></i><p>경상북도 전지역</p>
+              <i class="fa-solid fa-circle-check"></i><p>지역별 추가요금 없이 서비스 이용 가능합니다.</p>
+            </div>
+          </div>
+          <div class="area-map">
+            <img src="images/detail/map01.png" alt="지도">
+          </div>
         </div>
       </section> 
 
