@@ -1,0 +1,236 @@
+@charset "utf-8";
+.wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* 헤더 */
+header {
+  position: fixed;
+  display: block;
+  height: 60px;
+  width: 100%;
+  z-index: 9999;
+}
+header .inner {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 160px;
+}
+.logo h1 {
+  font-size: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #34c987;
+}
+.header-menu {
+  width: 500px;
+}
+.header-menu ul {
+  display: flex;
+  justify-content: space-between;
+}
+.header-menu ul li a {
+  color: #fff;
+}
+.header-menu ul li a:hover {
+  color: #34c987;
+}
+.log-in {
+  width: 120px;
+}
+.log-in ul {
+  display: flex;
+  justify-content: space-around;
+}
+.log-in ul li {
+  border-right: 1px solid #000;
+  padding-right: 5px;
+}
+.log-in ul li:last-child {
+  border-right: 0;
+}
+.log-in ul li a {
+  color: #fff;
+}
+.log-in ul li a:hover {
+  color: #34c987;
+}
+/* 비주얼 */
+.visual {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+/* Swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.visual-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.visual-bg-1 {
+  background: url("../images/index/visual.jpg") no-repeat center;
+  background-size: cover;
+}
+.visual-bg-2 {
+  background: url("../images/index/visual2.jpg") no-repeat center;
+  background-size: cover;
+}
+.visual-bg-3 {
+  background: url("../images/index/visual3.jpg") no-repeat center;
+  background-size: cover;
+}
+.visual-box .visual-inner {
+  position: absolute;
+  right: 40%;
+}
+.visual-phone{
+  position: absolute;
+  right: 10%;
+}
+.visual-box .visual-inner h2 {
+  line-height: 1.3;
+  font-size: 74px;
+  color: #fff;
+}
+/* 일반 슬라이드 */
+.sw-visual .swiper-slide .visual-box h2 {
+  opacity: 0;
+  transform: translateX(-10%);
+}
+.sw-visual .swiper-slide .visual-box p {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.sw-visual .swiper-slide-active .visual-box img{
+  opacity: 0;
+  transform: translateY(70px);
+}
+/* 포커스된 슬라이드 */
+.sw-visual .swiper-slide-active .visual-box h2 {
+  transition: opacity 1s, transform 1s;
+  transform: translateX(0);
+  opacity: 1;
+}
+.sw-visual .swiper-slide-active .visual-box p {
+  transition: opacity 1s 0.5s, transform 1s 0.5s;
+  transform: translateY(0);
+  opacity: 1;
+}
+.sw-visual .swiper-slide-active .visual-box img{
+  transition: opacity 1s 1s, transform 1s 1s;
+  transform: translateY(0);
+  opacity: 1;
+}
+.visual-box .visual-inner p {
+  opacity: 0.9;
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+}
+.visual-box .visual-inner a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+  height: 65px;
+  opacity: 1;
+  visibility: visible;
+  padding: 0 45px 0 50px;
+  margin-top: 50px;
+  font-size: 17px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+/* sw-visual 콘트롤 */
+.sw-visual-control {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(50% - 400px);
+  /* top: 50% ; */
+  display: flex;
+  width: 100%;
+  max-width: 1420px;
+  z-index: 9;
+}
+.sw-visual-control button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  /* background-color: rgba(255, 255, 255, 0.3); */
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #fff;
+}
+.sw-visual-control button i {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  font-size: 30px;
+}
+.sw-visual-control button:hover i {
+  opacity: 1;
+}
+.sw-visual-pg {
+  position: absolute;
+  left: 75%;
+  transform: translateX(-50%);
+  top: calc(50% + 350px);
+  width: 100%;
+  z-index: 9;
+}
+.sw-visual-pg-list {
+  position: relative;
+  display: flex;
+}
+.sw-visual-pg-list > li {
+  position: relative;
+  width: 60px;
+  padding: 10px 10px;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+}
+.sw-visual-pg-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.4;
+}
+.sw-visual-pg-list > li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.sw-visual-pg-list > li.active::after {
+  transition: width 1.5s;
+  width: 30px !important;
+}
