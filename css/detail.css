@@ -3,12 +3,14 @@
 /* 헤더 */
 header{
     position: fixed;
+    top: 0;
+    left: 0;
     display: block;
     width: 100%;
     height: 60px;
     z-index: 9999;
 }
-.inner{
+header .inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,19 +52,25 @@ header{
     color: #34C987;
 }
 
+/* ================================================== */
 /* detailmain01 */
 .detailmain01{
+    /* margin-top: 60px; */
+    position: relative;
+    display:flex;
+    width: 100%;
+    height: 100vh;
+}
+.reservation-txt{
     position: relative;
     display: block;
-    width: 100%;
-    height: 1000px;
-    background-color: #f3f3f3;
+    width: 50%;
 }
 .titlename{
     position: relative;
     display: inline-block;
-    font-size: 70px;
-    margin-top: 350px;
+    font-size: 3.6458vw;
+    margin-top: 300px;
     margin-left: 200px;
     font-weight: 800;
     color: #222;
@@ -92,42 +100,62 @@ header{
 .reservation-btn a{
     color: #fff;
 }
-.detailmain01 img{
+.detail-img{
+    position: relative;
+    display: block;
+    width: 50%;
+}
+.detail-img > img{
     position: absolute;
     display: block;
-    top: 21%;
     right: 0;
+    bottom: 0;
 }
 
 /* detailmain02 */
 .detailmain02{
     position: relative;
-    display: block;
+    display: flex;   
     width: 100%;
-    height: 1000px;
+    height: 100vh;
 }
-.detailmain02 img{
+.detail02-img{
+    position: relative;
+    display: block;
+    width: 50%;
+}
+.detail02-img img{
     position: absolute;
     display: block;
     top: 0;
-    height: 101%;
-    left:-100px;
+    left: -5%;
+    height: 100%;
+}
+.onfoot-txt{
+    position: relative;
+    display: inline-block;
+    font-size: 3.6458vw;
+    font-weight: 800;
+    color: #222;
+}
+.onfoot-txt{
+    width: 50%;
 }
 .titlename02{
     position: relative;
     display: inline-block;
-    font-size: 70px;
-    margin-top: 350px;
-    margin-left: 1000px;
+    font-size: 3.6458vw;
+    margin-top: 300px;
+    margin-left: 100px;
     font-weight: 800;
-    color: #222222;
+    color: #222;
 }
 .explane02{
     position: relative;
     display: block;
     font-size: 16px;
-    margin-left: 1000px;
     margin-top: 50px;
+    margin-left: 100px;
     line-height: 1.3;
     color: #333;
     font-weight: 500;
@@ -136,8 +164,8 @@ header{
     position: relative;
     display: block;
     font-size: 16px;
-    margin-left: 1000px;
     margin-top: 30px;
+    margin-left: 100px;
     line-height: 1.3;
     color: #333;
     font-weight: 500;
@@ -147,22 +175,90 @@ span{
     font-weight: 700;
     color: #34C987;
 }
-.detailmain02 > .reservation-btn{
-    margin-top: 100px;
-    margin-left: 1000px;
+.reservation-btn02{
+    position: relative;
+    display: block;
+    padding: 20px 70px;
+    margin-top: 50px;
+    margin-left: 100px;
+    background-color: #34c987;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.reservation-btn02 a{
+    color: #fff;
 }
 
 /* detailmain03 */
 .detailmain03{
     position: relative;
-    display: block;
+    display: flex;
     width: 100%;
-    height: 1000px;
+    height: 100vh;
     background-color: #f3f3f3;
 }
-.detailmain03 img{
+.car-txt{
+    position: relative;
+    display: block;
+    width: 50%;
+}
+.detail-img{
+    position: relative;
+    display: block;
+    width: 50%;
+}
+.detail-img img{
     position: absolute;
     display: block;
-    top: 21%;
-    right: 0;
+    
+}
+
+
+
+/* 서비스이용 가능지역 */
+.area{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.area-txt{
+    position: relative;
+    display: block;
+    width: 50%;
+    /* background-color: yellowgreen; */
+}
+.areatitle{
+    position: relative;
+    display: inline-block;
+    font-size: 2.6042vw;
+    margin-top: 200px;
+    margin-left: 100px;
+    font-weight: 800;
+    color: #222;
+}
+.area-info{
+    position: relative;
+    display: block;
+    margin-left: 200px;
+    margin-top: 30px;
+    line-height: 1.5;
+    color: #333;
+}
+.area-info > i{
+    float: left;
+}
+.area-map{
+    position: relative;
+    display: block;
+    /* background-color: #34C987; */
+    width: 50%;
+}
+.area-map img{
+    width: 70%;
+}
+
+@media all and (max-width: 1080px) {
 }

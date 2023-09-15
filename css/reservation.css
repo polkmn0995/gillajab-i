@@ -1,5 +1,15 @@
 @charset "utf-8";
+/* font-family: "TheJamsil5Bold","Noto Sans KR", sans-serif; */
 
+button {
+  border: none;
+}
+input {
+  width: 50%;
+  padding: 1%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
 /* 헤더 */
 header {
   position: fixed;
@@ -7,8 +17,9 @@ header {
   width: 100%;
   height: 60px;
   z-index: 9999;
+  top: 0;
 }
-.inner {
+header .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,4 +59,95 @@ header {
 }
 .log-in ul li a:hover {
   color: #34c987;
+}
+
+/* js addclasslist 용 */
+/* .color-on {
+  background-color: #34c987;
+}
+.color-off {
+  background-color: #f0f0f0;
+}
+.hide {
+  visibility: hidden !important;
+  opacity: 0 !important;
+} */
+
+/* 예약 형식 선택하기 */
+.buttons {
+  order: 1;
+  margin-top: 160px;
+  margin-bottom: 90px;
+}
+.buttons .inner {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.buttons .inner button {
+  border-radius: 20px;
+  font-size: 25px;
+  padding: 3% 10%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.274);
+  font-family: "TheJamsil5Bold", "Noto Sans KR", sans-serif;
+}
+.guardianbtn {
+  background-color: #34c987;
+  color: #000;
+}
+.buttons .inner button:hover {
+  background-color: #00a159;
+}
+.buttons .inner button:active {
+  background-color: #008046;
+}
+
+/* 주의사항 */
+.caution {
+  order: 2;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 90px;
+}
+.caution .inner p:first-child {
+  font-size: 20px;
+  font-weight: 700;
+}
+.caution .inner p {
+  margin: 0 14.5%;
+  padding: 5px 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* 날짜, 시간 선택 */
+.datetime {
+  order: 3;
+}
+.datetime-title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* 이용 형식 선택 아이콘 */
+.reservation-content {
+  order: 4;
+}
+
+/* 보호자 정보 */
+.guardian-info {
+  order: 5;
+  transition: all 0.1s ease-in-out;
+}
+
+/* 이용자 정보 */
+.user-info {
+  order: 6;
+}
+
+/* 예약 신청 버튼 */
+.reservatebtn {
+  order: 7;
 }
