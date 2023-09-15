@@ -41,13 +41,23 @@
     />
     <title>길라잡이</title>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-52PHBFFL');</script>
-<!-- End Google Tag Manager -->
-<meta name="naver-site-verification" content="05bd9d8a99acfd17d0037a7f44e7f96f3fe5653e" />
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-52PHBFFL");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta
+      name="naver-site-verification"
+      content="05bd9d8a99acfd17d0037a7f44e7f96f3fe5653e"
+    />
     <!-- fontawesome -->
     <link
       rel="stylesheet"
@@ -69,15 +79,90 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> -->
     <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
     <!-- --------- -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/common.css" />
     <script src="js/reservation.js"></script>
     <link rel="stylesheet" href="css/reservation.css" />
   </head>
 
   <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52PHBFFL"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <div class="wrap"></div>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-52PHBFFL"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="wrap">
+      <!-- header -->
+      <header>
+        <div class="inner">
+          <div class="logo">
+            <a href="index.html"><h1>길라잡이</h1></a>
+          </div>
+          <div class="header-menu">
+            <ul>
+              <li><a href="detail.html">서비스 소개</a></li>
+              <li><a href="reservation.html">예약하기</a></li>
+              <li><a href="review.html">이용후기</a></li>
+            </ul>
+          </div>
+          <div class="log-in">
+            <ul>
+              <li><a href="login.html">로그인</a></li>
+              <li><a href="login.html">회원가입</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- myreservation -->
+      <section class="buttons" id="buttons">
+        <button class="guardianbtn">보호자 예약하기</button>
+        <button class="userbtn">이용자 예약하기</button>
+      </section>
+      <!-- caution -->
+      <section class="caution" id="caution">
+        <p><i class="fa-regular fa-circle-check"></i> 예약 전 꼭 읽어주세요.</p>
+        <p>이동약자 맞춤 교통지원 서비스 규제특례 안내를 확인해 주세요.</p>
+        <p>
+          예약 신청 시 자사 직원이 신청 내용 확인 후, 15분 이내에 정보 확인 상담
+          연락을 드립니다. <br />
+          상담 후 길잡이가 배정되면 예약이 완료됩니다. 이용 하루 전에는 예약
+          변경이 불가하오니 유의해 주시기 바랍니다.
+        </p>
+        <p>
+          요금 결제는 상담 후 예약이 완료되면 이루어집니다. <br />
+          서비스 이용 중 추가 이용을 원하시면 해당 길잡이에게 요청 후 추가
+          결제가 이루어집니다.
+        </p>
+      </section>
+      <!-- datetime -->
+      <section class="datetime" id="datetime">
+        <p class="datetimetitle">예약 날짜/시간 선택</p>
+        <p class="datetimesubtitle">예얏하실 날짜와 시간을 선택해 주세요.</p>
+        <label for="date">날짜를 선택해 주세요</label>
+        <input type="date" name="date" id="date" />
+        <label for="date">시간를 선택해 주세요</label>
+        <input type="time" name="" id="" /> ~
+        <input type="time" name="" id="" />
+      </section>
+      <!-- userinfo -->
+      <section class="userinfo" id="userinfo"></section>
+      <!-- guardianinfo -->
+      <section class="guardianinfo" id="guardianinfo"></section>
+      <!-- etcinfo -->
+      <section class="etcinfo" id="etcinfo"></section>
+      <!-- request -->
+      <section class="request" id="request"></section>
+      <!-- point -->
+      <section class="point" id="point"></section>
+      <!-- reservatebtn -->
+      <button class="reservatebtn" id="reservatebtn"></button>
+      <!-- footer -->
+      <footer class="footer"></footer>
+    </div>
   </body>
 </html>
