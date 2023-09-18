@@ -18,6 +18,7 @@ window.addEventListener("load", function () {
       console.error("Target element not found");
     }
   }
+  // ==============================================================
   // 비주얼 슬라이드
   // 1.슬라이드 (.swiper-slide)개수 만큼 li생성하기v
   const swSlideCount = document.querySelectorAll(
@@ -73,4 +74,18 @@ window.addEventListener("load", function () {
       }
     });
   });
+  // ==========================================================
+  // 배너 슬라이드
+  skrollr.init({
+    forceHeight: false,
+    mobileCheck: function () {
+        if (
+            /Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(
+                navigator.userAgent || navigator.vendor || window.opera
+            )
+        ) {
+            // mobile device
+        }
+    },
+})
 });
