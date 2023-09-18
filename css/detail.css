@@ -220,31 +220,36 @@ span{
 /* 서비스이용 가능지역 */
 .area{
     position: relative;
-    display: flex;
+    display: block;
     width: 100%;
     height: auto;
+}
+.inner{
+    display: flex;
 }
 .area-txt{
     position: relative;
     display: block;
     width: 50%;
-    /* background-color: yellowgreen; */
+}
+.area-explane{
+    margin-left: 0;
+    margin-top: 30px;
+    line-height: 1.2;
 }
 .areatitle{
     position: relative;
     display: inline-block;
     font-size: 2.6042vw;
     margin-top: 200px;
-    margin-left: 100px;
     font-weight: 800;
     color: #222;
 }
 .area-info{
     position: relative;
     display: block;
-    margin-left: 200px;
     margin-top: 30px;
-    line-height: 1.5;
+    line-height: 2;
     color: #333;
 }
 .area-info > i{
@@ -253,12 +258,145 @@ span{
 .area-map{
     position: relative;
     display: block;
-    /* background-color: #34C987; */
     width: 50%;
+    margin-top: 200px;
 }
 .area-map img{
-    width: 70%;
+    width: 90%;
 }
 
+/* 지원하기 */
+.joinus {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 180px;
+}
+.driver {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 180px;
+    background-color: yellowgreen;
+}
+.driver-img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height:100%;
+    filter: brightness(50%);
+    background-image: url("../images/detail/join01.png") ;
+    background-repeat: no-repeat; /* 이미지 반복을 여기로 이동합니다. */
+    background-size: cover; 
+}
+
+.manaser {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 180px;
+    background-color: aqua;
+}
+.manaser-img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+    background-image: url("../images/detail/join02.png") ;
+    background-repeat: no-repeat; /* 이미지 반복을 여기로 이동합니다. */
+    background-size: cover; /* 이미지를 부모 요소에 맞게 크기 조절합니다. */
+}
+.joinus button{
+    position: relative;
+    display: block;
+    margin-top: 60px;
+    margin-left: 70%;
+    margin-right: 0;
+    padding: 10px 30px;
+    background: none;
+    border: 1px solid#fff;
+    border-radius: 50px;
+    color: #fff;
+}
+.joinus p{
+    position: relative;
+    display: block;
+    color: #fff;
+    z-index: 99;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: 200;
+    z-index: 99;
+}
+
+/* footer */
+footer{
+    position: relative;
+    display: block;
+    background-color: #333;
+    width: 100%;
+    height: 400px;
+}
+footer .inner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+}
+
+.footer-title{
+    position: relative;
+    display: block;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    color: #34C987;
+    font-weight: 800;
+    margin-top: 50px;
+}
+.sns-icon{
+    position: relative;
+    display: flex;
+    width: 15%;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+footer .inner img{
+    width: 40px;
+}
+.email-number{
+    position: relative;
+    display: flex;
+    width: 40%;
+    color: #fff;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+    font-weight: 200;
+}
+.name-adress{
+    position: relative;
+    display: flex;
+    width: 30%;
+    color: #fff;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    font-weight: 200;
+}
+.copy{
+    position: relative;
+    display: block;
+    text-align: center;
+    /* background-color: yellowgreen; */
+    margin-top: 60px;
+    color: #fff;
+    font-weight: 100;
+}
 @media all and (max-width: 1080px) {
 }
