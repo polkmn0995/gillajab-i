@@ -15,7 +15,7 @@ button {
   cursor: pointer;
 }
 input:not([type="checkbox"], [type="radio"]) {
-  width: 900px;
+  width: 790px;
   padding: 1%;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -28,6 +28,7 @@ input:focus {
 input[type="checkbox"],
 [type="radio"] {
   cursor: pointer;
+  accent-color: #34c987;
 }
 label {
   display: inline-block;
@@ -47,6 +48,7 @@ header .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1500px;
 }
 .logo {
   width: 160px;
@@ -87,27 +89,33 @@ header .inner {
 
 /* 예약 형식 선택하기 */
 .buttons {
+  position: relative;
+  display: block;
   order: 1;
   margin-top: 160px;
   margin-bottom: 90px;
 }
 .buttons .inner {
-  width: 70%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .buttons .inner button {
   border-radius: 20px;
   font-size: 25px;
-  padding: 3% 10%;
+  padding: 3% 13%;
   cursor: pointer;
+  font-weight: 600;
   transition: all 0.2s ease-in-out;
+  font-family: "Noto Sans KR", sans-serif;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.274);
-  font-family: "TheJamsil5Bold", "Noto Sans KR", sans-serif;
 }
 .guardianbtn {
   background-color: #34c987;
-  color: #000;
+  color: #fff;
+}
+.userbtn {
+  background-color: #f0f0f0;
+  color: #333;
 }
 .buttons .inner button:hover {
   background-color: #06b667;
@@ -118,8 +126,10 @@ header .inner {
 
 /* 주의사항 */
 .caution {
+  position: relative;
+  display: block;
   order: 2;
-  padding: 20px;
+  padding: 20px 0;
   background-color: rgba(0, 0, 0, 0.1);
   margin-bottom: 90px;
 }
@@ -128,7 +138,6 @@ header .inner {
   font-weight: 700;
 }
 .caution .inner p {
-  margin: 0 14.5%;
   padding: 5px 0;
   line-height: 1.5;
   font-size: 14px;
@@ -136,8 +145,10 @@ header .inner {
 
 /* 날짜, 시간 선택 */
 .datetime {
+  position: relative;
+  display: block;
   order: 3;
-  width: 1150px;
+  width: 100%;
   margin: 0 auto;
 }
 .datetime-title {
@@ -146,16 +157,31 @@ header .inner {
   margin-bottom: 15px;
   margin-top: 70px;
 }
-.datetime-subtitle {
-  font-size: 18px;
-  margin-bottom: 20px;
+.datetime input {
+  width: 310px;
+  padding: 9.5px;
+}
+.date {
+  width: 49%;
+  float: left;
+}
+.time {
+  width: 49%;
+  float: right;
+  margin-bottom: 80px;
 }
 
 /* 이용 형식 선택 아이콘 */
 .reservation-content {
+  clear: both;
+  position: relative;
+  display: block;
   order: 4;
-  width: 1050px;
+  width: 100%;
   margin: 0 auto;
+}
+input[type="checkbox"] {
+  margin-right: 10px;
 }
 .reservation-content img {
   width: auto;
@@ -168,105 +194,177 @@ header .inner {
   margin-bottom: 40px;
   margin-top: 70px;
 }
-input[type="checkbox"] {
-  margin-right: 20px;
-  margin-left: 40px;
-}
 .reservation-content span {
   position: absolute;
-  width: 130px;
+  width: auto;
   text-align: center;
   bottom: -25px;
 }
 .reservation-content-top {
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: flex;
-  padding: 50px 60px 70px 60px;
+  padding: 50px 0px 70px 0px;
   border: 1px solid #3b3b3b;
   border-radius: 30px;
   margin-bottom: 20px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .walk {
+  width: 33%;
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+}
+.walk::after {
+  content: "";
+  position: absolute;
+  right: -11px;
+  top: -30px;
+  width: 2px;
+  height: 150px;
+  background-color: #ccc;
 }
 .walk span {
-  left: 35px;
+  left: 136px;
 }
 .no-bathchair1 {
+  width: 33%;
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 .no-bathchair1 span {
-  left: 25px;
+  left: 136px;
+}
+.no-bathchair1 img {
+  opacity: 0.3;
+  transition: all 0.2s ease-in-out;
+}
+.no-bathchair1::after {
+  content: "";
+  position: absolute;
+  right: -11px;
+  top: -30px;
+  width: 2px;
+  height: 150px;
+  background-color: #ccc;
 }
 .yes-bathchair1 {
+  width: 33%;
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 .yes-bathchair1 span {
-  left: 42px;
+  left: 136px;
 }
+.yes-bathchair1 img {
+  transition: all 0.2s ease-in-out;
+  opacity: 0.3;
+}
+#walk:checked .no-bathchair1 img,
+#walk:checked .yes-bathchair1 img {
+  opacity: 1;
+}
+
 .reservation-content-bottom {
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: flex;
-  padding: 60px 40px 90px 40px;
+  padding: 50px 0px 70px 0px;
   border: 1px solid #3b3b3b;
   border-radius: 30px;
   justify-content: space-around;
   align-items: center;
 }
 .drive {
+  width: 33%;
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+}
+.drive::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: -70px;
+  width: 2px;
+  height: 240px;
+  background-color: #ccc;
 }
 .drive span {
-  left: 47px;
+  left: 135px;
 }
 .driver {
+  width: 33%;
   position: relative;
   display: block;
+}
+.driver::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 2px;
+  height: 240px;
+  background-color: #ccc;
+}
+.driver img {
+  opacity: 0.3;
+  transition: all 0.2s ease-in-out;
 }
 .driveronly {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 50px;
 }
 .driveronly span {
-  left: 20px;
+  left: 123px;
 }
 .driverandmanager {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 .driverandmanager span {
-  bottom: -40px;
-  left: 20px;
+  left: 60px;
+}
+.bathchair {
+  width: 33%;
+  position: relative;
+  display: block;
+}
+.bathchair img {
+  opacity: 0.3;
+  transition: all 0.2s ease-in-out;
 }
 .no-bathchair2 {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 50px;
 }
 .no-bathchair2 span {
-  left: 20px;
+  left: 136px;
 }
 .yes-bathchair2 {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 .yes-bathchair2 span {
-  left: 20px;
+  left: 136px;
 }
 
 /* 보호자 정보 */
 .guardian-info {
+  position: relative;
+  display: block;
   order: 5;
   transition: all 0.1s ease-in-out;
-  width: 1150px;
+  width: 100%;
   margin: 0 auto;
 }
 .guardian-info-title {
@@ -278,8 +376,10 @@ input[type="checkbox"] {
 
 /* 이용자 정보 */
 .user-info {
+  position: relative;
+  display: block;
   order: 6;
-  width: 1150px;
+  width: 100%;
   margin: 0 auto;
 }
 .user-info-title {
@@ -289,13 +389,15 @@ input[type="checkbox"] {
   margin-top: 70px;
 }
 .female {
-  margin-right: 600px;
+  padding-right: 550px;
   margin-top: 25px;
   margin-bottom: 5px;
 }
 
 /* 예약 신청 버튼 */
 .reservatebtn {
+  position: relative;
+  display: block;
   order: 7;
   width: 100%;
   margin-top: 100px;
@@ -307,6 +409,7 @@ input[type="checkbox"] {
   transition: all 0.2s ease-in-out;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.274);
   margin-bottom: 40px;
+  color: #fff;
 }
 .reservatebtn:hover {
   background-color: #06b667;
