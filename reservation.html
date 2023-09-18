@@ -151,36 +151,37 @@
           <!-- 예약 날짜/시간 -->
           <div class="datetime" id="datetime">
             <p class="datetime-title">예약 날짜/시간 선택</p>
-            <p class="datetime-subtitle">
-              예약하실 날짜와 시간을 선택해 주세요.
-            </p>
-            <label for="date">날짜를 선택해 주세요</label>
-            <input type="date" name="date" id="date" />
-            <label for="time">시간를 선택해 주세요</label>
-            <input type="time" name="time" id="time" placeholder="시작 시간" />
+            <div class="date">
+              <label for="date">날짜를 선택해 주세요.</label>
+              <input type="date" name="date" id="date" />
+            </div>
+            <div class="time">
+              <label for="time">시간를 선택해 주세요.</label>
+              <input type="time" name="time" id="time" />
+            </div>
           </div>
           <!-- 이용 항목 선택 -->
-          <div class="reservation-content" id="reservation-content">
+          <div class="reservation-content clearfix" id="reservation-content">
             <p class="reservation-content-title">
               이용하실 항목을 선택해 주세요.
             </p>
             <div class="reservation-content-top">
               <!-- 이용 항목 도보 선택 -->
               <div class="walk">
-                <input type="checkbox" />
-                <img src="images/reservation/two.png" alt="도보 동행" />
+                <input type="checkbox" id="walk" />
+                <img src="images/reservation/002.png" alt="도보 동행" />
                 <span>도보 동행</span>
               </div>
 
               <!-- 휠체어 유/무 -->
               <div class="no-bathchair1">
                 <input type="checkbox" id="no-chair1" />
-                <img src="images/reservation/one.png" alt="휠체어 무" />
+                <img src="images/reservation/001.png" alt="휠체어 무" />
                 <span>휠체어 무</span>
               </div>
               <div class="yes-bathchair1">
                 <input type="checkbox" id="yes-chair1" />
-                <img src="images/reservation/bathchair.png" alt="휠체어 유" />
+                <img src="images/reservation/003.png" alt="휠체어 유" />
                 <span>휠체어 유</span>
               </div>
             </div>
@@ -188,26 +189,26 @@
             <div class="reservation-content-bottom">
               <!-- 이용 항목 차량 선택 -->
               <div class="drive">
-                <input type="checkbox" />
-                <img src="images/reservation/car.svg" alt="차량 동행" />
+                <input type="checkbox" id="drive" />
+                <img src="images/reservation/005.png" alt="차량 동행" />
                 <span>차량 동행</span>
               </div>
 
               <!-- 드라이버 외 동행 매니저 유/무 -->
               <div class="driver">
                 <div class="driveronly">
-                  <input type="checkbox" id="no-driver" />
-                  <img src="images/reservation/driver.png" alt="드라이버 1명" />
+                  <input type="checkbox" id="driveronly" />
+                  <img src="images/reservation/004.png" alt="드라이버 1명" />
                   <span>드라이버 1명</span>
                 </div>
                 <div class="driverandmanager">
-                  <input type="checkbox" id="yes-driver" />
+                  <input type="checkbox" id="driverandmanager" />
                   <img
-                    src="images/reservation/driver.png"
+                    src="images/reservation/004.png"
                     alt="드라이버 1명 + 동행 매니저 1명"
                   />
                   <img
-                    src="images/reservation/two.png"
+                    src="images/reservation/002.png"
                     alt="드라이버 1명 + 동행 매니저 1명"
                   />
                   <span>드라이버 1명 + 동행 매니저 1명</span>
@@ -218,12 +219,12 @@
                 <!-- 휠체어 유/무 -->
                 <div class="no-bathchair2">
                   <input type="checkbox" id="no-chair2" />
-                  <img src="images/reservation/one.png" alt="휠체어 무" />
+                  <img src="images/reservation/001.png" alt="휠체어 무" />
                   <span>휠체어 무</span>
                 </div>
                 <div class="yes-bathchair2">
                   <input type="checkbox" id="yes-chair2" />
-                  <img src="images/reservation/bathchair.png" alt="휠체어 유" />
+                  <img src="images/reservation/003.png" alt="휠체어 유" />
                   <span>휠체어 유</span>
                 </div>
               </div>
@@ -233,17 +234,24 @@
           <div class="guardian-info" id="guardian-info">
             <p class="guardian-info-title">보호자 정보</p>
             <label for="guardian-name">이름 </label>
-            <input type="text" />
+            <input type="text" id="guardian-name" />
             <label for="guardian-number">전화번호 </label>
-            <input type="text" />
+            <input type="text" id="guardian-number" />
           </div>
           <!-- 이용자 정보 -->
           <div class="user-info" id="user-info">
             <p class="user-info-title">이용자 정보</p>
             <label for="user-name">이름 </label>
-            <input type="text" />
+            <input type="text" id="user-name" />
             <label for="user-gen">성별 </label>
-            <input type="radio" name="gen" class="gen" value="남자" id="male" />
+            <input
+              type="radio"
+              name="gen"
+              class="gen"
+              value="남자"
+              id="male"
+              checked
+            />
             <label for="male">남자</label>
             <input
               type="radio"
@@ -253,10 +261,10 @@
               id="female"
             />
             <label for="female" class="female">여자</label>
-            <label for="user-name">생년월일 </label>
-            <input type="date" />
+            <label for="user-birth">생년월일 </label>
+            <input type="date" id="user-birth" />
             <label for="user-number">전화번호 </label>
-            <input type="text" />
+            <input type="text" id="user-number" />
           </div>
         </div>
       </section>
