@@ -1,12 +1,12 @@
 window.addEventListener("load", function () {
-    var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        slidesPerView: 1,
-        spaceBetween: 30,
-        mousewheel: true,
+    var swiper = new Swiper(".reservation-slide", {
         pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+            el: ".swiper-pagination",
+            type: "progressbar",
         },
-    });
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
 });
