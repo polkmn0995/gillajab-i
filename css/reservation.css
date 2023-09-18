@@ -1,15 +1,39 @@
 @charset "utf-8";
 /* font-family: "TheJamsil5Bold","Noto Sans KR", sans-serif; */
 
+.inner {
+  position: relative;
+  width: 100%;
+  padding: 0px 25px;
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 100%;
+}
+
 button {
   border: none;
+  cursor: pointer;
 }
-input {
-  width: 50%;
+input:not([type="checkbox"], [type="radio"]) {
+  width: 900px;
   padding: 1%;
   border: 1px solid #ccc;
   border-radius: 10px;
+  clear: both;
+  margin-top: 20px;
 }
+input:focus {
+  border: 1px solid #34c987;
+}
+input[type="checkbox"],
+[type="radio"] {
+  cursor: pointer;
+}
+label {
+  display: inline-block;
+  width: 150px;
+}
+
 /* 헤더 */
 header {
   position: fixed;
@@ -61,18 +85,6 @@ header .inner {
   color: #34c987;
 }
 
-/* js addclasslist 용 */
-/* .color-on {
-  background-color: #34c987;
-}
-.color-off {
-  background-color: #f0f0f0;
-}
-.hide {
-  visibility: hidden !important;
-  opacity: 0 !important;
-} */
-
 /* 예약 형식 선택하기 */
 .buttons {
   order: 1;
@@ -98,10 +110,10 @@ header .inner {
   color: #000;
 }
 .buttons .inner button:hover {
-  background-color: #00a159;
+  background-color: #06b667;
 }
 .buttons .inner button:active {
-  background-color: #008046;
+  background-color: #059152;
 }
 
 /* 주의사항 */
@@ -125,29 +137,180 @@ header .inner {
 /* 날짜, 시간 선택 */
 .datetime {
   order: 3;
+  width: 1150px;
+  margin: 0 auto;
 }
 .datetime-title {
   font-size: 25px;
   font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 70px;
+}
+.datetime-subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 /* 이용 형식 선택 아이콘 */
 .reservation-content {
   order: 4;
+  width: 1050px;
+  margin: 0 auto;
+}
+.reservation-content img {
+  width: auto;
+  height: 70px;
+  position: relative;
+}
+.reservation-content-title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  margin-top: 70px;
+}
+input[type="checkbox"] {
+  margin-right: 20px;
+  margin-left: 40px;
+}
+.reservation-content span {
+  position: absolute;
+  width: 130px;
+  text-align: center;
+  bottom: -25px;
+}
+.reservation-content-top {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  padding: 50px 60px 70px 60px;
+  border: 1px solid #3b3b3b;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  justify-content: space-around;
+}
+.walk {
+  position: relative;
+  display: block;
+}
+.walk span {
+  left: 35px;
+}
+.no-bathchair1 {
+  position: relative;
+  display: block;
+}
+.no-bathchair1 span {
+  left: 25px;
+}
+.yes-bathchair1 {
+  position: relative;
+  display: block;
+}
+.yes-bathchair1 span {
+  left: 42px;
+}
+.reservation-content-bottom {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  padding: 60px 40px 90px 40px;
+  border: 1px solid #3b3b3b;
+  border-radius: 30px;
+  justify-content: space-around;
+  align-items: center;
+}
+.drive {
+  position: relative;
+  display: block;
+}
+.drive span {
+  left: 47px;
+}
+.driver {
+  position: relative;
+  display: block;
+}
+.driveronly {
+  position: relative;
+  display: block;
+  margin-bottom: 50px;
+}
+.driveronly span {
+  left: 20px;
+}
+.driverandmanager {
+  position: relative;
+  display: block;
+}
+.driverandmanager span {
+  bottom: -40px;
+  left: 20px;
+}
+.no-bathchair2 {
+  position: relative;
+  display: block;
+  margin-bottom: 50px;
+}
+.no-bathchair2 span {
+  left: 20px;
+}
+.yes-bathchair2 {
+  position: relative;
+  display: block;
+}
+.yes-bathchair2 span {
+  left: 20px;
 }
 
 /* 보호자 정보 */
 .guardian-info {
   order: 5;
   transition: all 0.1s ease-in-out;
+  width: 1150px;
+  margin: 0 auto;
+}
+.guardian-info-title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  margin-top: 70px;
 }
 
 /* 이용자 정보 */
 .user-info {
   order: 6;
+  width: 1150px;
+  margin: 0 auto;
+}
+.user-info-title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  margin-top: 70px;
+}
+.female {
+  margin-right: 600px;
+  margin-top: 25px;
+  margin-bottom: 5px;
 }
 
 /* 예약 신청 버튼 */
 .reservatebtn {
   order: 7;
+  width: 100%;
+  margin-top: 100px;
+  padding: 1% 3%;
+  background-color: #34c987;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.274);
+  margin-bottom: 40px;
+}
+.reservatebtn:hover {
+  background-color: #06b667;
+}
+.reservatebtn:active {
+  background-color: #059152;
 }
