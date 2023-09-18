@@ -236,42 +236,42 @@ header .inner {
 }
 /* ================================================================================= */
 /* 소개페이지 */
-.introduce{
+.introduce {
   width: 100%;
   height: 100vh;
   position: relative;
   display: block;
 }
-.inner{
+.inner {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.introduce-txt{
+.introduce-txt {
   width: 460px;
   height: 730px;
 }
-.introduce-txt h2{
+.introduce-txt h2 {
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 20px;
 }
-.introduce-txt > p{
+.introduce-txt > p {
   font-size: 20px;
   font-weight: 400;
   padding: 20px 0px;
   margin: 40px 0px;
 }
-.introduce-txt > a{
+.introduce-txt > a {
   display: block;
   margin-top: 40%;
 }
-.introduce-txt > a > p{
+.introduce-txt > a > p {
   font-size: 30px;
   color: #34c987;
 }
-.service01{
+.service01 {
   position: relative;
   display: block;
   width: 450px;
@@ -279,16 +279,16 @@ header .inner {
   border-radius: 20px;
   overflow: hidden;
 }
-.service01 img{
-  transition:  0.3s;
+.service01 img {
+  transition: 0.3s;
   max-width: 100%;
   height: auto;
 }
-.service01 img:hover{
+.service01 img:hover {
   scale: 1.1;
-  filter:brightness(50%)
+  filter: brightness(50%);
 }
-.service01  span{
+.service01 span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -296,11 +296,11 @@ header .inner {
   font-size: 26px;
   color: #fff;
 }
-.service01 a:hover > span{
+.service01 a:hover > span {
   color: #34c987;
   transition: linear 0.3s;
 }
-.service02{
+.service02 {
   position: relative;
   display: block;
   width: 450px;
@@ -308,16 +308,16 @@ header .inner {
   border-radius: 20px;
   overflow: hidden;
 }
-.service02 img{
-  transition:  0.3s;
+.service02 img {
+  transition: 0.3s;
   max-width: 100%;
   height: auto;
 }
-.service02 img:hover{
+.service02 img:hover {
   scale: 1.1;
-  filter:brightness(50%)
+  filter: brightness(50%);
 }
-.service02  span{
+.service02 span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -325,13 +325,13 @@ header .inner {
   font-size: 26px;
   color: #fff;
 }
-.service02 a:hover >span{
+.service02 a:hover > span {
   color: #34c987;
   transition: linear 0.3s;
 }
 /* ================================================================================= */
 /* 배너 */
-.banner{
+.banner {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -339,58 +339,98 @@ header .inner {
 }
 #skrollr-body .container section {
   width: 100%;
-  height: 100vh;
-  /* padding: 10px; */
+  height: 100%;
   position: relative;
 }
-
 .bg {
   width: 100%;
   height: 100vh;
-  position: absolute;
   top: 0;
   left: 0;
 }
-
-.bg>div {
+.bg > div {
   width: 100%;
   height: 100vh;
   background-attachment: fixed !important;
-  overflow: hidden;
+
   position: relative;
+  background: rgba(0, 0, 0, 0.5);
 }
-.bg>div p {
+.bg > div p {
   display: inline-block;
   padding: 10px;
+  font-size: 26px;
+  font-weight: 600;
   text-align: center;
-  background-color: #ffffff;
+  line-height: 30px;
+  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 9999;
 }
-
-.bg>div.bg01 {
-  background: url("../images/index/banner.png") no-repeat 50% 50% /cover;
+.bg > div p span {
+  font-weight: bold;
+  font-size: 40px;
+}
+.bg > div.bg01 {
+  background: url("../images/index/banner.png") no-repeat 50% 50% / cover;
   z-index: 10;
 }
-.bg>div.bg02 {
-  background: url("../images/index/banner.png") no-repeat 50% 50% /cover;
-z-index: 20;
+.bg > div.bg01::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.bg>div.bg03 {
-  background: url("../images/index/banner.png") no-repeat 50% 50% /cover;
+.bg > div.bg02 {
+  background: url("../images/index/banner.png") no-repeat 50% 50% / cover;
+  z-index: 20;
+}
+.bg > div.bg02::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bg > div.bg03 {
+  background: url("../images/index/banner.png") no-repeat 50% 50% / cover;
   z-index: 30;
 }
-.bg>div.bg04 {
-  background: url("../images/index/banner.png") no-repeat 50% 50% /cover;
+.bg > div.bg03::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bg > div.bg04 {
+  background: url("../images/index/banner.png") no-repeat 50% 50% / cover;
   z-index: 40;
 }
-.bg>div.bg05 {
-  background: url("../images/index/banner.png") no-repeat 50% 50% /cover;
-  z-index: 50;
+.bg > div.bg04::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.bg>div.bg06 {
-  background: url("../images/index/banner.png") no-repeat 50% 50% /cover;
-  z-index: 60;
+/* ======================================================================= */
+/* 앱서비스 */
+.app-service {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
 }
