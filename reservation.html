@@ -145,95 +145,127 @@
           </p>
         </div>
       </section>
-      <!-- 날짜, 시간 선택 -->
-      <section class="datetime" id="datetime">
+      <!-- 예약 내용 -->
+      <section id="reservation">
         <div class="inner">
-          <p class="datetime-title">예약 날짜/시간 선택</p>
-          <p class="datetime-subtitle">예약하실 날짜와 시간을 선택해 주세요.</p>
-          <label for="date">날짜를 선택해 주세요</label>
-          <input type="date" name="date" id="date" />
-          <label for="date">시간를 선택해 주세요</label>
-          <input type="time" name="starttime" id="starttime" /> ~
-          <input type="time" name="endtime" id="endtime" />
-        </div>
-      </section>
-      <!-- 이용 형식 선택 아이콘 -->
-      <section class="reservation-content" id="reservation-content">
-        <div class="inner">
-          <div class="reservation-content-top">
+          <!-- 예약 날짜/시간 -->
+          <div class="datetime" id="datetime">
+            <p class="datetime-title">예약 날짜/시간 선택</p>
+            <p class="datetime-subtitle">
+              예약하실 날짜와 시간을 선택해 주세요.
+            </p>
+            <label for="date">날짜를 선택해 주세요</label>
+            <input type="date" name="date" id="date" />
+            <label for="time">시간를 선택해 주세요</label>
+            <input type="time" name="time" id="time" placeholder="시작 시간" />
+          </div>
+          <!-- 이용 항목 선택 -->
+          <div class="reservation-content" id="reservation-content">
             <p class="reservation-content-title">
               이용하실 항목을 선택해 주세요.
             </p>
-            <!-- 예약 내용 도보 선택 -->
-            <div class="walk">
-              <input type="checkbox" />
-              <img src="" alt="도보 동행" />
+            <div class="reservation-content-top">
+              <!-- 이용 항목 도보 선택 -->
+              <div class="walk">
+                <input type="checkbox" />
+                <img src="images/reservation/two.png" alt="도보 동행" />
+                <span>도보 동행</span>
+              </div>
+
               <!-- 휠체어 유/무 -->
-              <div class="wheelchair">
-                <input type="checkbox" id="no-chair" />
-                <img src="" alt="휠체어 무" />
-                <input type="checkbox" id="yes-chair" />
-                <img src="" alt="휠체어 유" />
+              <div class="no-bathchair1">
+                <input type="checkbox" id="no-chair1" />
+                <img src="images/reservation/one.png" alt="휠체어 무" />
+                <span>휠체어 무</span>
+              </div>
+              <div class="yes-bathchair1">
+                <input type="checkbox" id="yes-chair1" />
+                <img src="images/reservation/bathchair.png" alt="휠체어 유" />
+                <span>휠체어 유</span>
               </div>
             </div>
+
             <div class="reservation-content-bottom">
-              <!-- 예약 내용 차량 선택 -->
+              <!-- 이용 항목 차량 선택 -->
               <div class="drive">
                 <input type="checkbox" />
-                <img src="" alt="차량 동행" />
-                <!-- 드라이버 외 동행매니저 유/무 -->
-                <div class="driver">
+                <img src="images/reservation/car.svg" alt="차량 동행" />
+                <span>차량 동행</span>
+              </div>
+
+              <!-- 드라이버 외 동행 매니저 유/무 -->
+              <div class="driver">
+                <div class="driveronly">
                   <input type="checkbox" id="no-driver" />
-                  <img src="" alt="드라이버 1명" />
-                  <input type="checkbox" id="yes-driver" />
-                  <img src="" alt="드라이버 1명 + 동행매니저 1명" />
+                  <img src="images/reservation/driver.png" alt="드라이버 1명" />
+                  <span>드라이버 1명</span>
                 </div>
+                <div class="driverandmanager">
+                  <input type="checkbox" id="yes-driver" />
+                  <img
+                    src="images/reservation/driver.png"
+                    alt="드라이버 1명 + 동행 매니저 1명"
+                  />
+                  <img
+                    src="images/reservation/two.png"
+                    alt="드라이버 1명 + 동행 매니저 1명"
+                  />
+                  <span>드라이버 1명 + 동행 매니저 1명</span>
+                </div>
+              </div>
+
+              <div class="bathchair">
                 <!-- 휠체어 유/무 -->
-                <div class="wheelchair">
-                  <input type="checkbox" id="no-chair" />
-                  <img src="" alt="휠체어 무" />
-                  <input type="checkbox" id="yes-chair" />
-                  <img src="" alt="휠체어 유" />
+                <div class="no-bathchair2">
+                  <input type="checkbox" id="no-chair2" />
+                  <img src="images/reservation/one.png" alt="휠체어 무" />
+                  <span>휠체어 무</span>
+                </div>
+                <div class="yes-bathchair2">
+                  <input type="checkbox" id="yes-chair2" />
+                  <img src="images/reservation/bathchair.png" alt="휠체어 유" />
+                  <span>휠체어 유</span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- 보호자 정보 -->
-      <section class="guardian-info" id="guardian-info">
-        <div class="inner">
-          <p class="guardian-info-title">보호자 정보</p>
-          <label for="guardian-name">이름 </label>
-          <input type="text" />
-          <label for="guardian-number">전화번호 </label>
-          <input type="text" />
-        </div>
-      </section>
-      <!-- 이용자 정보 -->
-      <section class="user-info" id="user-info">
-        <div class="inner">
-          <p class="user-info-title">이용자 정보</p>
-          <label for="user-name">이름 </label>
-          <input type="text" />
-          <label for="user-number">전화번호 </label>
-          <input type="text" />
-          <label for="user-name">생년월일 </label>
-          <input type="date" />
-          <label for="user-sex">성별 </label>
-          <div class="user-sex-select">
-            <select>
-              <option value="1">성별을 선택해 주세요.</option>
-              <option value="2">남</option>
-              <option value="3">여</option>
-            </select>
+          <!-- 보호자 정보 -->
+          <div class="guardian-info" id="guardian-info">
+            <p class="guardian-info-title">보호자 정보</p>
+            <label for="guardian-name">이름 </label>
+            <input type="text" />
+            <label for="guardian-number">전화번호 </label>
+            <input type="text" />
+          </div>
+          <!-- 이용자 정보 -->
+          <div class="user-info" id="user-info">
+            <p class="user-info-title">이용자 정보</p>
+            <label for="user-name">이름 </label>
+            <input type="text" />
+            <label for="user-gen">성별 </label>
+            <input type="radio" name="gen" class="gen" value="남자" id="male" />
+            <label for="male">남자</label>
+            <input
+              type="radio"
+              name="gen"
+              class="gen"
+              value="여자"
+              id="female"
+            />
+            <label for="female" class="female">여자</label>
+            <label for="user-name">생년월일 </label>
+            <input type="date" />
+            <label for="user-number">전화번호 </label>
+            <input type="text" />
           </div>
         </div>
       </section>
       <!-- 예약하기 버튼 -->
-      <button class="reservatebtn" id="reservatebtn" type="submit">
-        예약하기
-      </button>
+      <div class="inner">
+        <button class="reservatebtn" id="reservatebtn" type="submit">
+          예약하기
+        </button>
+      </div>
       <!-- footer -->
       <footer class="footer"></footer>
     </div>
