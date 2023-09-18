@@ -76,16 +76,75 @@ window.addEventListener("load", function () {
   });
   // ==========================================================
   // 배너 슬라이드
-  skrollr.init({
-    forceHeight: false,
-    mobileCheck: function () {
-        if (
-            /Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(
-                navigator.userAgent || navigator.vendor || window.opera
-            )
-        ) {
-            // mobile device
-        }
+  const bannerswiper = new Swiper(".swiper-container", {
+    direction: "vertical",
+    slidesPerView: "auto",
+    mousewheel: {
+      releaseOnEdges: true, // Release when swiper reaches edge
     },
-})
+    keyboard: {
+      enabled: true,
+    },
+  });
+  // 슬라이드 스크롤이 끝에 도달했을 때 기본 스크롤(해당페이지스크롤) 사용으로 전환되는 기능
+  // Detect mousewheel event on the document
+  document.addEventListener("mousewheel", (event) => {
+    // Check if the swiper is at the top or bottom
+    const isAtTop = swiper.isBeginning;
+    const isAtBottom = swiper.isEnd;
+
+    // If swiper is at the top and scrolling up, allow default scroll behavior
+    if (isAtTop && event.deltaY < 0) {
+      event.preventDefault();
+    }
+
+    // If swiper is at the bottom and scrolling down, allow default scroll behavior
+    if (isAtBottom && event.deltaY > 0) {
+      event.preventDefault();
+    }
+  });
+  // ===================
+  const swiperContainer = document.querySelector('.swiper-container');
+const swiperSlides = document.querySelectorAll('.swiper-slide');
+
+const updateActiveSlide = () => {
+  swiperSlides.forEach((slide, index) => {
+    const rect = slide.getBoundingClientRect();
+    if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+      slide.classList.add('active-slide');
+    } else {
+      slide.classList.remove('active-slide');
+    }
+  });
+};
+
+swiperContainer.addEventListener('scroll', () => {
+  updateActiveSlide();
+});
+
+// Initial call to set active slide
+  updateActiveSlide();
+  // =============================================================
+  // 앱서비스
+  // swi
+  var swiper = new Swiper('.swiper', {
+    slidesPerView: 3,
+    direction: getDirection(),
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      resize: function () {
+        swiper.changeDirection(getDirection());
+      },
+    },
+  });
+
+  function getDirection() {
+    var windowWidth = window.innerWidth;
+    var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+    return direction;
+  }
 });
