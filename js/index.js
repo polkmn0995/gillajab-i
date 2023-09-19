@@ -75,54 +75,50 @@ window.addEventListener("load", function () {
     });
   });
   // ==========================================================
-  skrollr.init({
-    forceHeight: false,
-    mobileCheck: function () {
-      if (
-        /Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(
-          navigator.userAgent || navigator.vendor || window.opera
-        )
-      ) {
-        // mobile device
-      }
-    },
+  document.addEventListener('DOMContentLoaded', function() {
+    var skrollrInstance = skrollr.init();
   });
   // Initial call to set active slide
-  updateActiveSlide();
+  // updateActiveSlide();
   // =============================================================
   // 앱서비스
-  var appswiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    loop: true,
-    slidesPerView: "1",
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 4,
-      slideShadows: false
+  var swiperMobile = new Swiper('.swiper-container.swiper-full-mobile', {
+    slidesPerView: 5,
+    spaceBetween: 50,
+    slideToClickedSlide:true,
+    centeredSlides:true,
+   pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
-    keyboard: {
-      enabled: true
+    loop:true,
+      autoplay: {
+        delay: 2000,
     },
-    mousewheel: {
-      thresholdDelta: 70
+    disableOnInteraction: false,
+      keyboard: {
+      enabled: true,
+      onlyInViewport: true,
     },
-    initialSlide: 0,
-    on: {
-      click(event) {
-        appswiperswiper.slideTo(this.clickedIndex);
-      }
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
-    breakpoints: {
-      640: {
-        slidesPerView: 2
-      }
+     breakpoints: {
+          
+          640: {
+            freemode:true,
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          320: {
+            freemode:true,
+            slidesPerView: 3,
+            spaceBetween: 20,
+          }
     }
+
   });
-  
   // ================================================================
   //
 });

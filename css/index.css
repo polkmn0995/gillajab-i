@@ -424,105 +424,74 @@ header .inner {
 }
 /* ======================================================================= */
 /* 앱서비스 */
-.app-service {
+.app-service{
   position: relative;
   display: block;
   width: 100%;
   height: 100vh;
 }
-/* @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"); */
 
-/* html,
-body {
-  position: relative;
-  height: 100%;
+:root {
+  --dark-green: #9cc675;
+  --dark-yellow: #e89a3d;
+  --extra-light-brown:#fdf0d7;
+  --light-brown: #ecd5ab;
+  --dark-brown:#915b40;
 }
-body {
-  background: #eee;
+.app-service-txt{
+
+}
+
+
+/* body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #000;
+  color:#000;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+   height: 100vh;
+  background: var(--light-brown)
 } */
-.mySwiper {
-  max-width: 50%;
-  overflow: visible;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.mySwiper .swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}
-
-.mySwiper .swiper-slide::after {
-  position: absolute;
-  content: "";
-  inset: 0;
+/* .swiper-container {
   width: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  background: linear-gradient(to bottom right, #b8b8b88f, #ffffff5e);
-}
-.mySwiper .swiper-slide-active::after {
-  background: none;
-}
-.mySwiper .swiper-slide > div {
-  text-align: center;
-  display: none;
-  opacity: 0;
-}
-.mySwiper .swiper-slide-active div {
-  display: block;
-  opacity: 1;
+  height: 100%;
+  margin: 0 auto;
+} */
+
+
+.swiper-full-mobile {
+position: relative;
+margin: 50px auto;
+padding-bottom: 50px;
 }
 
-.mySwiper .swiper-slide h2 {
-  font-size: 1.2rem;
-  font-family: "Libre Baskerville", serif;
-  position: relative;
+.swiper-full-mobile:before {
+content: "";
+width: 270px;
+/* height: 400px; */
+background: url("http://md-aqil.github.io/images/Pixel-3-XL.png");
+background-size: 100%;
+background-repeat: no-repeat;
+position: absolute;
+left: 0;
+right: 0;
+top: 0px;
+height: 565px;
+z-index: 2;
+margin: auto;
+}
+.swiper-full-mobile .swiper-slide {
+height: 100%;
+}
+.swiper-full-mobile .swiper-slide img{
+width: 62%;
+margin-left: 20%;
+height: 530px;
+object-fit: cover;
+
+}
+.swiper-slide.swiper-slide-active img {
+border-radius: 40px;
 }
 
-.mySwiper .swiper-slide h2::after {
-  position: absolute;
-  content: "";
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 2px;
-  background: linear-gradient(#e66465, #9198e5);
-}
-
-@keyframes line {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-.mySwiper.swiper-slide-active h2::after {
-  animation: line 0.5s linear forwards;
-}
-.mySwiper .swiper-slide img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-  box-shadow: 0px 3px 17px rgb(0 0 0 / 25%);
-  border-radius: 50%;
-  aspect-ratio: 1/1;
-}
-
-@media (min-width: 768px) {
-  .swiper-slide h2 {
-    font-size: 2rem;
-  }
-}
 
