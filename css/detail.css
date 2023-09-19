@@ -307,30 +307,7 @@ span{
     background-repeat: no-repeat; /* 이미지 반복을 여기로 이동합니다. */
     background-size: cover; /* 이미지를 부모 요소에 맞게 크기 조절합니다. */
 }
-.joinus a{
-    position: relative;
-    display: block;
-    margin-top: 60px;
-    margin-left: 70%;
-    margin-right: 0;
-    padding: 10px 30px;
-    background: none;
-    border: 1px solid#fff;
-    border-radius: 50px;
-    color: #fff;
-    cursor: pointer;
-}
-.joinus p{
-    position: relative;
-    display: block;
-    color: #fff;
-    z-index: 99;
-    margin-top: 40px;
-    margin-left: 40px;
-    font-size: 20px;
-    font-weight: 200;
-    z-index: 99;
-}
+
 /* 예약방법 슬라이드 */
 
 .swiper {
@@ -362,8 +339,86 @@ span{
     position: relative;
     display: block;
 }
+.img{
+    position: relative;
+    display: flex;
+    /* background-color: yellowgreen; */
+    width: 40%;
+    /* height: 100%; */
+    justify-content: center;
+    align-items: end
+}
+.img img{
+    position: relative;
+    display: inline-block;
+    /* background-color: yellow; */
+    width: 90%;
+    padding: 50px 0 0 0 ;
+}
+.reservation-box{
+    position: relative;
+    display: block;
+    width: 60%;
+    /* background-color: thistle; */
+}
+.reservation-box img{
+    width: 100%;
+}
+.top-txt{
+    position: absolute;
+    display: block;
+    /* background-color: #fff; */
+    text-align: left;
+    z-index: 9999;
+    top: 7%;
+    left: 7%;
+    line-height: 1.4;
+    font-size: 13px;
+}
+.top-txt span{
+    font-size: 35px;
+}
+.bt-txt{
+    position: relative;
+    display: block;
+    /* background-color: tomato; */
+    text-align: right;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #333;
+}
+.bt-txt span{
+    font-size: 25px;
+    color: #333;
+}
 
 
+/* 지원하기 버튼 */
+.joinus a{
+    position: relative;
+    display: block;
+    margin-top: 60px;
+    margin-left: 70%;
+    width: 25%;
+    padding: 10px 30px;
+    background: none;
+    border: 1px solid#fff;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+.joinus p{
+    position: relative;
+    display: block;
+    color: #fff;
+    z-index: 99;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: 200;
+    z-index: 99;
+}
 /* footer */
 footer{
     position: relative;
@@ -431,5 +486,7 @@ footer .inner img{
     color: #fff;
     font-weight: 100;
 }
+
+
 @media all and (max-width: 1080px) {
 }
