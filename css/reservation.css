@@ -263,11 +263,6 @@ input[type="checkbox"] {
   transition: all 0.2s ease-in-out;
   opacity: 0.3;
 }
-#walk:checked .no-bathchair1 img,
-#walk:checked .yes-bathchair1 img {
-  opacity: 1;
-}
-
 .reservation-content-bottom {
   width: 100%;
   margin: auto;
