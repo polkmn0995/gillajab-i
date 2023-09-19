@@ -1,4 +1,3 @@
-// $(document).ready(function () {});
 window.addEventListener("load", function () {
   // 예약자 선택하기
   let guardianBtn = document.querySelector(".guardianbtn");
@@ -20,7 +19,7 @@ window.addEventListener("load", function () {
   let driverOnly = document.querySelector("#driveronly");
   let driverAndManager = document.querySelector("#driverandmanager");
   let noChair2 = document.querySelector("#no-chair2");
-  let yesChair2 = document.querySelector("#yes-bathchair2");
+  let yesChair2 = document.querySelector("#yes-chair2");
 
   // 보호자 정보
   let guardianName = document.querySelector("#guardian-name");
@@ -35,36 +34,6 @@ window.addEventListener("load", function () {
 
   // 예약하기 버튼
   let reservateBtn = document.querySelector("#reservatebtn");
-
-  // alert 창에 띄울 확인 값
-  let dateVal = document.getElementById("date").value;
-  let timeVal = document.getElementById("time").value;
-  let walkVal = document.getElementById("walk").checked ? "도보 동행" : "";
-  let driveVal = document.getElementById("drive").checked ? "차량 동행" : "";
-  let driveronlyVal = document.getElementById("driveronly").checked
-    ? "드라이버 1명"
-    : "";
-  let driverandmanagerVal = document.getElementById("driverandmanager").checked
-    ? "드라이버 1명 + 동행 매니저 1명"
-    : "";
-  let noChair1Val = document.getElementById("no-chair1").checked
-    ? "휠체어 무"
-    : "";
-  let yesChair1Val = document.getElementById("yes-chair1").checked
-    ? "휠체어 유"
-    : "";
-  let noChair2Val = document.getElementById("no-chair2").checked
-    ? "휠체어 무"
-    : "";
-  let yesChair2Val = document.getElementById("yes-chair2").checked
-    ? "휠체어 유"
-    : "";
-  let guardianNameVal = document.getElementById("guardian-name").value;
-  let guardianNumberVal = document.getElementById("guardian-number").value;
-  let userNameVal = document.getElementById("user-name").value;
-  let userGenderVal = document.querySelector('input[name="gen"]:checked').value;
-  let userBirthVal = document.getElementById("user-birth").value;
-  let userNumberVal = document.getElementById("user-number").value;
 
   // 이용자로 예약하기 버튼을 누를 시 아래에 있던 보호자 정보 섹션이 숨겨진다.
   userBtn.addEventListener("click", function () {
@@ -83,39 +52,111 @@ window.addEventListener("load", function () {
     userBtn.style.color = "#333";
   });
 
-  // 이용 항목 선택 부분
-
   // 예약하기 버튼을 눌렀을 때
   reservateBtn.addEventListener("click", function (event) {
     // 정보를 덜 기입하고 예약하기 버튼을 눌렀을 때
-    if (
-      date.value.trim() === "" ||
-      time.value.trim() === "" ||
-      guardianName.value.trim() === "" ||
-      guardianNumber.value.trim() === "" ||
-      userName.value.trim() === "" ||
-      userBirth.value.trim() === "" ||
-      userNumber.value.trim() === ""
-    ) {
-      // 이름 또는 이메일 입력란이 비어있을 때 확인 창 띄우기
-      alert("비어있는 입력란이 존재합니다.");
-      event.preventDefault(); // 제출 이벤트를 중지
-    }
-    let result = confirm(
-      `예약 날짜/시간 : ${dateVal} ${timeVal}
+    // 선택한 값을 가져오기
+    let walkVal = walk.checked ? "도보 동행" : "";
+    let driveVal = drive.checked ? "차량 동행" : "";
+    let driveronlyVal = driverOnly.checked ? "드라이버 1명" : "";
+    let driverandmanagerVal = driverAndManager.checked
+      ? "드라이버 1명 + 동행 매니저 1명"
+      : "";
+    let noChair1Val = noChair1.checked ? "무" : "";
+    let yesChair1Val = yesChair1.checked ? "유" : "";
+    let noChair2Val = noChair2.checked ? "무" : "";
+    let yesChair2Val = yesChair2.checked ? "유" : "";
+    let userGenderVal = male.checked ? "남성" : "여성";
+
+    if (guardianInfo.style.display === "block") {
+      if (
+        date.value.trim() === "" ||
+        time.value.trim() === "" ||
+        (walk.checked === false &&
+          drive.checked === false &&
+          driverOnly.checked === false &&
+          driverAndManager.checked === false) ||
+        (walk.checked &&
+          noChair1.checked === false &&
+          yesChair1.checked === false) ||
+        (drive.checked &&
+          driverOnly.checked === false &&
+          driverAndManager.checked === false &&
+          noChair2.checked === false &&
+          yesChair2.checked === false) ||
+        guardianName.value.trim() === "" ||
+        guardianNumber.value.trim() === "" ||
+        userName.value.trim() === "" ||
+        (male.checked === false && female.checked === false) ||
+        userBirth.value.trim() === "" ||
+        userNumber.value.trim() === ""
+      ) {
+        // 필수 정보가 누락되었을 때 확인 창 띄우기
+        alert("필수 정보가 누락되었습니다.");
+        event.preventDefault(); // 제출 이벤트를 중지
+        return;
+      }
+
+      let result1 = confirm(
+        `예약 날짜 : ${date.value}
+예약 시간 : ${time.value}
 이용항목 : ${walkVal} ${driveVal} ${driveronlyVal} ${driverandmanagerVal}
 휠체어 유/무 : ${noChair1Val} ${yesChair1Val} ${noChair2Val} ${yesChair2Val} 
-보호자 정보 : ${guardianNameVal} ${guardianNumberVal}
-이용자 정보 : ${userNameVal} (${userGenderVal},${userBirthVal},${userNumberVal})
+보호자 정보 : ${guardianName.value} / ${guardianNumber.value}
+이용자 정보 : ${userName.value} ( ${userGenderVal} / ${userBirth.value} / ${userNumber.value} )
 
 해당 정보로 예약하시겠습니까?`
-    );
+      );
 
-    if (result === true) {
-      alert(`예약이 완료되었습니다. 15분 이내로 직원이 전화드릴 예정입니다.`);
-      location.href = "index.html";
+      if (result1 === true) {
+        alert(`예약이 완료되었습니다. 10분 이내로 직원이 전화드릴 예정입니다.`);
+        location.href = "index.html";
+      } else {
+        // 예약 취소 시 동작
+      }
     } else {
-      // alert(`예약이 취소되었습니다.`);
+      if (
+        date.value.trim() === "" ||
+        time.value.trim() === "" ||
+        (walk.checked === false &&
+          drive.checked === false &&
+          driverOnly.checked === false &&
+          driverAndManager.checked === false) ||
+        (walk.checked &&
+          noChair1.checked === false &&
+          yesChair1.checked === false) ||
+        (drive.checked &&
+          driverOnly.checked === false &&
+          driverAndManager.checked === false &&
+          noChair2.checked === false &&
+          yesChair2.checked === false) ||
+        userName.value.trim() === "" ||
+        (male.checked === false && female.checked === false) ||
+        userBirth.value.trim() === "" ||
+        userNumber.value.trim() === ""
+      ) {
+        // 필수 정보가 누락되었을 때 확인 창 띄우기
+        alert("필수 정보가 누락되었습니다.");
+        event.preventDefault(); // 제출 이벤트를 중지
+        return;
+      }
+
+      let result2 = confirm(
+        `예약 날짜 : ${date.value}
+예약 시간 : ${time.value}
+이용항목 : ${walkVal} ${driveVal} ${driveronlyVal} ${driverandmanagerVal}
+휠체어 유/무 : ${noChair1Val} ${yesChair1Val} ${noChair2Val} ${yesChair2Val}
+이용자 정보 : ${userName.value} ( ${userGenderVal} / ${userBirth.value} / ${userNumber.value} )
+
+해당 정보로 예약하시겠습니까?`
+      );
+
+      if (result2 === true) {
+        alert(`예약이 완료되었습니다. 10분 이내로 직원이 전화드릴 예정입니다.`);
+        location.href = "index.html";
+      } else {
+        // 예약 취소 시 동작
+      }
     }
   });
 });

@@ -152,6 +152,7 @@ header .inner {
   margin: 0 auto;
 }
 .datetime-title {
+  position: relative;
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -189,6 +190,7 @@ input[type="checkbox"] {
   position: relative;
 }
 .reservation-content-title {
+  position: relative;
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 40px;
@@ -363,9 +365,10 @@ input[type="checkbox"] {
   margin: 0 auto;
 }
 .guardian-info-title {
+  position: relative;
   font-size: 25px;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-top: 70px;
 }
 
@@ -378,15 +381,39 @@ input[type="checkbox"] {
   margin: 0 auto;
 }
 .user-info-title {
+  position: relative;
   font-size: 25px;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-top: 70px;
 }
 .female {
   padding-right: 550px;
   margin-top: 25px;
   margin-bottom: 5px;
+}
+
+/* 타이틀::after 선 */
+.datetime-title::after,
+.reservation-content-title::after,
+.guardian-info-title::after,
+.user-info-title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  bottom: -7px;
+  left: 0;
+  background-color: #34c987;
+}
+.datetime-title::after {
+  width: 208px;
+}
+.reservation-content-title::after {
+  width: 326px;
+}
+.guardian-info-title::after,
+.user-info-title::after {
+  width: 123px;
 }
 
 /* 예약 신청 버튼 */
@@ -411,4 +438,102 @@ input[type="checkbox"] {
 }
 .reservatebtn:active {
   background-color: #059152;
+}
+
+/* 반응형 */
+@media all and (max-width: 1000px) {
+  .inner {
+    width: 85%;
+  }
+}
+@media all and (max-width: 1100px) {
+  .buttons {
+    margin-top: 140px;
+    margin-bottom: 70px;
+  }
+}
+@media all and (max-width: 1000px) {
+  .buttons .inner button {
+    font-size: 20px;
+  }
+  input:not([type="checkbox"], [type="radio"]) {
+    width: 85%;
+  }
+
+  .datetime input {
+    width: 235px;
+  }
+  .datetime label {
+    width: 150px;
+  }
+  label {
+    width: 10%;
+  }
+}
+@media all and (max-width: 860px) {
+  .buttons .inner button {
+    font-size: 18px;
+    padding: 3% 12%;
+  }
+  .caution .inner p:first-child {
+    font-size: 18px;
+  }
+  .caution .inner p {
+    font-size: 12px;
+  }
+}
+@media all and (max-width: 730px) {
+  .buttons {
+    margin-top: 120px;
+    margin-bottom: 50px;
+  }
+  .buttons .inner button {
+    font-size: 18px;
+    padding: 3% 10%;
+  }
+}
+@media all and (max-width: 630px) {
+  .buttons .inner button {
+    padding: 3% 8%;
+  }
+}
+@media all and (max-width: 540px) {
+  .buttons {
+    margin-top: 100px;
+    margin-bottom: 30px;
+  }
+  .buttons .inner button {
+    padding: 3% 5%;
+  }
+}
+@media all and (max-width: 520px) {
+  .buttons .inner button {
+    border: 5px;
+    padding: 3% 5%;
+  }
+  .buttons {
+    margin-top: 130px;
+    margin-bottom: 60px;
+  }
+  .buttons .inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .buttons .inner button {
+    padding: 5% 7%;
+  }
+  .guardianbtn {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .userbtn {
+    display: block;
+    width: 100%;
+  }
+}
+@media all and (max-width: 320px) {
+  .buttons .inner button {
+    font-size: 16px;
+  }
 }
