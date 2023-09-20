@@ -53,7 +53,7 @@ header .inner {
 }
 .log-in ul li {
   border-right: 1px solid #fff;
-  padding-right: 5px;
+  padding-right: 4.65px;
 }
 .log-in ul li:last-child {
   border-right: 0;
