@@ -59,7 +59,8 @@ header .inner{
     position: relative;
     display:flex;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    background-color: #f8f8f8;
 }
 .reservation-txt{
     position: relative;
@@ -71,7 +72,7 @@ header .inner{
     display: inline-block;
     font-size: 3.6458vw;
     margin-top: 300px;
-    margin-left: 200px;
+    margin-left: 245px;
     font-weight: 800;
     color: #222;
 }
@@ -79,7 +80,7 @@ header .inner{
     position: relative;
     display: block;
     font-size: 16px;
-    margin-left: 200px;
+    margin-left: 245px;
     margin-top: 50px;
     line-height: 1.3;
     color: #333;
@@ -89,7 +90,7 @@ header .inner{
     position: relative;
     display: block;
     padding: 20px 70px;
-    margin-left: 200px;
+    margin-left: 245px;
     margin-top: 50px;
     background-color: #34c987;
     border: none;
@@ -105,11 +106,13 @@ header .inner{
     display: block;
     width: 50%;
 }
-.detail-img > img{
-    position: absolute;
+.detail-img  img{
+    position: relative;
     display: block;
     right: 0;
     bottom: 0;
+    padding: 200px 0 0 0;
+    margin-left: 13%;
 }
 
 /* detailmain02 */
@@ -117,7 +120,7 @@ header .inner{
     position: relative;
     display: flex;   
     width: 100%;
-    height: 100vh;
+    height: auto;
 }
 .detail02-img{
     position: relative;
@@ -125,11 +128,9 @@ header .inner{
     width: 50%;
 }
 .detail02-img img{
-    position: absolute;
+    position: relative;
     display: block;
-    top: 0;
     left: -5%;
-    height: 100%;
 }
 .onfoot-txt{
     position: relative;
@@ -196,8 +197,8 @@ span{
     position: relative;
     display: flex;
     width: 100%;
-    height: 100vh;
-    background-color: #f3f3f3;
+    height: auto;
+    background-color: #f8f8f8;
 }
 .car-txt{
     position: relative;
@@ -209,11 +210,7 @@ span{
     display: block;
     width: 50%;
 }
-.detail-img img{
-    position: absolute;
-    display: block;
-    
-}
+
 
 
 
@@ -231,6 +228,8 @@ span{
     position: relative;
     display: block;
     width: 50%;
+    margin-left: 15px;
+
 }
 .area-explane{
     margin-left: 0;
@@ -263,49 +262,6 @@ span{
 }
 .area-map img{
     width: 90%;
-}
-
-/* 지원하기 */
-.joinus {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 180px;
-}
-.driver {
-    position: relative;
-    display: block;
-    width: 50%;
-    height: 180px;
-    background-color: yellowgreen;
-}
-.driver-img {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height:100%;
-    filter: brightness(50%);
-    background-image: url("../images/detail/join01.png") ;
-    background-repeat: no-repeat; /* 이미지 반복을 여기로 이동합니다. */
-    background-size: cover; 
-}
-
-.manaser {
-    position: relative;
-    display: block;
-    width: 50%;
-    height: 180px;
-    background-color: aqua;
-}
-.manaser-img {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    filter: brightness(50%);
-    background-image: url("../images/detail/join02.png") ;
-    background-repeat: no-repeat; /* 이미지 반복을 여기로 이동합니다. */
-    background-size: cover; /* 이미지를 부모 요소에 맞게 크기 조절합니다. */
 }
 
 /* 예약방법 슬라이드 */
@@ -352,17 +308,18 @@ span{
     position: relative;
     display: inline-block;
     /* background-color: yellow; */
-    width: 90%;
-    padding: 50px 0 0 0 ;
+    width: 80%;
+    padding: 100px 0 0 0 ;
+    margin-left: 30%;
 }
 .reservation-box{
     position: relative;
     display: block;
     width: 60%;
-    /* background-color: thistle; */
+    margin-left: 30px;
 }
 .reservation-box img{
-    width: 100%;
+    width: 80%;
 }
 .top-txt{
     position: absolute;
@@ -372,16 +329,17 @@ span{
     z-index: 9999;
     top: 7%;
     left: 7%;
-    line-height: 1.4;
-    font-size: 13px;
+    line-height: 1.3;
+    font-size: 16px;
 }
 .top-txt span{
-    font-size: 35px;
+    font-size: 40px;
 }
 .bt-txt{
     position: relative;
     display: block;
     /* background-color: tomato; */
+    margin-right: 23%;
     text-align: right;
     font-size: 18px;
     line-height: 1.3;
@@ -391,7 +349,14 @@ span{
     font-size: 25px;
     color: #333;
 }
-
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 37%;
+    right: auto;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 6%;
+    left: auto;
+}
 
 /* 지원하기 버튼 */
 .joinus a{
@@ -419,13 +384,106 @@ span{
     font-weight: 200;
     z-index: 99;
 }
+/* 예약, 전화예약 버튼 */
+.bottom-btn{
+    position: relative;
+    display: block;
+}
+.bottom-btn .inner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+/* 왼 */
+.left-btn{
+    position: relative;
+    width: 47%;
+    height: 170px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    background-color: #34C987;
+}
+.left-btn a{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.left-txt{
+    position: relative;
+    display: block;
+    /* background-color: yellow; */
+    font-size: 25px;
+    font-weight: 800;
+    width: 50%;
+    height: auto;
+    text-align: right;
+}
+.left-img{
+    position: relative;
+    display: block;
+    width: 50%;
+    /* background-color: yellowgreen; */
+    margin-left: 5%;
+}
+.left-img img{
+    width: 40%;
+}
+/* 오 */
+.right-btn{
+    position: relative;
+    display: block;
+    width: 47%;
+    height: 170px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    background-color: #333;
+}
+.right-btn a{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.right-txt{
+    position: relative;
+    display: block;
+    font-size: 20px;
+    width: 40%;
+    height: auto;
+    margin-left: 20%;
+    text-align: left;
+    line-height: 1.2;
+}
+.right-txt span{
+    font-size: 25px;
+    font-weight: 800;
+}
+.right-img{
+    position: relative;
+    display: block;
+    width: 30%;
+}
+.right-img img{
+    width: 45%;
+}
 /* footer */
 footer{
     position: relative;
     display: block;
     background-color: #333;
     width: 100%;
-    height: 400px;
+    height: 300px;
 }
 footer .inner{
     position: relative;
@@ -444,18 +502,18 @@ footer .inner{
     margin: 0 auto;
     color: #34C987;
     font-weight: 800;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .sns-icon{
     position: relative;
     display: flex;
-    width: 15%;
+    width: 12%;
     text-align: center;
     justify-content: space-between;
     margin-top: 50px;
 }
 footer .inner img{
-    width: 40px;
+    width: 35px;
 }
 .email-number{
     position: relative;
@@ -464,27 +522,17 @@ footer .inner img{
     color: #fff;
     justify-content: space-around;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 30px;
     font-weight: 200;
 }
-.name-adress{
-    position: relative;
-    display: flex;
-    width: 30%;
-    color: #fff;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
-    font-weight: 200;
-}
+
 .copy{
     position: relative;
     display: block;
     text-align: center;
-    /* background-color: yellowgreen; */
-    margin-top: 60px;
     color: #fff;
     font-weight: 100;
+    margin-top: 50px;
 }
 
 
