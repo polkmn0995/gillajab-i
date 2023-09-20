@@ -1,4 +1,7 @@
 window.addEventListener("load", function () {
+    // AOS적용
+    AOS.init();
+    // ============================================
   // a태그 클릭시 해당페이지의 해당위치값 정해주는 기능
   const hash = window.location.hash.substring(1); // URL에서 # 제거
 
@@ -93,7 +96,7 @@ window.addEventListener("load", function () {
     },
     loop:true,
       autoplay: {
-        delay: 2000,
+        delay: 3000,
     },
     disableOnInteraction: false,
       keyboard: {
@@ -125,15 +128,21 @@ window.addEventListener("load", function () {
       spaceBetween: 30,
       centeredSlides: true,
       loop: true,
+      autoplay: {
+        delay: 3000, // 3초마다 자동 슬라이딩
+      },
+      speed: 800, // 슬라이드 이동 속도 (밀리초)
+  grabCursor: true, // 마우스 커서를 손가락 모양으로 변경
+  preventInteractionOnTransition: true, // 슬라이딩 중에 사용자의 상호 작용을 방지하여 끊김 없는 슬라이딩
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
       direction: getDirection(),
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      // },
       on: {
         resize: function () {
           reviewswiper.changeDirection(getDirection());
