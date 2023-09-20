@@ -78,7 +78,7 @@ header .inner {
 }
 .log-in ul li {
   border-right: 1px solid #000;
-  padding-right: 5px;
+  padding-right: 4.65px;
 }
 .log-in ul li:last-child {
   border-right: 0;
@@ -107,7 +107,8 @@ header .inner {
   font-weight: 600;
   transition: all 0.2s ease-in-out;
   font-family: "Noto Sans KR", sans-serif;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.274);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .guardianbtn {
   background-color: #34c987;
@@ -130,17 +131,19 @@ header .inner {
   display: block;
   order: 2;
   padding: 20px 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #f2f2f2;
   margin-bottom: 90px;
 }
 .caution .inner p:first-child {
   font-size: 20px;
   font-weight: 700;
+  color: #333;
 }
 .caution .inner p {
   padding: 5px 0;
   line-height: 1.5;
   font-size: 14px;
+  color: #333;
 }
 
 /* 날짜, 시간 선택 */
@@ -150,6 +153,7 @@ header .inner {
   order: 3;
   width: 100%;
   margin: 0 auto;
+  color: #222;
 }
 .datetime-title {
   position: relative;
@@ -180,6 +184,7 @@ header .inner {
   order: 4;
   width: 100%;
   margin: 0 auto;
+  color: #222;
 }
 input[type="checkbox"] {
   margin-right: 10px;
@@ -200,14 +205,14 @@ input[type="checkbox"] {
   position: absolute;
   width: auto;
   text-align: center;
-  bottom: -25px;
+  bottom: -30%;
 }
 .reservation-content-top {
   width: 100%;
   margin: auto;
   display: flex;
   padding: 50px 0px 70px 0px;
-  border: 1px solid #3b3b3b;
+  border: 1px solid #ccc;
   border-radius: 30px;
   margin-bottom: 20px;
   justify-content: space-between;
@@ -223,12 +228,15 @@ input[type="checkbox"] {
   position: absolute;
   right: -11px;
   top: -30px;
-  width: 2px;
+  width: 1px;
   height: 150px;
   background-color: #ccc;
 }
 .walk span {
-  left: 136px;
+  left: 43.5%;
+}
+.walk img {
+  opacity: 0.8;
 }
 .no-bathchair1 {
   width: 33%;
@@ -237,10 +245,10 @@ input[type="checkbox"] {
   justify-content: center;
 }
 .no-bathchair1 span {
-  left: 136px;
+  left: 43.5%;
 }
 .no-bathchair1 img {
-  opacity: 0.3;
+  opacity: 0.6;
   transition: all 0.2s ease-in-out;
 }
 .no-bathchair1::after {
@@ -248,7 +256,7 @@ input[type="checkbox"] {
   position: absolute;
   right: -11px;
   top: -30px;
-  width: 2px;
+  width: 1px;
   height: 150px;
   background-color: #ccc;
 }
@@ -259,18 +267,18 @@ input[type="checkbox"] {
   justify-content: center;
 }
 .yes-bathchair1 span {
-  left: 136px;
+  left: 43.5%;
 }
 .yes-bathchair1 img {
   transition: all 0.2s ease-in-out;
-  opacity: 0.3;
+  opacity: 0.6;
 }
 .reservation-content-bottom {
   width: 100%;
   margin: auto;
   display: flex;
   padding: 50px 0px 70px 0px;
-  border: 1px solid #3b3b3b;
+  border: 1px solid #ccc;
   border-radius: 30px;
   justify-content: space-around;
   align-items: center;
@@ -286,12 +294,15 @@ input[type="checkbox"] {
   position: absolute;
   right: -10px;
   top: -70px;
-  width: 2px;
+  width: 1px;
   height: 240px;
   background-color: #ccc;
 }
 .drive span {
-  left: 135px;
+  left: 43.5%;
+}
+.drive img {
+  opacity: 0.8;
 }
 .driver {
   width: 33%;
@@ -303,12 +314,12 @@ input[type="checkbox"] {
   position: absolute;
   right: -10px;
   top: -10px;
-  width: 2px;
+  width: 1px;
   height: 240px;
   background-color: #ccc;
 }
 .driver img {
-  opacity: 0.3;
+  opacity: 0.6;
   transition: all 0.2s ease-in-out;
 }
 .driveronly {
@@ -318,7 +329,7 @@ input[type="checkbox"] {
   margin-bottom: 50px;
 }
 .driveronly span {
-  left: 123px;
+  left: 40%;
 }
 .driverandmanager {
   position: relative;
@@ -326,7 +337,7 @@ input[type="checkbox"] {
   justify-content: center;
 }
 .driverandmanager span {
-  left: 60px;
+  left: 20%;
 }
 .bathchair {
   width: 33%;
@@ -334,7 +345,7 @@ input[type="checkbox"] {
   display: block;
 }
 .bathchair img {
-  opacity: 0.3;
+  opacity: 0.6;
   transition: all 0.2s ease-in-out;
 }
 .no-bathchair2 {
@@ -344,7 +355,7 @@ input[type="checkbox"] {
   margin-bottom: 50px;
 }
 .no-bathchair2 span {
-  left: 136px;
+  left: 43.5%;
 }
 .yes-bathchair2 {
   position: relative;
@@ -352,7 +363,7 @@ input[type="checkbox"] {
   justify-content: center;
 }
 .yes-bathchair2 span {
-  left: 136px;
+  left: 43.5%;
 }
 
 /* 보호자 정보 */
@@ -363,6 +374,7 @@ input[type="checkbox"] {
   transition: all 0.1s ease-in-out;
   width: 100%;
   margin: 0 auto;
+  color: #222;
 }
 .guardian-info-title {
   position: relative;
@@ -379,6 +391,7 @@ input[type="checkbox"] {
   order: 6;
   width: 100%;
   margin: 0 auto;
+  color: #222;
 }
 .user-info-title {
   position: relative;
@@ -429,7 +442,8 @@ input[type="checkbox"] {
   font-size: 20px;
   font-weight: 700;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.274);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   margin-bottom: 40px;
   color: #fff;
 }

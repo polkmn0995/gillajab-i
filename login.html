@@ -75,10 +75,12 @@
     <script src="js/respond.min.js"></script>
     <script src="js/html5shiv.js"></script>
     [endif]-->
-    <script src="js/prefixfree.min.js"></script>
+    <!-- <script src="js/prefixfree.min.js"></script> -->
     <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> -->
     <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
     <!-- --------- -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/common.css" />
     <script src="js/login.js"></script>
     <link rel="stylesheet" href="css/login.css" />
   </head>
@@ -95,7 +97,7 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="wrap">
-      <!-- 헤더 -->
+      <!-- header -->
       <header>
         <div class="inner">
           <div class="logo">
@@ -116,6 +118,69 @@
           </div>
         </div>
       </header>
+      <!-- contents -->
+      <div class="contents">
+        <div class="inner">
+          <div class="content-left" id="signup">
+            <div class="title">회원가입</div>
+            <ul class="content-left-ul">
+              <li>
+                <a href="#">
+                  <p>이용자 회원가입</p>
+                  <span>길라잡이 서비스를 이용해 보세요.</span>
+                  <img src="images/login/user.png" alt="이용자" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>보호자 회원가입</p>
+                  <span>보호자를 위한 회원가입</span>
+                  <img src="images/login/guardian.png" alt="보호자" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>지원자 회원가입</p>
+                  <span>길라잡이의 매니저로 등록해 보세요.</span>
+                  <img src="images/login/volunteer.png" alt="지원자" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="content-right" id="login">
+            <div class="title">로그인</div>
+            <form class="login-form">
+              <legend>이용자</legend>
+              <legend>보호자</legend>
+              <legend>지원자</legend>
+              <input type="text" placeholder="아이디를 입력해주세요." />
+              <input type="password" placeholder="비밀번호를 입력해주세요." />
+              <a href="#">아이디/비밀번호 찾기</a>
+            </form>
+            <button type="submit">로그인</button>
+            <ul class="content-right-ul">
+              <li>
+                <a href="#">
+                  <img src="images/login/naver.png" alt="네이버 아이콘" />
+                  <p>네이버 아이디로 로그인</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/login/kakaotalk.png" alt="카카오톡 아이콘" />
+                  <p>카카오톡 아이디로 로그인</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/login/google.png" alt="구글 아이콘" />
+                  <p>구글 아이디로 로그인</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
