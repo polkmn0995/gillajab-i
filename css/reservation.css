@@ -21,7 +21,9 @@ input:not([type="checkbox"], [type="radio"]) {
   border-radius: 10px;
   clear: both;
   margin-top: 20px;
+  transition: border 0.2s ease-in-out !important;
 }
+input:hover,
 input:focus {
   border: 1px solid #34c987;
 }
@@ -66,6 +68,9 @@ header .inner {
   display: flex;
   justify-content: space-between;
 }
+.header-menu ul li a {
+  transition: color 0.15s ease-in-out !important;
+}
 .header-menu ul li a:hover {
   color: #34c987;
 }
@@ -82,6 +87,9 @@ header .inner {
 }
 .log-in ul li:last-child {
   border-right: 0;
+}
+.log-in ul li a {
+  transition: color 0.15s ease-in-out !important;
 }
 .log-in ul li a:hover {
   color: #34c987;
@@ -140,7 +148,7 @@ header .inner {
   color: #333;
 }
 .caution .inner p {
-  padding: 5px 0;
+  padding: 3px 0;
   line-height: 1.5;
   font-size: 14px;
   color: #333;
