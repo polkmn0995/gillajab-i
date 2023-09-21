@@ -119,10 +119,10 @@ header .inner {
   color: #333;
 }
 .buttons .inner button:hover {
-  background-color: #06b667;
+  background-color: #06b667 !important;
 }
 .buttons .inner button:active {
-  background-color: #059152;
+  background-color: #059152 !important;
 }
 
 /* 주의사항 */
@@ -448,10 +448,10 @@ input[type="checkbox"] {
   color: #fff;
 }
 .reservatebtn:hover {
-  background-color: #06b667;
+  background-color: #06b667 !important;
 }
 .reservatebtn:active {
-  background-color: #059152;
+  background-color: #059152 !important;
 }
 
 /* 반응형 */
