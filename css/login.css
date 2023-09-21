@@ -148,29 +148,30 @@ header .inner {
 legend {
   float: left;
   border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  font-weight: 700;
   padding: 8px 15px;
   border-radius: 10px;
   margin: 0 5px;
-  font-weight: 500;
   cursor: pointer;
   font-size: 14px;
-  background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 legend:hover {
-  background-color: #06b667;
+  background-color: #06b667 !important;
 }
 legend:active {
-  background-color: #059152;
+  background-color: #059152 !important;
 }
 
-.userlegend {
+/* .userlegend {
   background-color: #34c987;
   color: #fff;
   border: 1px solid #34c987;
   font-weight: 600;
-}
+} */
 input {
   width: 380px;
   margin: auto;
@@ -190,10 +191,9 @@ input:focus {
   margin-bottom: 10px;
 }
 .find {
-  /* position: absolute;
-  left: 25px;
-  bottom: 10px; */
-  align-self: self-start;
+  position: absolute;
+  left: 10px;
+  bottom: 65px;
   margin-left: 25px;
   margin-bottom: 30px;
   font-size: 14px;
@@ -211,10 +211,23 @@ input:focus {
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 .submitbtn:hover {
   background-color: #06b667;
 }
 .submitbtn:active {
   background-color: #059152;
+}
+.content-right-ul {
+  width: 450px;
+  margin: 0 auto;
+}
+.naver,
+.kakao,
+.google {
+  border-radius: 10px;
+  display: flex;
+  padding: 10px 20px;
 }
