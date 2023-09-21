@@ -21,6 +21,9 @@ header .inner {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .logo {
   width: 160px;
@@ -44,6 +47,25 @@ header .inner {
 .header-menu ul li a:hover {
   color: #34c987;
 }
+.header-menu ul li{
+  position: relative;
+}
+.header-menu ul li::after{
+  content: "";
+  display: block;
+  /* absolute는 너비높이에 영행을 안준다 */
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #34c987;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.header-menu ul li:hover::after{
+  opacity: 1;
+}
 .log-in {
   width: 120px;
 }
@@ -63,6 +85,25 @@ header .inner {
 }
 .log-in ul li a:hover {
   color: #34c987;
+}
+.log-in ul li{
+  position: relative;
+}
+.log-in ul li::after{
+  content: "";
+  display: block;
+  /* absolute는 너비높이에 영행을 안준다 */
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #34c987;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.log-in ul li:hover::after{
+  opacity: 1;
 }
 /* ================================================================================= */
 /* 비주얼 */
@@ -212,8 +253,9 @@ header .inner {
 .sw-visual-pg-list > li {
   position: relative;
   width: 60px;
-  height: 30px;
+  height: 32px;
   padding: 10px 10px;
+  margin-right: 10px;
   color: #fff;
   font-weight: 400;
   cursor: pointer;
@@ -287,14 +329,21 @@ header .inner {
   position: relative;
   display: block;
   width: 450px;
-  height: 730px;
-  border-radius: 20px;
-  overflow: hidden;
+  height: 700px;
+  border-radius: 50px;
+  overflow: hidden !important;
+}
+.service01 a{
+  display: block;
+  width: 100%;
+  height: 100%%;
 }
 .service01 img {
   transition: 0.3s;
-  max-width: 100%;
-  height: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .service01 a:hover img {
   scale: 1.1;
@@ -317,9 +366,9 @@ header .inner {
   position: relative;
   display: block;
   width: 450px;
-  height: 730px;
-  border-radius: 20px;
-  overflow: hidden;
+  height: 700px;
+  border-radius: 50px;
+  overflow: hidden !important;
 }
 .service02 img {
   transition: 0.3s;
@@ -366,11 +415,15 @@ header .inner {
   background-attachment: fixed !important;
   position: relative;
 }
+.bg > div p strong{
+  font-size: 40px;
+  font-weight: 600;
+}
 .bg > div p {
   display: inline-block;
   padding: 10px;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   line-height: 36px;
   color: #e0e0e0;
@@ -382,7 +435,7 @@ header .inner {
 }
 .bg > div p span {
   font-weight: bold;
-  font-size: 52px;
+  font-size: 50px;
 }
 .bg > div.bg01 {
   background: url("../images/index/banner.png") no-repeat 50% 50% / cover;
@@ -444,6 +497,9 @@ header .inner {
   width: 100%;
   height: 100vh;
 }
+.inner{
+  position: relative;
+}
 :root {
   --dark-green: #9cc675;
   --dark-yellow: #e89a3d;
@@ -454,6 +510,7 @@ header .inner {
 .app-service-txt p {
   font-size: 50px;
   margin-top: 5%;
+  margin-bottom: 5%;
   line-height: 70px;
   color: #666;
 }
@@ -486,10 +543,10 @@ header .inner {
   height: 100%;
 }
 .swiper-full-mobile .swiper-slide img {
-  width: 82%;
+  width: 80%;
   margin-left: 10%;
-  height: 660px;
-  object-fit: cover;
+  height: 550px;
+  object-fit: contain;
 }
 .swiper-slide.swiper-slide-active img {
   border-radius: 40px;
@@ -518,11 +575,13 @@ header .inner {
 .review .inner {
   position: relative;
   display: flex;
+  padding-bottom: 5%;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 .review-sw {
   overflow: hidden;
+  padding-top: 5%;
   width: 100%;
   height: 50%;
 }
@@ -533,7 +592,8 @@ header .inner {
   font-size: 50px;
   font-weight: bold;
   line-height: 60px;
-  margin-top: 5%;
+  padding-top: 5%;
+  margin-top: 3%;
   margin-bottom: 25px;
 }
 .review p {
@@ -564,6 +624,8 @@ header .inner {
   width: 100%;
   height: 50px;
   border-radius: 40px;
+  margin-top: 5%;
+  margin-bottom: 8%;
 }
 .review-bt {
   border: 1px solid #34c987;

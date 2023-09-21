@@ -2,6 +2,31 @@ window.addEventListener("load", function () {
     // AOS적용
     AOS.init();
     // ============================================
+    // ============================================
+    // 헤더 메뉴 클릭시 해당 섹션 자동 스크롤
+// document.addEventListener('DOMContentLoaded', function() {
+//   const sectionYpos = [500, 1000, 1500, 2000, 3500];
+//   const navLis = document.querySelectorAll(".nav ul li");
+//   const navLisA = document.querySelectorAll(".nav ul li a");
+
+//   navLisA.forEach(function(item, index) {
+//     item.addEventListener('click', function(event) {
+//       event.preventDefault();
+
+//       navLis.forEach(function(navLi) {
+//         navLi.classList.remove("focus-active");
+//       });
+
+//       navLis[index].classList.add("focus-active");
+
+//       window.scrollTo({
+//         top: sectionYpos[index],
+//         behavior: 'smooth'
+//       });
+//     });
+//   });
+// });
+
   // a태그 클릭시 해당페이지의 해당위치값 정해주는 기능
   const hash = window.location.hash.substring(1); // URL에서 # 제거
 
@@ -131,6 +156,11 @@ window.addEventListener("load", function () {
       autoplay: {
         delay: 3000, // 3초마다 자동 슬라이딩
       },
+      disableOnInteraction: false,
+      keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
       speed: 800, // 슬라이드 이동 속도 (밀리초)
   grabCursor: true, // 마우스 커서를 손가락 모양으로 변경
   preventInteractionOnTransition: true, // 슬라이딩 중에 사용자의 상호 작용을 방지하여 끊김 없는 슬라이딩
