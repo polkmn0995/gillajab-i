@@ -87,9 +87,10 @@ header .inner {
 }
 .content-left img {
   height: 50px;
+  opacity: 0.8;
 }
 .content-left-ul li {
-  border: 1px solid #797979;
+  border: 1px solid #ccc;
   border-radius: 30px;
   width: 350px;
   height: 150px;
