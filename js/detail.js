@@ -9,4 +9,5 @@ window.addEventListener("load", function () {
             prevEl: ".swiper-button-prev",
         },
         });
+        AOS.init();
 });

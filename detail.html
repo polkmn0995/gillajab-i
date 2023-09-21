@@ -81,6 +81,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/common.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- --------- -->
     <script src="js/detail.js"></script>
     <link rel="stylesheet" href="css/detail.css" />
@@ -100,8 +101,6 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52PHBFFL"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<!-- animate.css -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <div class="wrap">
       <!-- 헤더 -->
       <header>
@@ -136,14 +135,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
           <button class="reservation-btn"><a href="reservation.html">예약하기</a></button>
         </div>
-        <div class="detail-img">
-          <img src="images/detail/detaim-img001.png" alt="예약하기" class="animate__animated animate__fadeInLeft">
+        <div data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" 
+        class="detail-img">
+          <img src="images/detail/detaim-img001.png" alt="예약하기">
         </div>
       </section>
 
       <!-- section02 -->
       <section class="detailmain02" id="detail-section02">
-        <div class="detail02-img">
+        <div data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" 
+        class="detail02-img">
           <img src="images/detail/detaim-img02.png" alt="사람">
         </div>
         <div class="onfoot-txt">
@@ -153,28 +158,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             한 걸음 한 걸음 보다 안전하게 목적지까지 모십니다.
           </p>
           <p class="explane002">
-            <span>도보 동행 서비스란?</span> 차량으로 이동하지 않고 길라잡이
-            동행 매니저와 가까운 <br />거리를 이동하거나 집 근처 목적지로 이동할
-            때 이용하기 적합한 서비스 입니다.<br />
-            길라잡이만의 친절하고 편안한 동행 서비스를 만나보세요.
+            <span>도보 동행 서비스란?</span> 차량으로 이동하지 않고 길라잡이<br/>
+            동행 매니저와 가까운 거리를 이동하거나 집 근처 목적지로<br/> 
+            이동할 때 이용하기 적합한 서비스 입니다. 길라잡이만의<br/> 
+            친절하고 편안한 동행 서비스를 만나보세요.
           </p>
-          <button class="reservation-btn02"><a href="reservation.html">도보 동행 서비스 예약하기</a></button>
+          <button class="reservation-btn02"><a href="reservation.html">자세히 보기</a></button>
         </div>
       </section>
 
       <!-- section03 -->
       <section class="detailmain03" id="detail-section03">
         <div class="car-txt">
-          <p class="titlename">차량 동행 서비스</p> 
-          <p class="explane">
+          <p class="titlename03">차량 동행 서비스</p> 
+          <p class="explane03">
             불편한 대중교통 이용은 그만! 교통약자의 불편함을 배려한 특수<br>  개조된 전문차량으로
             보다 안전하게 목적지까지 모십니다.<br>
           </p>
-          <p class="explane"><span>차량 동행 서비스란?</span> 도보로 이동하기 먼 거리를 길라잡이 드라이버와 함께 <br>
-            차량으로 이동하는 서비스입니다. 택시처럼 쉽게 불러 자가용처럼 편하게 이동해보세요.</p>
-            <button class="reservation-btn"><a href="reservation.html">차량 동행 서비스 예약하기</a></button>
+          <p class="explane03"><span>차량 동행 서비스란?</span> 도보로 이동하기 먼 거리를
+            길라잡이 <br/>드라이버와 함께 차량으로 이동하는 서비스입니다. 택시처럼 <br/>쉽게 불러 자가용처럼 편하게 이동해보세요.</p>
+            <button class="reservation-btn03"><a href="reservation.html">자세히 보기</a></button>
         </div>
-        <div class="detail-img">
+        <div data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        class="detail-img03">
           <img src="images/detail/detaim-img03.png" alt="자동차">
         </div>
       </section>
@@ -202,6 +210,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- 예약방법 슬라이드 -->
       <section class="reservation-method">
+        <p class="reservation-method-title">예약방법</p>
           <div class="swiper reservation-slide">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -264,10 +273,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="inner">
     <div class="left-btn">
       <a href="reservation.html">
-        <div class="left-txt">
+        <div 
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        class="left-txt">
           <p>예약하기</p>
         </div>
-        <div class="left-img">
+        <div 
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        class="left-img">
           <img src="images/detail/left-btn-icon.png" alt="예약하기">
         </div>
       </a>
@@ -275,10 +290,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="right-btn">
       <a href="#">
-        <div class="right-txt">
+        <div data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        class="right-txt">
           <p>전화예약<br><span>053-123-4567</span></p>
         </div>
-        <div class="right-img">
+        <div data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        class="right-img">
           <img src="images/detail/right-btn-icon.png" alt="전화예약">
         </div>
       </a>
@@ -304,5 +323,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </footer>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
