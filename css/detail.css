@@ -71,7 +71,7 @@ header .inner{
     position: relative;
     display: inline-block;
     font-size: 3.6458vw;
-    margin-top: 30%;
+    margin-top: 35%;
     margin-left: 24.5%;
     font-weight: 800;
     color: #222;
@@ -82,7 +82,7 @@ header .inner{
     font-size: 16px;
     margin-left: 24.5%;
     margin-top: 5%;
-    line-height: 1.3;
+    line-height: 1.5;
     color: #333;
     font-weight: 500;
 }
@@ -92,6 +92,7 @@ header .inner{
     padding: 20px 70px;
     margin-left: 24.5%;
     margin-top: 50px;
+    margin-bottom: 20%;
     background-color: #34c987;
     border: none;
     color: #fff;
@@ -157,7 +158,7 @@ header .inner{
     font-size: 16px;
     margin-top: 50px;
     margin-left: 10%;
-    line-height: 1.3;
+    line-height: 1.5;
     color: #333;
     font-weight: 500;
 }
@@ -167,7 +168,7 @@ header .inner{
     font-size: 16px;
     margin-top: 30px;
     margin-left: 10%;
-    line-height: 1.3;
+    line-height: 1.5;
     color: #333;
     font-weight: 500;
 }
@@ -201,18 +202,51 @@ span{
     height: auto;
     background-color: #f8f8f8;
 }
+.titlename03{
+    position: relative;
+    display: inline-block;
+    font-size: 3.6458vw;
+    margin-top: 35%;
+    margin-left: 24.5%;
+    font-weight: 800;
+    color: #222;
+}
+.reservation-btn03{
+    position: relative;
+    display: block;
+    padding: 20px 70px;
+    margin-left: 24.5%;
+    margin-top: 50px;
+    margin-bottom: 20%;
+    background-color: #34c987;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.reservation-btn03 a{
+    color: #fff;
+}
 .car-txt{
     position: relative;
     display: block;
     width: 50%;
 }
-.detail-img{
+.detail-img03{
+    margin-left: 10%;
+    margin-top: 15%;
+    width: 40%;
+}
+.explane03{
     position: relative;
     display: block;
-    width: 50%;
+    font-size: 16px;
+    margin-left: 24.5%;
+    margin-top: 5%;
+    line-height: 1.5;
+    color: #333;
+    font-weight: 500;
 }
-
-
 
 
 /* 서비스이용 가능지역 */
@@ -223,6 +257,7 @@ span{
     height: auto;
 }
 .inner{
+    width: 80%;
     display: flex;
 }
 .area-txt{
@@ -241,7 +276,7 @@ span{
     position: relative;
     display: inline-block;
     font-size: 2.6042vw;
-    margin-top: 200px;
+    margin-top: 30%;
     font-weight: 800;
     color: #222;
 }
@@ -255,12 +290,14 @@ span{
 .area-info > i{
     float: left;
 }
-.area-map{
+.area-map {
     position: relative;
     display: block;
     width: 50%;
-    margin-top: 200px;
+    margin-top: 13%;
+    margin-bottom: 100px;
 }
+
 .area-map img{
     width: 90%;
 }
@@ -359,32 +396,6 @@ span{
     left: auto;
 }
 
-/* 지원하기 버튼 */
-.joinus a{
-    position: relative;
-    display: block;
-    margin-top: 60px;
-    margin-left: 70%;
-    width: 25%;
-    padding: 10px 30px;
-    background: none;
-    border: 1px solid#fff;
-    border-radius: 50px;
-    color: #fff;
-    cursor: pointer;
-    text-align: center;
-}
-.joinus p{
-    position: relative;
-    display: block;
-    color: #fff;
-    z-index: 99;
-    margin-top: 40px;
-    margin-left: 40px;
-    font-size: 20px;
-    font-weight: 200;
-    z-index: 99;
-}
 /* 예약, 전화예약 버튼 */
 .bottom-btn{
     position: relative;
@@ -393,7 +404,7 @@ span{
 .bottom-btn .inner{
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0;
 }
@@ -402,7 +413,7 @@ span{
 .left-btn{
     position: relative;
     width: 47%;
-    height: 170px;
+    height: 8.8542vw;
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 20px;
@@ -419,12 +430,14 @@ span{
 .left-txt{
     position: relative;
     display: block;
-    /* background-color: yellow; */
     font-size: 25px;
     font-weight: 800;
     width: 50%;
     height: auto;
     text-align: right;
+}
+.left-txt p{
+    font-size: 25px;
 }
 .left-img{
     position: relative;
@@ -441,7 +454,7 @@ span{
     position: relative;
     display: block;
     width: 47%;
-    height: 170px;
+    height: 8.8542vw;
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 20px;
@@ -535,7 +548,281 @@ footer .inner img{
     font-weight: 100;
     margin-top: 50px;
 }
+.reservation-method-title{
+    display: none;
+}
+
+@media all and (max-width: 1024px) {
+    .titlename {
+        font-size: 3.4458vw;
+        margin-top: 45%;
+    }
+    .explane {
+        font-size: 15px;
+        margin-top: 4%;
+    }
+    .explane02 {
+        font-size: 15px;
+        margin-top: 4%;
+    }
+    .explane002 {
+        font-size: 15px;
+        margin-top: 4%;
+    }
+    .reservation-btn {
+        padding: 15px 55px;
+    }
+    .detail-img03{
+        margin-bottom: 7%;
+    }
+    .area-map img {
+        width: 100%;
+        margin-left: 10%;
+    }
+    .top-txt{
+        font-size: 15px;
+    }
+    .top-txt span {
+        font-size: 30px;
+    }
+    .area-map {
+        margin-top: 130px;
+        margin-bottom: 10%;
+    }
+    .bt-txt span {
+        font-size: 18px;
+    }
+    .bt-txt {
+        font-size: 15px;
+    }
+    
+    .bottom-btn .inner {
+        justify-content: space-around;
+        max-width: 800px;
+    }
+    .left-txt p{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .right-txt p{
+        font-size: 16px;
+        font-weight: 100;
+    }
+    .right-txt span {
+        font-size: 20px;
+        font-weight: 700;
+    }
 
 
-@media all and (max-width: 1080px) {
+}
+
+@media all and (max-width: 835px) {
+    .titlename {
+        position: relative;
+        display: inline-block;
+        font-size: 3.6458vw;
+        margin-top: 45%;
+        margin-left: 24.5%;
+        font-weight: 800;
+        color: #222;
+    }
+}
+@media all and (max-width: 783px) {
+    .titlename {
+        font-size: 3.6458vw;
+        margin-top: 45%;
+        margin-left: 24.5%;
+    }
+    .explane {
+        font-size: 14px;
+        margin-top: 4%;
+    }
+}
+@media all and (max-width: 768px) {
+    .inner{
+        width: 650px;
+    }
+    .detailmain01 {
+        flex-direction: column;
+    }
+    .detail-img{
+        width: 60%;
+        margin-left: 53%;
+        margin-top: -20%;
+    }
+    .detail-img img {
+        padding: 0;
+        width: 70%;
+    }
+    .reservation-btn{
+        margin-bottom: -15%;
+    }
+    .reservation-btn a{
+        font-size: 16px;
+    }
+    .reservation-btn02 {
+        font-size: 16px;
+        padding: 15px 55px;
+    }
+    .reservation-btn03 a{
+        font-size: 16px;
+    }
+    .reservation-btn03 {
+        font-size: 16px;
+        padding: 15px 55px;
+        margin-left: 20.5%;
+        margin-top: 10%;
+    }
+    .detail02-img {
+        position: relative;
+        display: block;
+        width: 40%;
+    }
+    .detail02-img img {
+        left: -10%;
+    }
+    .explane02 {
+        font-size: 14px;
+        margin-top: 4%;
+    }
+    .explane002{
+        font-size: 14px;
+    }
+    .car-txt{
+        width: 90%;
+    }
+    .titlename03 {
+        margin-left: 20.5%;
+    }
+    .explane03 {
+        font-size: 14px;
+        margin-left: 20.5%;
+    }
+    .detail-img03{
+        position: relative;
+        display: block;
+        width: 50%;
+        margin: 0px;
+        margin-top: 32.5%;
+    }
+    .area .inner{
+        max-width: 650px;
+    }
+    .areatitle {
+        margin-top: 100px;
+    }
+    .area-explane {
+        font-size: 14px;
+    }
+    .area-info{
+        font-size: 14px;
+    }
+    .area-map{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .titlename03{
+        margin-top: 25%;
+    }
+    .top-txt span {
+        font-size: 20px;
+    }
+    .top-txt {
+        font-size: 10px;
+    }
+    .bt-txt span {
+        font-size: 15px;
+    }
+    .bt-txt {
+        font-size: 12px;
+    }
+    .right-txt p {
+        font-size: 12px;
+    }
+    .right-txt span {
+        font-size: 15px;
+    }
+    .left-txt p{
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .detailmain02{
+        flex-direction: column;
+    }
+    .detailmain03{
+        flex-direction: column;
+    }
+    .reservation-txt {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+    .titlename {
+        font-size: 6.6458vw;
+        margin-top: 36%;
+        margin-left: 10%;
+    }
+    .titlename03 {
+        font-size: 6.6458vw;
+        margin-top: 20%;
+        margin-left: 10%;
+    }
+    .explane {
+        margin-left: 10%;
+    }
+    .explane03 {
+        margin-left: 10%;
+    }
+    .reservation-btn {
+        margin-left: 10%;
+        margin-bottom: 2%;
+    }
+    .reservation-btn02{
+        margin-bottom: 18%;
+    }
+    .reservation-btn03 {
+        margin-left: 10%;
+        margin-bottom: 25%;
+    }
+    .detail-img {
+        width: 100%;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .detail-img03 {
+        width: 100%;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .detail-img03 img{
+        width: 70%;
+        margin-left: 30%;
+    }
+    .detail02-img img {
+        width: 70%;
+    }
+    .onfoot-txt {
+        width: 100%;
+    }
+    .titlename02 {
+        font-size: 6.6458vw;
+        margin-top: 25%;
+    }
+    .areatitle {
+        margin-top: 100px;
+        font-size: 6vw;
+    }
+    .area .inner{
+        flex-direction: column;
+    }
+    .area-map img {
+        max-width: 150%;
+        width: 150%;
+    }
+    .swiper-slide {
+        flex-direction: column;
+        
+    }
 }
