@@ -59,9 +59,10 @@ header .inner {
 
 /* 전체 컨텐츠 */
 .contents {
-  width: 60%;
+  width: 80%;
   margin: auto;
   margin-top: 130px;
+  transition: all 0.3 ease-in-out;
 }
 .contents .inner {
   display: flex;
@@ -70,7 +71,8 @@ header .inner {
   font-size: 30px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+  color: #111;
 }
 
 /* 회원가입 */
@@ -82,7 +84,7 @@ header .inner {
   height: 50px;
 }
 .content-left-ul li {
-  border: 2px solid #aaa;
+  border: 2px solid #525252;
   border-radius: 30px;
   width: 350px;
   height: 150px;
@@ -90,16 +92,31 @@ header .inner {
   margin-bottom: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  /* cursor: pointer; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.content-left-ul li:hover {
+  border: 2px solid #34c987;
+}
+.content-left-ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .content-left-ul li p {
   width: 200px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #242424;
 }
 .content-left-ul li span {
-  width: 240px !important;
+  width: 180px !important;
   display: inline-block;
+  line-height: 1.3;
+  font-size: 16px;
 }
 
 /* 로그인 */
@@ -108,4 +125,96 @@ header .inner {
 }
 .content-right img {
   height: 30px;
+}
+.login-form {
+  position: relative;
+  width: 450px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.legends {
+  margin: auto;
+  z-index: 999;
+  position: absolute;
+  top: -15px;
+}
+legend {
+  float: left;
+  border: 1px solid #ccc;
+  padding: 8px 15px;
+  border-radius: 10px;
+  margin: 0 5px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+legend:hover {
+  background-color: #06b667;
+}
+legend:active {
+  background-color: #059152;
+}
+
+.userlegend {
+  background-color: #34c987;
+  color: #fff;
+  border: 1px solid #34c987;
+  font-weight: 600;
+}
+input {
+  width: 380px;
+  margin: auto;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+}
+input:hover,
+input:focus {
+  border: 1px solid #34c987;
+}
+.textinput {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.passwordinput {
+  margin-bottom: 10px;
+}
+.find {
+  /* position: absolute;
+  left: 25px;
+  bottom: 10px; */
+  align-self: self-start;
+  margin-left: 25px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #777;
+}
+.find:hover {
+  color: #34c987;
+}
+.submitbtn {
+  padding: 10px 125px;
+  border: 0;
+  background-color: #34c987;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+}
+.submitbtn:hover {
+  background-color: #06b667;
+}
+.submitbtn:active {
+  background-color: #059152;
 }

@@ -128,36 +128,46 @@
                 <a href="#">
                   <p>이용자 회원가입</p>
                   <span>길라잡이 서비스를 이용해 보세요.</span>
-                  <img src="images/login/user.png" alt="이용자" />
                 </a>
+                <img src="images/login/user.png" alt="이용자" />
               </li>
               <li>
                 <a href="#">
                   <p>보호자 회원가입</p>
                   <span>보호자를 위한 회원가입</span>
-                  <img src="images/login/guardian.png" alt="보호자" />
                 </a>
+                <img src="images/login/guardian.png" alt="보호자" />
               </li>
               <li>
                 <a href="#">
                   <p>지원자 회원가입</p>
                   <span>길라잡이의 매니저로 등록해 보세요.</span>
-                  <img src="images/login/volunteer.png" alt="지원자" />
                 </a>
+                <img src="images/login/volunteer.png" alt="지원자" />
               </li>
             </ul>
           </div>
           <div class="content-right" id="login">
             <div class="title">로그인</div>
             <form class="login-form">
-              <legend>이용자</legend>
-              <legend>보호자</legend>
-              <legend>지원자</legend>
-              <input type="text" placeholder="아이디를 입력해주세요." />
-              <input type="password" placeholder="비밀번호를 입력해주세요." />
-              <a href="#">아이디/비밀번호 찾기</a>
+              <div class="legends">
+                <legend class="userlegend">이용자</legend>
+                <legend class="guardlegend">보호자</legend>
+                <legend class="volunteerlegend">지원자</legend>
+              </div>
+              <input
+                type="text"
+                placeholder="아이디를 입력해주세요."
+                class="textinput"
+              />
+              <input
+                type="password"
+                placeholder="비밀번호를 입력해주세요."
+                class="passwordinput"
+              />
+              <a href="#" class="find">아이디/비밀번호 찾기</a>
+              <button type="submit" class="submitbtn">로그인</button>
             </form>
-            <button type="submit">로그인</button>
             <ul class="content-right-ul">
               <li>
                 <a href="#">
