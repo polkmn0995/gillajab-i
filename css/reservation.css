@@ -307,6 +307,7 @@ input[type="checkbox"] {
   background-color: #ccc;
 }
 .drive span {
+  bottom: -8%;
   left: 43.5%;
 }
 .drive img {
@@ -491,6 +492,48 @@ input[type="checkbox"] {
   label {
     width: 10%;
   }
+  .walk span,
+  .no-bathchair1 span,
+  .yes-bathchair1 span,
+  .drive span,
+  .no-bathchair2 span,
+  .yes-bathchair2 span {
+    left: 42%;
+  }
+  .driveronly span {
+    left: 38%;
+  }
+  .driverandmanager span {
+    left: 12%;
+  }
+}
+@media all and (max-width: 995px) {
+  .walk span,
+  .no-bathchair1 span,
+  .yes-bathchair1 span,
+  .drive span,
+  .no-bathchair2 span,
+  .yes-bathchair2 span {
+    left: 41%;
+  }
+  .driveronly span {
+    left: 38%;
+  }
+  .driverandmanager span {
+    width: 50%;
+    left: 27%;
+    bottom: -50%;
+  }
+}
+@media all and (max-width: 995px) {
+  .datetime-title {
+    margin-bottom: 30px;
+  }
+  .datetime input {
+    width: 100%;
+    padding: 9.5px;
+    margin-top: 10px;
+  }
 }
 @media all and (max-width: 860px) {
   .buttons .inner button {
@@ -504,6 +547,37 @@ input[type="checkbox"] {
     font-size: 12px;
   }
 }
+@media all and (max-width: 818px) {
+  .driverandmanager span {
+    width: 55%;
+    left: 25%;
+  }
+}
+@media all and (max-width: 770px) {
+  .walk::after,
+  .no-bathchair1::after,
+  .drive::after,
+  .driver::after {
+    width: 0px;
+  }
+}
+@media all and (max-width: 749px) {
+  .walk span,
+  .no-bathchair1 span,
+  .yes-bathchair1 span,
+  .drive span,
+  .no-bathchair2 span,
+  .yes-bathchair2 span {
+    left: 39.5%;
+  }
+  .driveronly span {
+    left: 33%;
+  }
+  .driverandmanager span {
+    width: 60%;
+    left: 25%;
+  }
+}
 @media all and (max-width: 730px) {
   .buttons {
     margin-top: 120px;
@@ -513,10 +587,59 @@ input[type="checkbox"] {
     font-size: 18px;
     padding: 3% 10%;
   }
+  .driveronly span {
+    left: 31%;
+  }
+}
+@media all and (max-width: 691px) {
+  .driverandmanager span {
+    width: 70%;
+    left: 20%;
+  }
 }
 @media all and (max-width: 630px) {
   .buttons .inner button {
     padding: 3% 8%;
+  }
+}
+@media all and (max-width: 601px) {
+  .walk span,
+  .no-bathchair1 span,
+  .yes-bathchair1 span,
+  .drive span,
+  .no-bathchair2 span,
+  .yes-bathchair2 span {
+    left: 37%;
+  }
+  .driveronly span {
+    left: 30%;
+  }
+  .driverandmanager span {
+    width: 80%;
+    left: 15%;
+  }
+  .reservation-content-top {
+    height: 190px;
+    width: 80%;
+    position: relative;
+  }
+  .walk {
+    position: absolute;
+    left: 49%;
+    top: 47%;
+    transform: translate(-50%, -50%);
+  }
+  .reservation-content-bottom {
+    height: 260px;
+    width: 80%;
+    position: relative;
+  }
+  .drive {
+    position: absolute;
+    left: 49%;
+    top: 47%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
   }
 }
 @media all and (max-width: 540px) {
@@ -552,6 +675,41 @@ input[type="checkbox"] {
   .userbtn {
     display: block;
     width: 100%;
+  }
+}
+@media all and (max-width: 500px) {
+  .caution {
+    margin-bottom: 0;
+  }
+  .datetime {
+    display: flex;
+    flex-direction: column;
+  }
+  .datetime-title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  .datetime input {
+    width: 100%;
+    padding: 9.5px;
+    margin-top: 10px;
+  }
+  .date {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .time {
+    width: 100%;
+  }
+}
+@media all and (max-width: 444px) {
+  .reservation-content-title {
+    width: 200px;
+    line-height: 1.5;
+  }
+  .reservation-content-title::after {
+    width: 170px;
+    bottom: -2px;
   }
 }
 @media all and (max-width: 320px) {
