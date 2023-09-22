@@ -79,14 +79,17 @@ header .inner {
   width: 17%;
   margin-top: 50px;
 }
-.sub-title .announcement a {
-  font-weight: 700;
-  color: #34c987;
-  text-decoration-line: underline;
-  text-decoration-thickness: 3px;
-}
 
 /* 아코디언 */
+.active2{
+  text-decoration-thickness: 3px;
+  color: #34c987;
+  text-decoration-line: underline;
+}
+.active1{
+  font-weight: 700;
+  color: #34c987 !important;
+}
 .accordion {
   width: 100%;
   margin: 30px auto 20px;
@@ -159,7 +162,8 @@ header .inner {
 .submenu li {
   display: block;
   text-decoration: none;
-  color: #d9d9d9;
+  color: #333;
+  line-height: 1.3;
   padding: 12px;
   padding-left: 42px;
   -webkit-transition: all 0.25s ease;
@@ -170,4 +174,102 @@ header .inner {
 .submenu a:hover {
   background: #b63b4d;
   color: #fff;
+}
+
+/* 이용후기 */
+.user-review{
+  display: none;
+}
+.left-info{
+  position: relative;
+  display: block;
+  width: 70%;
+}
+.top-review-txt{
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.top-review-txt p{
+  font-size: 25px;
+  color: #333;
+}
+.number{
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+.top-review-txt p span{
+  font-size: 15px;
+  color: #777777;
+}
+.top-review-txt .all{
+  position: relative;
+  display: block;
+  font-size: 13px;
+  color: #333;
+  padding: 0 0 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.review-info{
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid#ccc;
+}
+.review-info-title{
+  position: relative;
+  display: block;
+  padding: 30px 0 10px 0;
+  font-weight: 500;
+}
+.fa-star{
+  font-size: 13px;
+  float: left;
+}
+.top-star{
+  font-size: 20px;
+  float: none;
+}
+.score{
+  font-size: 13px;
+}
+.manager{
+  position: relative;
+  display: block;
+  padding-top: 20px;
+  font-size: 13px;
+  color: #555;
+}
+.service{
+  position: relative;
+  display: block;
+  padding-top: 3px;
+  font-size: 13px;
+  color: #555;
+}
+.date{
+  position: relative;
+  display: block;
+  font-size: 13px;
+  color: #555;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.review-txt{
+  position: relative;
+  display: block;
+  color: #333;
+  padding-top: 20px;
+  font-size: 15px;
+  line-height: 1.3;
+}
+.right-img{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin-left: 20px;
 }

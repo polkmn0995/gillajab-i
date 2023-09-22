@@ -70,10 +70,10 @@ header .inner {
 .titlename {
   position: relative;
   display: inline-block;
-  font-size: 3.6458vw;
+  font-size: 3.1250vw;
   margin-top: 35%;
   margin-left: 24.5%;
-  font-weight: 800;
+  font-weight: 600;
   color: #222;
 }
 .explane {
@@ -145,11 +145,11 @@ header .inner {
 }
 .titlename02 {
   position: relative;
-  display: inline-block;
-  font-size: 3.6458vw;
+  display: inline-block;  
+  font-size: 3.1250vw;
   margin-top: 35%;
   margin-left: 10%;
-  font-weight: 800;
+  font-weight: 600;
   color: #222;
 }
 .explane02 {
@@ -205,10 +205,10 @@ span {
 .titlename03 {
   position: relative;
   display: inline-block;
-  font-size: 3.6458vw;
+  font-size: 3.1250vw;
   margin-top: 35%;
   margin-left: 24.5%;
-  font-weight: 800;
+  font-weight: 600;
   color: #222;
 }
 .reservation-btn03 {
@@ -275,7 +275,7 @@ span {
   display: inline-block;
   font-size: 2.6042vw;
   margin-top: 30%;
-  font-weight: 800;
+  font-weight: 600;
   color: #222;
 }
 .area-info {
