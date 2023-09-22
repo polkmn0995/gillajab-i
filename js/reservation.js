@@ -35,6 +35,14 @@ window.addEventListener("load", function () {
   // 예약하기 버튼
   let reservateBtn = document.querySelector("#reservatebtn");
 
+  // ==
+  const walkCheckbox = document.getElementById("walk");
+  const noBathChair1 = document.querySelector(".no-bathchair1");
+  const yesBathChair1 = document.querySelector(".yes-bathchair1");
+  const driveCheckbox = document.getElementById("drive");
+  const driverDiv = document.querySelector(".driver");
+  const bathChairDiv = document.querySelector(".bathchair");
+
   // 이용자로 예약하기 버튼을 누를 시 아래에 있던 보호자 정보 섹션이 숨겨진다.
   userBtn.addEventListener("click", function () {
     guardianInfo.style.display = "none";
@@ -159,4 +167,41 @@ window.addEventListener("load", function () {
       }
     }
   });
+
+  function updateVisibility() {
+    if (window.innerWidth <= 600) {
+      if (walkCheckbox.checked) {
+        noBathChair1.style.display = "block";
+        yesBathChair1.style.display = "block";
+      } else {
+        noBathChair1.style.display = "none";
+        yesBathChair1.style.display = "none";
+      }
+
+      if (driveCheckbox.checked) {
+        driverDiv.style.display = "block";
+        bathChairDiv.style.display = "block";
+      } else {
+        driverDiv.style.display = "none";
+        bathChairDiv.style.display = "none";
+      }
+    } else {
+      // 화면 너비가 600px 이상인 경우 항상 표시
+      noBathChair1.style.display = "flex";
+      yesBathChair1.style.display = "flex";
+      driverDiv.style.display = "block";
+      bathChairDiv.style.display = "block";
+    }
+  }
+
+  // walkCheckbox와 driveCheckbox의 클릭 이벤트에 대한 이벤트 리스너 추가
+  walkCheckbox.addEventListener("click", updateVisibility);
+  driveCheckbox.addEventListener("click", updateVisibility);
+
+  // 페이지 로드 시 및 화면 크기 변경 시 가시성 업데이트
+  window.addEventListener("load", updateVisibility);
+  window.addEventListener("resize", updateVisibility);
+
+  // 초기 화면 크기에 따라 가시성 설정
+  updateVisibility();
 });

@@ -1,15 +1,5 @@
 // ============================================
-// 헤더매뉴바 스크롤시 변화
-$(document).ready(function() {
-  $(window).scroll(function() {
-    // Check the scroll position
-    if ($(this).scrollTop() > 800) {
-      $('.heaader').addClass('header-active');
-    } else {
-      $('.navbar').removeClass('.header-active');
-    }
-  });
-});
+// ========================
 // 스크롤 시 상단으로 이동
 // 문서가 로드될 때 실행되는 함수
 $(function () {
@@ -39,6 +29,29 @@ $(function () {
     return false; // 이벤트 전파 방지
   });
 });
+  // 수동스크롤할때 각섹션에 도착했을때 모달메뉴의 섹상 변경
+  $(document).ready(function() {
+    
+    $(
+  window).scroll(function() {
+      // Get the scroll position with a slight offset
+      var scrollPos = $(this).scrollTop() + 50; // Adjust the offset as needed
+  
+      // Iterate through each section and determine the active section
+      $('section').each(function() {
+        var sectionOffset = $(this).offset().top;
+        var sectionHeight = $(this).outerHeight();
+        
+  if (scrollPos >= sectionOffset && scrollPos < sectionOffset + sectionHeight) {
+          var targetId = $(this).attr('id');
+          $('.modal-menu a').removeClass('active');
+          $('.modal-menu a[href="#' + targetId + '"]').addClass('active');
+        }
+      });
+    });
+  });
+  
+  // ==============================================================================
 window.addEventListener("load", function () {
   // AOS적용
   AOS.init();
@@ -57,6 +70,39 @@ window.addEventListener("load", function () {
       console.error("Target element not found");
     }
   }
+  // 헤더바 스크롤시 색강 변경
+  document.addEventListener('scroll', function () {
+    var navbar = document.getElementById('navbar');
+  
+    // Change the background color when scrolling down
+    if (window.scrollY > 100) { // Adjust the scroll position as needed
+      navbar.classList.add('active');
+    } else {
+      navbar.classList.remove('active');
+    }
+  });
+  // 스크롤시 헤더 메뉴바 컬러변경
+  document.addEventListener('scroll', function () {
+    var navbar = document.getElementById('navbar');
+  
+    // Change the background color when scrolling down
+    if (window.scrollY > 100) { // Adjust the scroll position as needed
+      navbar.classList.add('active');
+    } else {
+      navbar.classList.remove('active');
+    }
+  });
+  // 헤더의 메뉴 글자 컬러변경
+  document.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+  
+    // Change the text color when scrolling down
+    if (window.scrollY > 100) { // Adjust the scroll position as needed
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
   // ==============================================================
   // 비주얼 슬라이드
   // 1.슬라이드 (.swiper-slide)개수 만큼 li생성하기v
@@ -211,21 +257,21 @@ window.addEventListener("load", function () {
     });
   });
   // Get all the menu links
-  const menuLinks = document.querySelectorAll(".menu-link");
+  // const menuLinks = document.querySelectorAll(".menu-link");
 
   // Add a click event listener to each menu link
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
+  // menuLinks.forEach((link) => {
+  //   link.addEventListener("click", (event) => {
       // Prevent the default link behavior (page scroll)
-      event.preventDefault();
+      // event.preventDefault();
 
       // Remove the "active" class from all menu links
-      menuLinks.forEach((link) => {
-        link.classList.remove("active");
-      });
+      // menuLinks.forEach((link) => {
+      //   link.classList.remove("active");
+      // });
 
       // Add the "active" class to the clicked menu link
-      link.classList.add("active");
-    });
-  });
+  //     link.classList.add("active");
+  //   });
+  // });
 });
