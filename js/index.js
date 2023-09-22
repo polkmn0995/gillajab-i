@@ -1,4 +1,5 @@
 // ============================================
+// ========================
 // 헤더매뉴바 스크롤시 변화
 $(document).ready(function() {
   $(window).scroll(function() {
@@ -12,7 +13,7 @@ $(document).ready(function() {
 });
 // 스크롤 시 상단으로 이동
 // 문서가 로드될 때 실행되는 함수
-$(function () 
+$(function () {
 
   // 스크롤 이벤트 처리
   $(window).scroll(function () {
