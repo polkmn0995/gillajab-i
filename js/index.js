@@ -1,57 +1,54 @@
+// ============================================
+// 헤더매뉴바 스크롤시 변화
+$(document).ready(function() {
+  $(window).scroll(function() {
+    // Check the scroll position
+    if ($(this).scrollTop() > 800) {
+      $('.heaader').addClass('header-active');
+    } else {
+      $('.navbar').removeClass('.header-active');
+    }
+  });
+});
+// 스크롤 시 상단으로 이동
+// 문서가 로드될 때 실행되는 함수
+$(function () 
+
+  // 스크롤 이벤트 처리
+  $(window).scroll(function () {
+    // 스크롤이 800 이상일 때
+    if ($(this).scrollTop() > 800) {
+      // 모달 요소들을 표시
+      $(".modal-top").fadeIn();
+      $(".modal").fadeIn();
+    } else {
+      // 모달 요소들을 숨김
+      $(".modal-top").fadeOut();
+      $(".modal").fadeOut();
+    }
+  });
+  // 모달 상단 버튼 클릭 시
+  $(".modal-top").click(function () {
+    // 페이지 상단으로 부드럽게 스크롤 이동
+    $("html, body").animate(
+      {
+        scrollTop: 0, // 페이지 상단으로 이동
+      },
+      400 // 애니메이션 속도 (400 milliseconds)
+    );
+    return false; // 이벤트 전파 방지
+  });
+});
 window.addEventListener("load", function () {
   // AOS적용
   AOS.init();
-  // ============================================
-  // 스크롤 시 상단으로 이동
-  // 문서가 로드될 때 실행되는 함수
-  $(function () {
-    // 스크롤 이벤트 처리
-    $(window).scroll(function () {
-      // 스크롤이 800 이상일 때
-      if ($(this).scrollTop() > 800) {
-        // 모달 요소들을 표시
-        $(".modal-top").fadeIn();
-        $(".modal").fadeIn();
-      } else {
-        // 모달 요소들을 숨김
-        $(".modal-top").fadeOut();
-        $(".modal").fadeOut();
-      }
-    });
-    // 모달 메뉴 클릭시  mouseover해도 나타나는 색깔 유지
-    document.addEventListener('DOMContentLoaded', function () {
-      var modalItems = document.querySelectorAll('.modal li a');
-    
-      modalItems.forEach(function (modalItems) {
-        modalItems.addEventListener('click', function (e) {
-          e.preventDefault();
-          this.classList.toggle('active');
-        });
-      });
-    });
-    // 모달 상단 버튼 클릭 시
-    $(".modal-top").click(function () {
-      // 페이지 상단으로 부드럽게 스크롤 이동
-      $("html, body").animate(
-        {
-          scrollTop: 0, // 페이지 상단으로 이동
-        },
-        400 // 애니메이션 속도 (400 milliseconds)
-      );
-      return false; // 이벤트 전파 방지
-    });
-  });
   // a태그 클릭시 해당페이지의 해당위치값 정해주는 기능
   const hash = window.location.hash.substring(1); // URL에서 # 제거
-
   if (hash) {
     console.log("Hash found:", hash); // 확인을 위해 콘솔에 출력
-
     const targetElement = document.getElementById(hash);
-
     if (targetElement) {
       console.log("Target element found:", targetElement); // 확인을 위해 콘솔에 출력
-
       window.scrollTo({
         top: targetElement.offsetTop,
         behavior: "smooth",
@@ -78,7 +75,6 @@ window.addEventListener("load", function () {
   // 5.페이지네이션 관련(코딩으로 생성한 li태그 저장)
   const swVisualPgLi = document.querySelectorAll(".sw-visual-pg-list > li");
   console.log(swVisualPgLi);
-
   var visualswiper = new Swiper(".sw-visual", {
     effect: "fade",
     // fadeEffect: {
@@ -192,32 +188,44 @@ window.addEventListener("load", function () {
       },
     },
   });
-
   function getDirection() {
     var windowWidth = window.innerWidth;
     var direction = window.innerWidth <= 760 ? "vertical" : "horizontal";
-
     return direction;
   }
   // ======================================================================================================================
   // '서비스소개'
-// JavaScript 파일에서 메뉴 항목과 섹션 간의 스크롤 연결
-document.addEventListener('DOMContentLoaded', function () {
-  var menuItems = document.querySelectorAll('.modal-menu li a');
-
+  // JavaScript 파일에서 메뉴 항목과 섹션 간의 스크롤 연결
+  var menuItems = document.querySelectorAll(".modal-menu li a");
   menuItems.forEach(function (menuItem) {
-    menuItem.addEventListener('click', function (e) {
+    menuItem.addEventListener("click", function (e) {
       e.preventDefault();
-
-      var targetSectionId = this.getAttribute('data-section');
+      var targetSectionId = this.getAttribute("data-section");
       var targetSection = document.getElementById(targetSectionId);
-
-      // 부드러운 스크롤을 사용하여 해당 섹션으로 이동
-      window.scrollTo({
-        top: targetSection.offsetTop,
-        behavior: 'smooth'
+      // 해당 섹션으로 스크롤
+      targetSection.scrollIntoView({
+        behavior: "smooth",
       });
+      // 클릭한 메뉴 항목에 'active' 클래스 추가
+      // 클릭한 메뉴 항목에 포커스 주기
     });
   });
-});
+  // Get all the menu links
+  const menuLinks = document.querySelectorAll(".menu-link");
+
+  // Add a click event listener to each menu link
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      // Prevent the default link behavior (page scroll)
+      event.preventDefault();
+
+      // Remove the "active" class from all menu links
+      menuLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      // Add the "active" class to the clicked menu link
+      link.classList.add("active");
+    });
+  });
 });
