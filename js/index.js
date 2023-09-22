@@ -1,7 +1,46 @@
 window.addEventListener("load", function () {
-    // AOS적용
-    AOS.init();
-    // ============================================
+  // AOS적용
+  AOS.init();
+  // ============================================
+  // 스크롤 시 상단으로 이동
+  // 문서가 로드될 때 실행되는 함수
+  $(function () {
+    // 스크롤 이벤트 처리
+    $(window).scroll(function () {
+      // 스크롤이 800 이상일 때
+      if ($(this).scrollTop() > 800) {
+        // 모달 요소들을 표시
+        $(".modal-top").fadeIn();
+        $(".modal").fadeIn();
+      } else {
+        // 모달 요소들을 숨김
+        $(".modal-top").fadeOut();
+        $(".modal").fadeOut();
+      }
+    });
+    // 모달 메뉴 클릭시  mouseover해도 나타나는 색깔 유지
+    document.addEventListener('DOMContentLoaded', function () {
+      var modalItems = document.querySelectorAll('.modal li a');
+    
+      modalItems.forEach(function (modalItems) {
+        modalItems.addEventListener('click', function (e) {
+          e.preventDefault();
+          this.classList.toggle('active');
+        });
+      });
+    });
+    // 모달 상단 버튼 클릭 시
+    $(".modal-top").click(function () {
+      // 페이지 상단으로 부드럽게 스크롤 이동
+      $("html, body").animate(
+        {
+          scrollTop: 0, // 페이지 상단으로 이동
+        },
+        400 // 애니메이션 속도 (400 milliseconds)
+      );
+      return false; // 이벤트 전파 방지
+    });
+  });
   // a태그 클릭시 해당페이지의 해당위치값 정해주는 기능
   const hash = window.location.hash.substring(1); // URL에서 # 제거
 
@@ -78,82 +117,107 @@ window.addEventListener("load", function () {
     });
   });
   // ==========================================================
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener("DOMContentLoaded", function () {
     var skrollrInstance = skrollr.init();
   });
   // Initial call to set active slide
   // updateActiveSlide();
   // =============================================================
   // 앱서비스
-  var swiperMobile = new Swiper('.swiper-container.swiper-full-mobile', {
+  var swiperMobile = new Swiper(".swiper-container.swiper-full-mobile", {
     slidesPerView: 5,
     spaceBetween: 50,
-    slideToClickedSlide:true,
-    centeredSlides:true,
-   pagination: {
-      el: '.swiper-pagination',
+    slideToClickedSlide: true,
+    centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
       clickable: true,
     },
-    loop:true,
-      autoplay: {
-        delay: 3000,
+    loop: true,
+    autoplay: {
+      delay: 3000,
     },
     disableOnInteraction: false,
-      keyboard: {
+    keyboard: {
       enabled: true,
       onlyInViewport: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-     breakpoints: {
-          
-          640: {
-            freemode:true,
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          320: {
-            freemode:true,
-            slidesPerView: 3,
-            spaceBetween: 20,
-          }
-    }
+    breakpoints: {
+      640: {
+        freemode: true,
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      320: {
+        freemode: true,
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
   });
   // ================================================================
   //이용후기
-      var reviewswiper = new Swiper('.reviewswiper', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      centeredSlides: true,
-      loop: true,
-      autoplay: {
-        delay: 3000, // 3초마다 자동 슬라이딩
+  var reviewswiper = new Swiper(".reviewswiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 3000, // 3초마다 자동 슬라이딩
+    },
+    disableOnInteraction: false,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    speed: 800, // 슬라이드 이동 속도 (밀리초)
+    grabCursor: true, // 마우스 커서를 손가락 모양으로 변경
+    preventInteractionOnTransition: true, // 슬라이딩 중에 사용자의 상호 작용을 방지하여 끊김 없는 슬라이딩
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    direction: getDirection(),
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
+    on: {
+      resize: function () {
+        reviewswiper.changeDirection(getDirection());
       },
-      speed: 800, // 슬라이드 이동 속도 (밀리초)
-  grabCursor: true, // 마우스 커서를 손가락 모양으로 변경
-  preventInteractionOnTransition: true, // 슬라이딩 중에 사용자의 상호 작용을 방지하여 끊김 없는 슬라이딩
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      direction: getDirection(),
-      // navigation: {
-      //   nextEl: '.swiper-button-next',
-      //   prevEl: '.swiper-button-prev',
-      // },
-      on: {
-        resize: function () {
-          reviewswiper.changeDirection(getDirection());
-        },
-      },
+    },
+  });
+
+  function getDirection() {
+    var windowWidth = window.innerWidth;
+    var direction = window.innerWidth <= 760 ? "vertical" : "horizontal";
+
+    return direction;
+  }
+  // ======================================================================================================================
+  // '서비스소개'
+// JavaScript 파일에서 메뉴 항목과 섹션 간의 스크롤 연결
+document.addEventListener('DOMContentLoaded', function () {
+  var menuItems = document.querySelectorAll('.modal-menu li a');
+
+  menuItems.forEach(function (menuItem) {
+    menuItem.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      var targetSectionId = this.getAttribute('data-section');
+      var targetSection = document.getElementById(targetSectionId);
+
+      // 부드러운 스크롤을 사용하여 해당 섹션으로 이동
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: 'smooth'
+      });
     });
-
-    function getDirection() {
-      var windowWidth = window.innerWidth;
-      var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
-
-      return direction;
-    }
+  });
+});
 });

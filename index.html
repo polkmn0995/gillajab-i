@@ -58,6 +58,7 @@
       name="naver-site-verification"
       content="05bd9d8a99acfd17d0037a7f44e7f96f3fe5653e"
     />
+    <link rel="canonical" href="http://www.mysite.com/article/article1.html" />
     <!-- fontawesome -->
     <link
       rel="stylesheet"
@@ -97,6 +98,22 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="wrap">
+      <!-- modal -->
+      <div class="modal">
+        <ul class="modal-menu">
+          <li><a href="#introduce" data-section="introduce">서비스소개</a></li>
+          <li><a href="#banner" data-section="banner">배너</a></li>
+          <li>
+            <a href="#app-service" data-section="app-service"
+              >길라잡이<br />APP안내</a
+            >
+          </li>
+          <li><a href="#review" data-section="review">이용후기 바로가기</a></li>
+        </ul>
+      </div>
+      <div class="modal-top">
+        <i class="fa-solid fa-eject"></i>
+      </div>
       <!-- header -->
       <header>
         <div class="inner">
@@ -208,13 +225,10 @@
         </div>
       </section>
       <!-- introduce -->
-      <section class="introduce">
+      <section class="introduce" id="introduce">
         <div class="inner">
           <div class="introduce-txt">
-            <h2>
-              더 편리한 프리미엄<br />
-              동행 서비스, 길라잡이
-            </h2>
+            <h2>길라잡이 서비스 소개</h2>
             <p>
               교육을 이수한 매니저가 특수차량으로<br />
               원하는 위치까지 안전하고 편안하게 함께 합니다.
@@ -241,7 +255,7 @@
         </div>
       </section>
       <!-- banner -->
-      <section class="banner">
+      <section class="banner" id="banner">
         <div class="bg">
           <div
             class="bg01"
@@ -270,8 +284,8 @@
             >
               <span>더 안전하게</span><br />
               <br />
-              정기적인 차내 소독과 전 탑승 보험 적용, 실시간 위치 <br>전송으로 안심할
-              수 있습니다.
+              정기적인 차내 소독과 전 탑승 보험 적용, 실시간 위치 <br />전송으로
+              안심할 수 있습니다.
             </p>
           </div>
           <div
@@ -303,13 +317,14 @@
             >
               <span>더 정직하게</span><br />
               <br />
-              승차거부 없는 바로 배차와 상호 평가 시스템으로 마음 편히 이동하세요.
+              승차거부 없는 바로 배차와 상호 평가 시스템으로 마음 편히
+              이동하세요.
             </p>
           </div>
         </div>
       </section>
       <!-- app service -->
-      <section class="app-service inner">
+      <section class="app-service inner" id="app-service">
         <div class="app-service-box">
           <div class="app-service-txt">
             <p>
@@ -338,7 +353,10 @@
                 </p>
               </div>
               <div class="swiper-slide">
-                <img src="images/index/app-reservation-white.png" alt="mobilelist" />
+                <img
+                  src="images/index/app-reservation-white.png"
+                  alt="mobilelist"
+                />
                 <p>
                   <span>서비스 소개</span><br />
                   다양한 후기들을 보고<br />
@@ -346,7 +364,10 @@
                 </p>
               </div>
               <div class="swiper-slide">
-                <img src="images/index/app-reservation2-white.png" alt="mobilelist" />
+                <img
+                  src="images/index/app-reservation2-white.png"
+                  alt="mobilelist"
+                />
                 <p>
                   <span>이용자 맞춤 예약</span><br />
                   사전 질문을 통해 이용자 맞춤<br />
@@ -371,7 +392,7 @@
         </div>
       </section>
       <!-- review -->
-      <section class="review">
+      <section class="review" id="review">
         <div class="inner">
           <div class="review-txt">
             <h2>
@@ -432,16 +453,20 @@
       </section>
       <!-- bt-banner -->
       <section class="bt-banner">
-          <a href="login.html" class="btb-left">
-            <img src="images/index/bt-banner.png" alt="btbanner">
-            <p>당신의 지원을 기다립니다.</p>
-            <button>드라이버 지원하기 &nbsp;<i class="fa-solid fa-angle-right"></i></button>
-          </a>
-          <a href="login.html" class="btb-right">
-            <img src="images/index/bt-banner2.png" alt="btbanner">
-            <p>당신의 지원을 기다립니다.</p>
-            <button>동행매니저 지원하기 &nbsp;<i class="fa-solid fa-angle-right"></i></button>
-          </a>
+        <a href="login.html" class="btb-left">
+          <img src="images/index/bt-banner.png" alt="btbanner" />
+          <p>당신의 지원을 기다립니다.</p>
+          <button>
+            드라이버 지원하기 &nbsp;<i class="fa-solid fa-angle-right"></i>
+          </button>
+        </a>
+        <a href="login.html" class="btb-right">
+          <img src="images/index/bt-banner2.png" alt="btbanner" />
+          <p>당신의 지원을 기다립니다.</p>
+          <button>
+            동행매니저 지원하기 &nbsp;<i class="fa-solid fa-angle-right"></i>
+          </button>
+        </a>
       </section>
       <!-- footer -->
       <footer>

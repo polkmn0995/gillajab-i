@@ -5,9 +5,12 @@ window.addEventListener("load", function () {
 
   let legends = [userlegend, guardlegend, volunteerlegend];
   let form = document.querySelector("form"); // form 요소 선택
-  let submit = document.querySelector(".submitbtn");
   let usernameInput = document.querySelector(".textinput");
   let passwordInput = document.querySelector(".passwordinput");
+
+  let naver = document.querySelector(".naver");
+  let kakao = document.querySelector(".kakao");
+  let google = document.querySelector(".google");
 
   legends.forEach((legend) => {
     legend.addEventListener("click", function () {
@@ -48,13 +51,32 @@ window.addEventListener("load", function () {
           break;
       }
 
-      alert(message);
+      if (usernameInput.value === "") {
+        alert("아이디를 입력해 주세요.");
+      } else if (passwordInput.value === "") {
+        alert("비밀번호를 입력해 주세요.");
+      } else {
+        alert(message);
 
-      // 아이디와 비밀번호 입력 필드를 지움
-      usernameInput.value = "";
-      passwordInput.value = "";
+        // 아이디와 비밀번호 입력 필드를 지움
+        usernameInput.value = "";
+        passwordInput.value = "";
+      }
     } else {
       alert("선택된 역할이 없습니다. 역할을 선택해 주세요.");
     }
+  });
+
+  naver.addEventListener("click", function () {
+    confirm("네이버 아이디로 로그인 하시겠습니까?");
+    alert("로그인 되었습니다.");
+  });
+  kakao.addEventListener("click", function () {
+    confirm("카카오톡 아이디로 로그인 하시겠습니까?");
+    alert("로그인 되었습니다.");
+  });
+  google.addEventListener("click", function () {
+    confirm("구글 아이디로 로그인 하시겠습니까?");
+    alert("로그인 되었습니다.");
   });
 });
