@@ -1,5 +1,4 @@
 @charset "utf-8";
-/* font-family: "TheJamsil5Bold","Noto Sans KR", sans-serif; */
 
 .inner {
   position: relative;
@@ -16,7 +15,7 @@ button {
 }
 input:not([type="checkbox"], [type="radio"]) {
   width: 790px;
-  padding: 1%;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
   clear: both;
@@ -45,6 +44,7 @@ header {
   height: 60px;
   z-index: 9999;
   top: 0;
+  background-color: #fff;
 }
 header .inner {
   display: flex;
@@ -181,7 +181,7 @@ header .inner {
 .time {
   width: 49%;
   float: right;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 /* 이용 형식 선택 아이콘 */
@@ -390,9 +390,11 @@ input[type="checkbox"] {
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .reservation-content-top-mobile {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .reservation-content-mobile img {
   width: 40px;
@@ -406,7 +408,23 @@ input[type="checkbox"] {
 .driverandmanager-mobile,
 .no-bathchair2-mobile,
 .yes-bathchair2-mobile {
-  padding: 15px;
+  padding: 15px 15px 15px 30px;
+}
+.no-bathchair1-mobile img,
+.yes-bathchair1-mobile img,
+.driveronly-mobile img,
+.driverandmanager-mobile img,
+.no-bathchair2-mobile img,
+.yes-bathchair2-mobile img {
+  opacity: 0.6;
+}
+.driverandmanager-mobile img {
+  width: 55px;
+}
+.walk-mobile,
+.drive-mobile2,
+.driverandmanager-mobile {
+  border-bottom: 1px solid #ccc;
 }
 
 /* 보호자 정보 */
@@ -441,7 +459,7 @@ input[type="checkbox"] {
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 30px;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 .female {
   padding-right: 550px;
@@ -482,7 +500,7 @@ input[type="checkbox"] {
   display: block;
   order: 7;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 90px;
   padding: 1% 3%;
   background-color: #34c987;
   border-radius: 10px;
@@ -573,6 +591,17 @@ input[type="checkbox"] {
     margin-top: 10px;
   }
 }
+@media all and (max-width: 926px) {
+  input:not([type="checkbox"], [type="radio"]) {
+    width: 85%;
+  }
+  .female {
+    padding-right: 450px;
+  }
+  label {
+    width: 14%;
+  }
+}
 @media all and (max-width: 860px) {
   .buttons .inner button {
     font-size: 18px;
@@ -584,11 +613,19 @@ input[type="checkbox"] {
   .caution .inner p {
     font-size: 12px;
   }
+  .female {
+    padding-right: 400px;
+  }
 }
 @media all and (max-width: 818px) {
   .driverandmanager span {
     width: 60%;
     left: 25%;
+  }
+}
+@media all and (max-width: 778px) {
+  .female {
+    padding-right: 370px;
   }
 }
 @media all and (max-width: 770px) {
@@ -629,10 +666,34 @@ input[type="checkbox"] {
     left: 31%;
   }
 }
+@media all and (max-width: 729px) {
+  .female {
+    padding-right: 330px;
+  }
+}
 @media all and (max-width: 691px) {
   .driverandmanager span {
     width: 80%;
     left: 15%;
+  }
+}
+@media all and (max-width: 663px) {
+  .female {
+    padding-right: 260px;
+  }
+}
+@media all and (max-width: 650px) {
+  input:not([type="checkbox"], [type="radio"]) {
+    width: 81.5%;
+  }
+  label {
+    width: 12%;
+    margin-right: 5%;
+  }
+}
+@media all and (max-width: 638px) {
+  .female {
+    padding-right: 230px;
   }
 }
 @media all and (max-width: 630px) {
@@ -651,6 +712,11 @@ input[type="checkbox"] {
     margin-bottom: 50px;
   }
 }
+@media all and (max-width: 580px) {
+  .female {
+    padding-right: 200px;
+  }
+}
 @media all and (max-width: 540px) {
   .buttons {
     margin-top: 100px;
@@ -658,6 +724,23 @@ input[type="checkbox"] {
   }
   .buttons .inner button {
     padding: 3% 5%;
+  }
+}
+@media all and (max-width: 530px) {
+  input:not([type="checkbox"], [type="radio"]) {
+    width: 80%;
+  }
+  label {
+    width: 12%;
+    margin-right: 5.5%;
+  }
+  .female {
+    padding-right: 170px;
+  }
+}
+@media all and (max-width: 522px) {
+  .female {
+    padding-right: 170px;
   }
 }
 @media all and (max-width: 520px) {
@@ -695,7 +778,7 @@ input[type="checkbox"] {
     flex-direction: column;
   }
   .datetime-title {
-    margin-top: 60px;
+    margin-top: 80px;
     margin-bottom: 30px;
   }
   .datetime input {
@@ -710,6 +793,43 @@ input[type="checkbox"] {
   .time {
     width: 100%;
   }
+  input:not([type="checkbox"], [type="radio"]) {
+    width: 80%;
+  }
+  label {
+    width: 12%;
+    margin-right: 5.5%;
+  }
+}
+@media all and (max-width: 492px) {
+  input:not([type="checkbox"], [type="radio"]) {
+    width: 80%;
+  }
+  label {
+    width: 12%;
+    margin-right: 5.5%;
+  }
+}
+@media all and (max-width: 476px) {
+  .driverandmanager-mobile img {
+    margin-bottom: 15px;
+  }
+  input:not([type="checkbox"], [type="radio"]) {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  #male {
+    margin-left: 20px;
+  }
+  .female {
+    padding-right: 130px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .reservatebtn {
+    margin-top: 60px;
+  }
 }
 @media all and (max-width: 444px) {
   .reservation-content-title {
@@ -719,6 +839,29 @@ input[type="checkbox"] {
   .reservation-content-title::after {
     width: 170px;
     bottom: -2px;
+  }
+}
+@media all and (max-width: 435px) {
+  .female {
+    padding-right: 110px;
+  }
+}
+@media all and (max-width: 395px) {
+  .female {
+    padding-right: 90px;
+  }
+}
+@media all and (max-width: 382px) {
+  #male {
+    margin-left: 30px;
+  }
+  .female {
+    padding-right: 80px;
+  }
+}
+@media all and (max-width: 356px) {
+  .female {
+    padding-right: 50px;
   }
 }
 @media all and (max-width: 320px) {

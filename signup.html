@@ -83,7 +83,7 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/common.css" />
     <script src="js/login.js"></script>
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/signup.css" />
   </head>
 
   <body>
@@ -122,39 +122,28 @@
       <!-- contents -->
       <div class="contents">
         <div class="inner">
-          <div class="title">로그인</div>
-          <form class="login-form">
-            <div class="legends">
-              <legend class="userlegend">이용자</legend>
-              <legend class="guardlegend">보호자</legend>
-              <legend class="volunteerlegend">지원자</legend>
-            </div>
-            <input
-              type="text"
-              placeholder="아이디를 입력해주세요."
-              class="textinput"
-            />
-            <input
-              type="password"
-              placeholder="비밀번호를 입력해주세요."
-              class="passwordinput"
-            />
-            <a href="#" class="find">아이디/비밀번호 찾기</a>
-            <button type="submit" class="submitbtn">로그인</button>
-            <button type="submit" class="gosignup">회원가입</button>
-          </form>
+          <div class="title">회원가입</div>
           <ul class="content-ul">
-            <li class="naver">
-              <img src="images/login/naver.png" alt="네이버 아이콘" />
-              <p>네이버 아이디로 로그인</p>
+            <li>
+              <a href="#">
+                <p>이용자 회원가입</p>
+                <span>길라잡이 서비스를 이용해 보세요.</span>
+              </a>
+              <img src="images/login/user.png" alt="이용자" />
             </li>
-            <li class="kakao">
-              <img src="images/login/kakaotalk.png" alt="카카오톡 아이콘" />
-              <p>카카오톡 아이디로 로그인</p>
+            <li>
+              <a href="#">
+                <p>보호자 회원가입</p>
+                <span>보호자를 위한 회원가입</span>
+              </a>
+              <img src="images/login/guardian.png" alt="보호자" />
             </li>
-            <li class="google">
-              <img src="images/login/google.png" alt="구글 아이콘" />
-              <p>구글 아이디로 로그인</p>
+            <li>
+              <a href="#">
+                <p>지원자 회원가입</p>
+                <span>길라잡이의 매니저로 등록해 보세요.</span>
+              </a>
+              <img src="images/login/volunteer.png" alt="지원자" />
             </li>
           </ul>
         </div>

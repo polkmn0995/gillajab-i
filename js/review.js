@@ -65,7 +65,7 @@ window.addEventListener("load", function () {
     announcement.click();
 
     // 게시글 작성 폼
-    const writeBtn = document.querySelector(".write.btn")
+    const writeBtn = document.querySelector(".write-btn")
     const postForm = document.querySelector(".post-form")
     const postTitleInput = document.getElementById("postTitle");
     const postContentInput = document.getElementById("postContent");
@@ -77,10 +77,14 @@ window.addEventListener("load", function () {
     const searchBtn = document.getElementById("searchBtn");
     const clearBtn = document.getElementById("clearBtn");
     
-    // 리뷰 작성하기 버튼
-    writeBtn.addEventListener("click", function(){
+    // 리뷰 작성하기 버튼 클릭 시 토글로 postForm 요소의 표시 여부를 변경
+writeBtn.addEventListener("click", function () {
+    if (postForm.style.display === "block") {
+        postForm.style.display = "none";
+    } else {
         postForm.style.display = "block";
-    })
+    }
+});
 
 // 저장된 게시글 배열
 let posts = [];

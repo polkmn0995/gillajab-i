@@ -9,6 +9,7 @@ header {
   width: 100%;
   height: 60px;
   z-index: 9999;
+  background-color: #fff;
 }
 header .inner {
   display: flex;
@@ -792,7 +793,7 @@ footer .inner {
     margin-bottom: -15%;
     margin-left: 10%;
     padding: 15px 60px;
-}
+  }
   .titlename {
     font-size: 6.6458vw;
     margin-top: 36%;
@@ -809,7 +810,7 @@ footer .inner {
   .explane03 {
     margin-left: 10%;
   }
-rvation-btn {
+  rvation-btn {
     margin-left: 10%;
     margin-bottom: 2%;
   }
@@ -843,17 +844,17 @@ rvation-btn {
   }
   .detail02-img {
     width: 70%;
-}
-.explane02 {
-  font-size: 13px;
-}
-.explane002 {
-  font-size: 13px;
-}
-.reservation-btn02 {
-  margin-top: 15%;
-  padding: 15px 60px;
-}
+  }
+  .explane02 {
+    font-size: 13px;
+  }
+  .explane002 {
+    font-size: 13px;
+  }
+  .reservation-btn02 {
+    margin-top: 15%;
+    padding: 15px 60px;
+  }
   .onfoot-txt {
     width: 80%;
   }
@@ -892,111 +893,113 @@ rvation-btn {
     margin-top: 5%;
     line-height: 2;
   }
-.area-map img {
-  width: 100%;
-}
-.area-explane {
-  margin-top: 5%;
-  line-height: 1.5;
-}
-.area-info {
-  margin-top: 5%;
-  line-height: 2;
-}
-.area-map {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.img{
-  width: 100%;
-  border-bottom: 1px solid #ccc
-}
-.img img {
-  width: 100%;
-  padding: 65px 0 0 0;
-}
-.reservation-method-title {
-  display: block;
-  position: relative;
-  margin: 0 auto;
-  text-align: center;
-}
-.reservation-method-title > p:nth-child(1){
-  padding-top: 20%;
-  margin-left: 10%;
-  font-size: 6vw;
-  font-weight: 600;
-}
-.reservation-method-title > p:nth-child(2){
-  margin-left: 10%;
-  margin-top: 3%;
-  font-size: 15px;
-}
-.reservation-box img {
-  display: none;
-}
-.top-txt{
-  display: none;
-}
-.reservation-box {
-  width: 100%;
-}
-.top-txt {
-  left: 10%;
-  margin-top: 5%;
-}
-.bt-txt {
-  text-align: center;
-  line-height: 1.5;
-  color: #333;
-  margin-top: 3%;
-  margin-right: 0;
-  margin-bottom: 5%;
-}
-.bt-txt span {
-  font-size: 20px;
-}
-.bt-txt {
-  font-size: 14px;
-}
-.img {
-  width: 100%;
-  border-bottom: none;
-}
-.swiper-button-next, .swiper-button-prev {
-  top: 50%;
-}
-.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-  right: 0%;
-}
-.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-  left: 7%;
-}
-.inner{
-  width: 80%;
-}
-.bottom-btn .inner {
-  flex-direction: column;
-}
-.left-btn {
-  position: relative;
-  width: 100%;
-  height: 16.8542vw;
-  margin-top: 50px;
-  margin-bottom: 15px;
-  border-radius: 20px;
-  background-color: #34c987;
-}
-.right-btn {
-  position: relative;
-  width: 100%;
-  height: 16.8542vw;
-  margin-top: 15px;
-  margin-bottom: 50px;
-  border-radius: 15px;
-}
-.footer-title {
-  font-size: 30px;
-}
-
+  .area-map img {
+    width: 100%;
+  }
+  .area-explane {
+    margin-top: 5%;
+    line-height: 1.5;
+  }
+  .area-info {
+    margin-top: 5%;
+    line-height: 2;
+  }
+  .area-map {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+  }
+  .img img {
+    width: 100%;
+    padding: 65px 0 0 0;
+  }
+  .reservation-method-title {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .reservation-method-title > p:nth-child(1) {
+    padding-top: 20%;
+    margin-left: 10%;
+    font-size: 6vw;
+    font-weight: 600;
+  }
+  .reservation-method-title > p:nth-child(2) {
+    margin-left: 10%;
+    margin-top: 3%;
+    font-size: 15px;
+  }
+  .reservation-box img {
+    display: none;
+  }
+  .top-txt {
+    display: none;
+  }
+  .reservation-box {
+    width: 100%;
+  }
+  .top-txt {
+    left: 10%;
+    margin-top: 5%;
+  }
+  .bt-txt {
+    text-align: center;
+    line-height: 1.5;
+    color: #333;
+    margin-top: 3%;
+    margin-right: 0;
+    margin-bottom: 5%;
+  }
+  .bt-txt span {
+    font-size: 20px;
+  }
+  .bt-txt {
+    font-size: 14px;
+  }
+  .img {
+    width: 100%;
+    border-bottom: none;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 50%;
+  }
+  .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    right: 0%;
+  }
+  .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    left: 7%;
+  }
+  .inner {
+    width: 80%;
+  }
+  .bottom-btn .inner {
+    flex-direction: column;
+  }
+  .left-btn {
+    position: relative;
+    width: 100%;
+    height: 16.8542vw;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    background-color: #34c987;
+  }
+  .right-btn {
+    position: relative;
+    width: 100%;
+    height: 16.8542vw;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+  }
+  .footer-title {
+    font-size: 30px;
+  }
 }

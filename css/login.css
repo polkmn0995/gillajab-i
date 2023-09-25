@@ -1,5 +1,13 @@
 @charset "utf-8";
-/* font-family: "TheJamsil5Bold","Noto Sans KR", sans-serif; */
+
+.inner {
+  position: relative;
+  width: 100%;
+  padding: 0px 0px;
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 100%;
+}
 
 body {
   overflow: hidden;
@@ -13,6 +21,7 @@ header {
   height: 60px;
   z-index: 9999;
   top: 0;
+  background-color: #fff;
 }
 header .inner {
   display: flex;
@@ -67,83 +76,35 @@ header .inner {
 .contents {
   width: 80%;
   margin: auto;
-  margin-top: 130px;
+  margin-top: 150px;
 }
 .contents .inner {
   display: flex;
+  flex-direction: column;
 }
 .title {
   font-size: 30px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 80px;
-  color: #333;
-}
-
-/* 회원가입 */
-.content-left {
-  width: 50%;
-  border-right: 1px solid #ccc;
-}
-.content-left img {
-  height: 50px;
-  opacity: 0.8;
-}
-.content-left-ul li {
-  border: 1px solid #ccc;
-  border-radius: 30px;
-  width: 350px;
-  height: 150px;
-  margin: auto;
   margin-bottom: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  transition: border 0.2s ease-in-out !important;
-}
-.content-left-ul li:hover {
-  border: 2px solid #34c987;
-}
-.content-left-ul li a {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.content-left-ul li p {
-  width: 200px;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 15px;
   color: #333;
-}
-.content-left-ul li span {
-  width: 180px !important;
-  display: inline-block;
-  line-height: 1.3;
-  font-size: 15px;
-}
-
-/* 로그인 */
-.content-right {
-  width: 50%;
 }
 .login-form {
   position: relative;
-  width: 450px;
+  width: 100%;
+  border: 1px solid #f3f3f3;
+  max-width: 450px;
   height: auto;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ccc;
   align-items: center;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .legends {
+  min-width: 241.92px;
   margin: auto;
   z-index: 999;
   position: absolute;
@@ -151,7 +112,7 @@ header .inner {
 }
 legend {
   float: left;
-  border: 1px solid #ccc;
+  border: 1px solid #f3f3f3;
   background-color: #fff;
   color: #333;
   font-weight: 700;
@@ -178,7 +139,8 @@ legend:active {
   font-weight: 600;
 } */
 input {
-  width: 380px;
+  width: 90%;
+  max-width: 380px;
   margin: auto;
   padding: 10px 10px;
   border-radius: 6px;
@@ -198,9 +160,8 @@ input:focus {
 }
 .find {
   position: absolute;
-  left: 10px;
-  bottom: 90px;
-  margin-left: 25px;
+  left: 7.5%;
+  bottom: 135px;
   margin-bottom: 30px;
   font-size: 14px;
   color: #777;
@@ -210,7 +171,9 @@ input:focus {
   color: #34c987;
 }
 .submitbtn {
-  padding: 10px 125px;
+  width: 90%;
+  max-width: 300px;
+  padding: 10px;
   border: 0;
   background-color: #34c987;
   color: #fff;
@@ -218,7 +181,23 @@ input:focus {
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-  margin-top: 50px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  transition: background-color 0.2s ease-in-out !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.gosignup {
+  width: 90%;
+  max-width: 300px;
+  padding: 10px;
+  border: 0;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
   margin-bottom: 40px;
   transition: background-color 0.2s ease-in-out !important;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
@@ -230,17 +209,20 @@ input:focus {
 .submitbtn:active {
   background-color: #059152;
 }
-.content-right-ul {
-  width: 350px;
+.content-ul {
+  width: 100%;
+  max-width: 350px;
   margin: 0 auto;
 }
-.content-right-ul img {
+.content-ul img {
   height: 20px;
   margin-right: 15px;
 }
 .naver,
 .kakao,
 .google {
+  width: 100%;
+  max-width: 350px;
   border-radius: 50px;
   display: flex;
   padding: 10px 35px;
