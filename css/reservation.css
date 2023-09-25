@@ -202,7 +202,8 @@ input[type="checkbox"] {
   height: 70px;
   position: relative;
 }
-.reservation-content-title {
+.reservation-content-title,
+.reservation-content-title-mobile {
   position: relative;
   font-size: 25px;
   font-weight: 700;
@@ -375,6 +376,39 @@ input[type="checkbox"] {
   left: 43.5%;
 }
 
+/* 이용 형식 모바일 버전 */
+.reservation-content-mobile {
+  display: none;
+}
+.reservation-content-title-mobile {
+  width: 170px;
+  margin-top: 0px;
+  line-height: 1.3;
+}
+.reservation-content-top-mobile,
+.reservation-content-bottom-mobile {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.reservation-content-top-mobile {
+  margin-bottom: 20px;
+}
+.reservation-content-mobile img {
+  width: 40px;
+  margin-right: 10px;
+}
+.walk-mobile,
+.no-bathchair1-mobile,
+.yes-bathchair1-mobile,
+.drive-mobile2,
+.driveronly-mobile,
+.driverandmanager-mobile,
+.no-bathchair2-mobile,
+.yes-bathchair2-mobile {
+  padding: 15px;
+}
+
 /* 보호자 정보 */
 .guardian-info {
   position: relative;
@@ -418,6 +452,7 @@ input[type="checkbox"] {
 /* 타이틀::after 선 */
 .datetime-title::after,
 .reservation-content-title::after,
+.reservation-content-title-mobile::after,
 .guardian-info-title::after,
 .user-info-title::after {
   content: "";
@@ -432,6 +467,9 @@ input[type="checkbox"] {
 }
 .reservation-content-title::after {
   width: 326px;
+}
+.reservation-content-title-mobile::after {
+  width: 170px;
 }
 .guardian-info-title::after,
 .user-info-title::after {
@@ -549,7 +587,7 @@ input[type="checkbox"] {
 }
 @media all and (max-width: 818px) {
   .driverandmanager span {
-    width: 55%;
+    width: 60%;
     left: 25%;
   }
 }
@@ -593,8 +631,8 @@ input[type="checkbox"] {
 }
 @media all and (max-width: 691px) {
   .driverandmanager span {
-    width: 70%;
-    left: 20%;
+    width: 80%;
+    left: 15%;
   }
 }
 @media all and (max-width: 630px) {
@@ -602,44 +640,15 @@ input[type="checkbox"] {
     padding: 3% 8%;
   }
 }
-@media all and (max-width: 601px) {
-  .walk span,
-  .no-bathchair1 span,
-  .yes-bathchair1 span,
-  .drive span,
-  .no-bathchair2 span,
-  .yes-bathchair2 span {
-    left: 37%;
+@media all and (max-width: 600px) {
+  .reservation-content {
+    display: none;
   }
-  .driveronly span {
-    left: 30%;
+  .reservation-content-mobile {
+    display: block;
   }
-  .driverandmanager span {
-    width: 80%;
-    left: 15%;
-  }
-  .reservation-content-top {
-    height: 190px;
-    width: 80%;
-    position: relative;
-  }
-  .walk {
-    position: absolute;
-    left: 49%;
-    top: 47%;
-    transform: translate(-50%, -50%);
-  }
-  .reservation-content-bottom {
-    height: 260px;
-    width: 80%;
-    position: relative;
-  }
-  .drive {
-    position: absolute;
-    left: 49%;
-    top: 47%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
+  .date {
+    margin-bottom: 50px;
   }
 }
 @media all and (max-width: 540px) {

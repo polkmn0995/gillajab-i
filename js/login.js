@@ -68,15 +68,20 @@ window.addEventListener("load", function () {
   });
 
   naver.addEventListener("click", function () {
-    confirm("네이버 아이디로 로그인 하시겠습니까?");
-    alert("로그인 되었습니다.");
+    if (confirm("네이버 아이디로 로그인 하시겠습니까?")) {
+      alert("로그인 되었습니다.");
+    }
   });
+
   kakao.addEventListener("click", function () {
-    confirm("카카오톡 아이디로 로그인 하시겠습니까?");
-    alert("로그인 되었습니다.");
+    if (confirm("카카오톡 아이디로 로그인 하시겠습니까?")) {
+      alert("로그인 되었습니다.");
+    }
   });
+
   google.addEventListener("click", function () {
-    confirm("구글 아이디로 로그인 하시겠습니까?");
-    alert("로그인 되었습니다.");
+    if (confirm("구글 아이디로 로그인 하시겠습니까?")) {
+      alert("로그인 되었습니다.");
+    }
   });
 });
