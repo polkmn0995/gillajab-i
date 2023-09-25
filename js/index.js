@@ -50,7 +50,6 @@ $(document).ready(function () {
     });
   });
 });
-
 // ==============================================================================
 window.addEventListener("load", function () {
   // AOS적용
@@ -106,6 +105,15 @@ window.addEventListener("load", function () {
       navbar.classList.remove("scrolled");
     }
   });
+  // =============================================
+// 모바일 메뉴버튼 기능
+const menuToggleBtn = document.getElementById("menuToggleBtn");
+const mobileMenubox = document.getElementById("mobile-menu-box");
+menuToggleBtn.addEventListener("click", function () {
+  // Toggle the 'active' class to show/hide the mobile menu
+  mobileMenubox.classList.toggle("active");
+});
+  // ===================================================
   // ==============================================================
   // 비주얼 슬라이드
   // 1.슬라이드 (.swiper-slide)개수 만큼 li생성하기v
