@@ -192,6 +192,44 @@ header .inner {
 .navbar.scrolled a {
   color: #000; /* Set the text color when scrolled */
 }
+/* 헤더 반응형 */
+@media all and (max-width: 1000px) {
+  header {
+    width: 100%;
+    height: 60px;
+  }
+  header::after {
+    content: "";
+    background: url("../images/index/mobile-menu.png");
+    position: absolute;
+    color: #fff;
+    background-color: #fff;
+    top: 40%;
+    left: 80%;
+    z-index: 999;
+  }
+  .logo {
+    width: 150px;
+    margin: 0 auto;
+  }
+  .logo h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2.0833vw;
+    color: #34c987;
+  }
+  .header-menu {
+    display: none;
+  }
+  .log-in {
+    display: none;
+  }
+  .nav {
+    position: relative;
+    display: flex;
+  }
+}
 /* ================================================================================= */
 /* 비주얼 */
 .visual {
@@ -414,6 +452,9 @@ header .inner {
 .introduce-txt > a > p {
   font-size: 1.25vw;
   color: #34c987;
+}
+.introduce-txt > a:hover {
+  font-weight: bold;
 }
 .service01 {
   position: relative;
@@ -781,7 +822,7 @@ header .inner {
   width: 13.5417vw;
   height: 2.3438vw;
   text-align: center;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
 }
 .btb-left button:hover {
@@ -819,7 +860,7 @@ header .inner {
   width: 13.5417vw;
   height: 2.3438vw;
   text-align: center;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
 }
 .btb-right button:hover {
