@@ -3,7 +3,6 @@
 // 스크롤 시 상단으로 이동
 // 문서가 로드될 때 실행되는 함수
 $(function () {
-
   // 스크롤 이벤트 처리
   $(window).scroll(function () {
     // 스크롤이 800 이상일 때
@@ -29,29 +28,30 @@ $(function () {
     return false; // 이벤트 전파 방지
   });
 });
-  // 수동스크롤할때 각섹션에 도착했을때 모달메뉴의 섹상 변경
-  $(document).ready(function() {
-    
-    $(
-  window).scroll(function() {
-      // Get the scroll position with a slight offset
-      var scrollPos = $(this).scrollTop() + 50; // Adjust the offset as needed
-  
-      // Iterate through each section and determine the active section
-      $('section').each(function() {
-        var sectionOffset = $(this).offset().top;
-        var sectionHeight = $(this).outerHeight();
-        
-  if (scrollPos >= sectionOffset && scrollPos < sectionOffset + sectionHeight) {
-          var targetId = $(this).attr('id');
-          $('.modal-menu a').removeClass('active');
-          $('.modal-menu a[href="#' + targetId + '"]').addClass('active');
-        }
-      });
+// 수동스크롤할때 각섹션에 도착했을때 모달메뉴의 섹상 변경
+$(document).ready(function () {
+  $(window).scroll(function () {
+    // Get the scroll position with a slight offset
+    var scrollPos = $(this).scrollTop() + 50; // Adjust the offset as needed
+
+    // Iterate through each section and determine the active section
+    $("section").each(function () {
+      var sectionOffset = $(this).offset().top;
+      var sectionHeight = $(this).outerHeight();
+
+      if (
+        scrollPos >= sectionOffset &&
+        scrollPos < sectionOffset + sectionHeight
+      ) {
+        var targetId = $(this).attr("id");
+        $(".modal-menu a").removeClass("active");
+        $('.modal-menu a[href="#' + targetId + '"]').addClass("active");
+      }
     });
   });
-  
-  // ==============================================================================
+});
+
+// ==============================================================================
 window.addEventListener("load", function () {
   // AOS적용
   AOS.init();
@@ -71,36 +71,39 @@ window.addEventListener("load", function () {
     }
   }
   // 헤더바 스크롤시 색강 변경
-  document.addEventListener('scroll', function () {
-    var navbar = document.getElementById('navbar');
-  
+  document.addEventListener("scroll", function () {
+    var navbar = document.getElementById("navbar");
+
     // Change the background color when scrolling down
-    if (window.scrollY > 100) { // Adjust the scroll position as needed
-      navbar.classList.add('active');
+    if (window.scrollY > 100) {
+      // Adjust the scroll position as needed
+      navbar.classList.add("active");
     } else {
-      navbar.classList.remove('active');
+      navbar.classList.remove("active");
     }
   });
   // 스크롤시 헤더 메뉴바 컬러변경
-  document.addEventListener('scroll', function () {
-    var navbar = document.getElementById('navbar');
-  
+  document.addEventListener("scroll", function () {
+    var navbar = document.getElementById("navbar");
+
     // Change the background color when scrolling down
-    if (window.scrollY > 100) { // Adjust the scroll position as needed
-      navbar.classList.add('active');
+    if (window.scrollY > 100) {
+      // Adjust the scroll position as needed
+      navbar.classList.add("active");
     } else {
-      navbar.classList.remove('active');
+      navbar.classList.remove("active");
     }
   });
   // 헤더의 메뉴 글자 컬러변경
-  document.addEventListener('scroll', function() {
-    var navbar = document.getElementById('navbar');
-  
+  document.addEventListener("scroll", function () {
+    var navbar = document.getElementById("navbar");
+
     // Change the text color when scrolling down
-    if (window.scrollY > 100) { // Adjust the scroll position as needed
-      navbar.classList.add('scrolled');
+    if (window.scrollY > 100) {
+      // Adjust the scroll position as needed
+      navbar.classList.add("scrolled");
     } else {
-      navbar.classList.remove('scrolled');
+      navbar.classList.remove("scrolled");
     }
   });
   // ==============================================================
@@ -136,10 +139,10 @@ window.addEventListener("load", function () {
       // 이것을 방지해 주기위한 처리
       disableOnInteraction: false,
     },
-    navigation: {
-      nextEl: ".sw-visual-next",
-      prevEl: ".sw-visual-prev",
-    },
+    // navigation: {
+    //   nextEl: ".sw-visual-next",
+    //   prevEl: ".sw-visual-prev",
+    // },
   });
   // swiper 가 최초 실행될때
   // 1번 li 의 흰색 라인이 늘어나는 모션을 실행
@@ -172,21 +175,22 @@ window.addEventListener("load", function () {
     slideToClickedSlide: true,
     centeredSlides: true,
     pagination: {
-      el: ".swiper-pagination",
+      el: ".swiper-container.swiper-full-mobile .swiper-pagination",
       clickable: true,
     },
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 2500,
+      disableOnInteraction: false,
     },
-    disableOnInteraction: false,
+    speed: 800,
     keyboard: {
       enabled: true,
       onlyInViewport: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-container.swiper-full-mobile .swiper-button-next",
+      prevEl: ".swiper-container.swiper-full-mobile .swiper-button-prev",
     },
     breakpoints: {
       640: {
@@ -209,36 +213,36 @@ window.addEventListener("load", function () {
     centeredSlides: true,
     loop: true,
     autoplay: {
-      delay: 3000, // 3초마다 자동 슬라이딩
+      delay: 2500, // 3초마다 자동 슬라이딩
+      disableOnInteraction: false,
     },
-    disableOnInteraction: false,
     keyboard: {
       enabled: true,
       onlyInViewport: true,
     },
     speed: 800, // 슬라이드 이동 속도 (밀리초)
     grabCursor: true, // 마우스 커서를 손가락 모양으로 변경
-    preventInteractionOnTransition: true, // 슬라이딩 중에 사용자의 상호 작용을 방지하여 끊김 없는 슬라이딩
+    // preventInteractionOnTransition: true, // 슬라이딩 중에 사용자의 상호 작용을 방지하여 끊김 없는 슬라이딩
     pagination: {
-      el: ".swiper-pagination",
+      el: ".reviewswiper .swiper-pagination",
       clickable: true,
     },
-    direction: getDirection(),
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
+    // direction: getDirection(),
+    // // navigation: {
+    // //   nextEl: '.swiper-button-next',
+    // //   prevEl: '.swiper-button-prev',
+    // // },
+    // on: {
+    //   resize: function () {
+    //     reviewswiper.changeDirection(getDirection());
+    //   },
     // },
-    on: {
-      resize: function () {
-        reviewswiper.changeDirection(getDirection());
-      },
-    },
   });
-  function getDirection() {
-    var windowWidth = window.innerWidth;
-    var direction = window.innerWidth <= 760 ? "vertical" : "horizontal";
-    return direction;
-  }
+  // function getDirection() {
+  //   var windowWidth = window.innerWidth;
+  //   var direction = window.innerWidth <= 760 ? "vertical" : "horizontal";
+  //   return direction;
+  // }
   // ======================================================================================================================
   // '서비스소개'
   // JavaScript 파일에서 메뉴 항목과 섹션 간의 스크롤 연결
@@ -262,15 +266,15 @@ window.addEventListener("load", function () {
   // Add a click event listener to each menu link
   // menuLinks.forEach((link) => {
   //   link.addEventListener("click", (event) => {
-      // Prevent the default link behavior (page scroll)
-      // event.preventDefault();
+  // Prevent the default link behavior (page scroll)
+  // event.preventDefault();
 
-      // Remove the "active" class from all menu links
-      // menuLinks.forEach((link) => {
-      //   link.classList.remove("active");
-      // });
+  // Remove the "active" class from all menu links
+  // menuLinks.forEach((link) => {
+  //   link.classList.remove("active");
+  // });
 
-      // Add the "active" class to the clicked menu link
+  // Add the "active" class to the clicked menu link
   //     link.classList.add("active");
   //   });
   // });
