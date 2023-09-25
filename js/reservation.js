@@ -35,6 +35,12 @@ window.addEventListener("load", function () {
   // 예약하기 버튼
   let reservateBtn = document.querySelector("#reservatebtn");
 
+  // 이용항목 선택
+  let reservationContent = document.querySelector(".reservation-content");
+  let reservationContentMobile = document.querySelector(
+    ".reservation-content-mobile"
+  );
+
   // 이용자로 예약하기 버튼을 누를 시 아래에 있던 보호자 정보 섹션이 숨겨진다.
   userBtn.addEventListener("click", function () {
     guardianInfo.style.display = "none";
@@ -159,4 +165,18 @@ window.addEventListener("load", function () {
       }
     }
   });
+  
+  function setDisplayBasedOnWindowWidth() {
+    // 현재 윈도우 너비 확인
+    let windowWidth = window.innerWidth;
+
+    // 너비가 600px 이하일 때
+    if (windowWidth <= 600) {
+      reservationContentMobile.style.display = "block";
+      reservationContent.style.display = "none";
+    } else {
+      reservationContentMobile.style.display = "none";
+      reservationContent.style.display = "block";
+    }
+  }
 });

@@ -98,27 +98,27 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="wrap">
-      <!-- header -->
-      <header>
+      <header class="navbar" id="navbar">
         <div class="inner">
           <div class="logo">
             <a href="index.html"><h1>길라잡이</h1></a>
           </div>
           <div class="header-menu">
-            <ul>
+            <ul class="navul01" id="navul01">
               <li><a href="detail.html">서비스 소개</a></li>
               <li><a href="reservation.html">예약하기</a></li>
               <li><a href="review.html">이용후기</a></li>
             </ul>
           </div>
           <div class="log-in">
-            <ul>
+            <ul class="navul02" id="navul02">
               <li><a href="login.html">로그인</a></li>
               <li><a href="login.html">회원가입</a></li>
             </ul>
           </div>
         </div>
       </header>
+
       <!-- 예약자 선택하기 -->
       <section class="buttons" id="buttons">
         <div class="inner">
@@ -230,6 +230,84 @@
                   <input type="checkbox" id="yes-chair2" />
                   <img src="images/reservation/5604544.png" alt="휠체어 유" />
                   <span>휠체어 유</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 이용 항목 선택 모바일(600px 이하) -->
+          <div
+            class="reservation-content-mobile clearfix"
+            id="reservation-content-mobile"
+          >
+            <p class="reservation-content-title-mobile">
+              이용하실 항목을 선택해 주세요.
+            </p>
+            <div class="reservation-content-top-mobile">
+              <!-- 이용 항목 도보 선택 -->
+              <div class="walk-mobile">
+                <input type="checkbox" id="walk-mobile" />
+                <img src="images/reservation/4605452.png" alt="도보 동행" />
+                <span>도보 동행</span>
+              </div>
+
+              <!-- 휠체어 유/무 -->
+              <div class="bathchair-mobile">
+                <div class="no-bathchair1-mobile">
+                  <input type="checkbox" id="no-chair1-mobile" />
+                  <img src="images/reservation/man.png" alt="휠체어 무" />
+                  <span>휠체어 무</span>
+                </div>
+                <div class="yes-bathchair1-mobile">
+                  <input type="checkbox" id="yes-chair1-mobile" />
+                  <img src="images/reservation/5604544.png" alt="휠체어 유" />
+                  <span>휠체어 유</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="reservation-content-bottom-mobile">
+              <!-- 이용 항목 차량 선택 -->
+              <div class="drive-mobile1">
+                <div class="drive-mobile2">
+                  <input type="checkbox" id="drive-mobile" />
+                  <img src="images/reservation/3202926.png" alt="차량 동행" />
+                  <span>차량 동행</span>
+                </div>
+                <!-- 드라이버 외 동행 매니저 유/무 -->
+                <div class="driver-mobile">
+                  <div class="driveronly-mobile">
+                    <input type="checkbox" id="driveronly-mobile" />
+                    <img
+                      src="images/reservation/5999086.png"
+                      alt="드라이버 1명"
+                    />
+                    <span>드라이버 1명</span>
+                  </div>
+                  <div class="driverandmanager-mobile">
+                    <input type="checkbox" id="driverandmanager-mobile" />
+                    <img
+                      src="images/reservation/5999086.png"
+                      alt="드라이버 1명 + 동행 매니저 1명"
+                    />
+                    <img
+                      src="images/reservation/man.png"
+                      alt="드라이버 1명 + 동행 매니저 1명"
+                    />
+                    <span>드라이버 1명 + 동행 매니저 1명</span>
+                  </div>
+                </div>
+                <!-- 휠체어 유/무 -->
+                <div class="bathchair-mobile">
+                  <div class="no-bathchair2-mobile">
+                    <input type="checkbox" id="no-chair2-mobile" />
+                    <img src="images/reservation/man.png" alt="휠체어 무" />
+                    <span>휠체어 무</span>
+                  </div>
+                  <div class="yes-bathchair2-mobile">
+                    <input type="checkbox" id="yes-chair2-mobile" />
+                    <img src="images/reservation/5604544.png" alt="휠체어 유" />
+                    <span>휠체어 유</span>
+                  </div>
                 </div>
               </div>
             </div>
