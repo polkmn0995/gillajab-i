@@ -1,0 +1,23 @@
+diff a/css/index.css b/css/index.css	(rejected hunks)
+@@ -279,16 +279,16 @@
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+-  width: 255px;
+-  height: 55px;
++  width: 13.2813vw;
++  height: 2.8646vw;
+   opacity: 1;
+   visibility: visible;
+-  padding: 0 45px 0 50px;
++  padding: 0 2.3438vw 0 2.6042vw;
+   margin-top: 32%;
+-  font-size: 16px;
++  font-size: 0.8333vw;
+   color: #fff;
+   border: none;
+-  border-radius: 50px;
++  border-radius: 2.6042vw;
+   background-color: #34c987;
+ }
+ /* sw-visual 콘트롤 */
