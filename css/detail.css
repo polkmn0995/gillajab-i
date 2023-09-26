@@ -310,6 +310,7 @@ span {
   width: 60%;
   margin-left: 20%;
 }
+
 .fa-solid,
 .fas {
   color: #32c987;
@@ -404,11 +405,13 @@ span {
 .swiper-container-rtl .swiper-button-next {
   left: 37%;
   right: auto;
+  color: #32c987;
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
   right: 6%;
   left: auto;
+  color: #32c987;
 }
 
 /* 예약, 전화예약 버튼 */
@@ -528,7 +531,6 @@ footer .inner {
   position: relative;
   display: block;
   font-size: 40px;
-  text-transform: uppercase;
   text-align: center;
   margin: 0 auto;
   color: #34c987;
@@ -552,7 +554,7 @@ footer .inner {
 .email-number {
   position: relative;
   display: flex;
-  width: 40%;
+  width: 400px;
   color: #fff;
   justify-content: space-around;
   align-items: center;
@@ -566,12 +568,14 @@ footer .inner {
   text-align: center;
   color: #fff;
   font-weight: 100;
-  bottom: 20px;
+  bottom: 45px;
 }
 .reservation-method-title {
   display: none;
 }
-
+.fa-solid, .fas {
+  color: #32c987;
+}
 @media all and (max-width: 1024px) {
   .titlename {
     font-size: 3vw;
@@ -858,6 +862,7 @@ footer .inner {
   }
   .detail-img img {
     width: 100%;
+    margin-top: 0;
   }
   .detail-img03 {
     width: 100%;
@@ -1029,6 +1034,24 @@ footer .inner {
   .footer-title {
     font-size: 30px;
   }
+  .email-number p{
+    white-space: nowrap;
+  }
+  .email-number {
+    position: relative;
+    display: flex;
+    /* width: 400px; */
+    color: #fff;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    font-weight: 200;
+    flex-direction: column;
+    line-height: 1.5;
+}
+.copy {
+  font-size: 13px;
+}
 }
 @media all and (max-width: 340px) {
   .email-number p {
