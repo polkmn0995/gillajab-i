@@ -32,6 +32,9 @@ header .inner {
   display: flex;
   justify-content: space-between;
 }
+.header-menu ul li a {
+  font-weight: 600;
+}
 .header-menu ul li a:hover {
   color: #34c987;
 }
@@ -98,8 +101,7 @@ header .inner {
   color: #fff;
   font-size: 20px;
   cursor: pointer;
-  box-shadow: 0 17px 20px -20px rgba(0, 0, 0, 0.5);    
-
+  box-shadow: 0 17px 20px -20px rgba(0, 0, 0, 0.5);
 }
 .reservation-btn a {
   color: #fff;
@@ -188,7 +190,7 @@ span {
   font-size: 20px;
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: 0 17px 20px -20px rgba(0, 0, 0, 0.5);   
+  box-shadow: 0 17px 20px -20px rgba(0, 0, 0, 0.5);
 }
 .reservation-btn02 a {
   color: #fff;
@@ -225,7 +227,7 @@ span {
   font-size: 20px;
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: 0 17px 20px -20px rgba(0, 0, 0, 0.5);   
+  box-shadow: 0 17px 20px -20px rgba(0, 0, 0, 0.5);
 }
 .reservation-btn03 a {
   color: #fff;
@@ -309,6 +311,10 @@ span {
   margin-left: 20%;
 }
 
+.fa-solid,
+.fas {
+  color: #32c987;
+}
 
 /* 예약방법 슬라이드 */
 
@@ -574,10 +580,10 @@ footer .inner {
   .titlename {
     font-size: 3vw;
   }
-  .titlename02{
+  .titlename02 {
     font-size: 3vw;
   }
-  .titlename03{
+  .titlename03 {
     font-size: 3vw;
   }
   .explane {
@@ -594,19 +600,19 @@ footer .inner {
   }
   .explane03 {
     font-size: 15px;
-}
+  }
   .reservation-btn {
     padding: 13px 45px;
     font-size: 15px;
-}
+  }
   .reservation-btn02 {
     padding: 13px 55px;
     font-size: 15px;
-}
+  }
   .reservation-btn03 {
     padding: 13px 55px;
     font-size: 15px;
-}
+  }
 
   .top-txt {
     font-size: 15px;
@@ -647,7 +653,7 @@ footer .inner {
   }
   .footer-title {
     font-size: 30px;
-}
+  }
 }
 
 @media all and (max-width: 839px) {
@@ -1047,9 +1053,8 @@ footer .inner {
   font-size: 13px;
 }
 }
-@media all and (max-width: 340px){
-  .email-number p{
+@media all and (max-width: 340px) {
+  .email-number p {
     white-space: nowrap;
   }
-
 }
