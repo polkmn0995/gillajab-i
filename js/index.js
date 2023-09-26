@@ -201,15 +201,30 @@ menuToggleBtn.addEventListener("click", function () {
       prevEl: ".swiper-container.swiper-full-mobile .swiper-button-prev",
     },
     breakpoints: {
-      640: {
-        freemode: true,
+      1650: {
+        // freemode: true,
         slidesPerView: 3,
-        spaceBetween: 20,
+        spaceBetween: 50,
+      },
+      531: {
+        // freemode: true,
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+      530: {
+        // freemode: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      480: {
+        // freemode: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
       },
       320: {
-        freemode: true,
-        slidesPerView: 3,
-        spaceBetween: 20,
+        // freemode: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
       },
     },
   });

@@ -1492,7 +1492,10 @@ header .inner {
 @media all and (max-width: 1650px) {
   .banner {
     width: 100%;
-    height: 3484px;
+    height: 3884px;
+  }
+  .bg > div {
+    height: 971px;
   }
   .bg > div p span {
     font-size: 50px;
@@ -1506,6 +1509,9 @@ header .inner {
     width: 100%;
     height: 3484px;
   }
+  .bg > div {
+    height: 854px;
+  }
   .bg > div p span {
     font-size: 50px;
   }
@@ -1518,6 +1524,9 @@ header .inner {
     width: 100%;
     height: 3484px;
   }
+  .bg > div {
+    height: 854px;
+  }
   .bg > div p span {
     font-size: 50px;
   }
@@ -1529,6 +1538,9 @@ header .inner {
   .banner {
     width: 100%;
     height: 3484px;
+  }
+  .bg > div {
+    height: 854px;
   }
   .bg > div p span {
     font-size: 50px;
@@ -1543,6 +1555,9 @@ header .inner {
     width: 100%;
     height: 3484px;
   }
+  .bg > div {
+    height: 854px;
+  }
   .bg > div p span {
     font-size: 50px;
   }
@@ -1555,6 +1570,9 @@ header .inner {
   .banner {
     width: 100%;
     height: 3484px;
+  }
+  .bg > div {
+    height: 854px;
   }
   .bg > div p span {
     font-size: 50px;
@@ -1569,6 +1587,9 @@ header .inner {
     width: 100%;
     height: 3484px;
   }
+  .bg > div {
+    height: 854px;
+  }
   .bg > div p span {
     font-size: 50px;
   }
@@ -1582,6 +1603,9 @@ header .inner {
     width: 100%;
     height: 3484px;
   }
+  .bg > div {
+    height: 854px;
+  }
   .bg > div p span {
     font-size: 45px;
   }
@@ -1593,6 +1617,9 @@ header .inner {
 @media all and (max-width: 660px) {
   .modal-top {
     bottom: 10%;
+  }
+  .bg > div {
+    height: 854px;
   }
   .banner {
     width: 100%;
@@ -1611,6 +1638,9 @@ header .inner {
     width: 100%;
     height: 3484px;
   }
+  .bg > div {
+    height: 854px;
+  }
   .bg > div p span {
     font-size: 40px;
   }
@@ -1622,7 +1652,10 @@ header .inner {
 @media all and (max-width: 540px) {
   .banner {
     width: 100%;
-    height: 3484px;
+    height: 3384px;
+  }
+  .bg > div {
+    height: 854px;
   }
   .bg > div p span {
     font-size: 35px;
@@ -1635,7 +1668,10 @@ header .inner {
 @media all and (max-width: 480px) {
   .banner {
     width: 100%;
-    height: 3484px;
+    height: 3384px;
+  }
+  .bg > div {
+    height: 854px;
   }
   .bg > div p span {
     font-size: 35px;
@@ -1648,7 +1684,10 @@ header .inner {
 @media all and (max-width: 420px) {
   .banner {
     width: 100%;
-    height: 3484px;
+    height: 3384px;
+  }
+  .bg > div {
+    height: 854px;
   }
   .bg > div p span {
     font-size: 33px;
@@ -1661,7 +1700,10 @@ header .inner {
 @media all and (max-width: 380px) {
   .banner {
     width: 100%;
-    height: 3484px;
+    height: 3384px;
+  }
+  .bg > div {
+    height: 854px;
   }
   .bg > div p span {
     font-size: 27px;
@@ -1745,7 +1787,18 @@ header .inner {
   font-weight: 600;
   line-height: 40px;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: #34c987;
+}
+.swiper-pagination-bullet {
+  background: #34c987; /* 페이지 버튼의 색상을 원하는 색상으로 설정 */
+}
 @media all and (max-width: 1650px) {
+  .app-service {
+    width: 100%;
+    height: 100vh;
+  }
   .app-service-txt p {
     font-size: 50px;
     padding-top: 8%;
@@ -1768,22 +1821,185 @@ header .inner {
   .swiper-full-mobile .swiper-slide img {
     width: 80%;
     margin-left: 10%;
-    height: 550px;
+    height: 450px;
     object-fit: contain;
   }
-  .swiper-slide.swiper-slide-active img {
-    border-radius: 40px;
+}
+@media all and (max-width: 1400px) {
+  .app-service-txt p {
+    font-size: 40px;
+    padding-top: 6%;
+    margin-top: 3%;
+    line-height: 50px;
+  }
+}
+@media all and (max-width: 1000px) {
+  .app-service-txt p {
+    font-size: 40px;
+    padding-top: 8%;
+    margin-top: 3%;
+    line-height: 50px;
+  }
+  .swiper-full-mobile .swiper-slide img {
+    width: 80%;
+    margin-left: 10%;
+    height: 450px;
+    object-fit: contain;
+  }
+  .swiper-full-mobile {
+    position: relative;
+    padding-bottom: 40px;
+    height: 600px;
+  }
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-button-prev {
+    display: none;
+  }
+}
+@media all and (max-width: 768px) {
+  .modal {
+    right: 10%;
+  }
+  .app-service-txt p {
+    font-size: 40px;
+    padding-top: 10%;
+    margin-top: 10%;
+    line-height: 50px;
+  }
+  .swiper-full-mobile .swiper-slide img {
+    width: 80%;
+    margin-left: 10%;
+    height: 460px;
+    object-fit: contain;
+  }
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-button-prev {
+    display: none;
   }
   .swiper-full-mobile .swiper-slide p {
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 16px;
+  }
+  .swiper-full-mobile .swiper-slide p span {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 40px;
+  }
+}
+@media all and (max-width: 530px) {
+  .modal {
+    top: 111%;
+    right: 10%;
+  }
+  .app-service-txt p {
+    font-size: 35px;
+    text-align: center;
+    padding-top: 13%;
+    margin-top: 13%;
+    height: 150px;
+    width: 100%;
+    line-height: 50px;
+    margin-bottom: 10%;
+  }
+  .swiper-full-mobile .swiper-slide img {
+    width: 80%;
+    margin-left: 10%;
+    height: 450px;
+    object-fit: contain;
+  }
+  .swiper-full-mobile .swiper-slide p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
   }
   .swiper-full-mobile .swiper-slide p span {
     font-size: 20px;
     font-weight: 600;
     line-height: 40px;
+  }
+  .swiper-full-mobile {
+    position: relative;
+    /* margin: 50px auto; */
+    height: 600px;
+    padding-bottom: 50px;
+    margin-bottom: 45px;
+    /* padding-top: 50px; */
+  }
+}
+@media all and (max-width: 480px) {
+  .app-service-txt p {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 15%;
+    margin-top: 15%;
+    height: 140px;
+    width: 100%;
+    margin-bottom: 5%;
+    line-height: 40px;
+  }
+  .swiper-full-mobile .swiper-slide img {
+    width: 80%;
+    margin-left: 10%;
+    height: 440px;
+    object-fit: contain;
+  }
+  .swiper-full-mobile .swiper-slide p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .swiper-full-mobile .swiper-slide p span {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 40px;
+  }
+  .swiper-full-mobile {
+    position: relative;
+    /* margin: 50px auto; */
+    height: 600px;
+    padding-bottom: 50px;
+    margin-bottom: 45px;
+    /* padding-top: 50px; */
+  }
+}
+@media all and (max-width: 420px) {
+  .app-service-txt p {
+    font-size: 27px;
+    text-align: center;
+    padding-top: 25%;
+    margin-top: 25%;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 10%;
+    line-height: 40px;
+  }
+  .swiper-full-mobile {
+    position: relative;
+    /* margin: 50px auto; */
+    height: 600px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    /* padding-top: 50px; */
+  }
+}
+@media all and (max-width: 380px) {
+  .app-service-txt p {
+    font-size: 27px;
+    text-align: center;
+    padding-top: 25%;
+    margin-top: 25%;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 5%;
+    line-height: 35px;
   }
 }
 /* ========================= */
@@ -1919,7 +2135,7 @@ header .inner {
   width: 260px;
   height: 50px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 .btb-left button:hover {
@@ -1957,7 +2173,7 @@ header .inner {
   width: 260px;
   height: 50px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 .btb-right button:hover {
