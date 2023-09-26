@@ -12,27 +12,27 @@ body {
 /* modal */
 .modal {
   position: fixed;
-  right: 4.4%;
+  right: 1.4%;
   top: 55%;
   transform: translateY(-50%);
   display: none;
-  width: 3.6458vw;
-  height: 15.625vw;
+  width: 70px;
+  height: 300px;
   z-index: 9999;
-  padding: 0.5208vw 0;
+  padding: 10px 0;
 }
 .modal li {
   text-align: right;
   margin: 10% 0;
-  width: 7.8125vw;
-  padding: 0.5208vw;
+  width: 95px;
+  padding: 5px;
 }
 /* .modal li:last-child {
   margin-bottom: 0;
 } */
 .modal li a {
   font-weight: 700;
-  font-size: 0.7292vw;
+  font-size: 14px;
   color: #333;
 }
 .modal li a:hover {
@@ -44,22 +44,22 @@ body {
 .modal-top {
   position: fixed;
   display: none;
-  right: 1.0417vw;
-  bottom: 2.6042vw;
+  right: 20px;
+  bottom: 50px;
   z-index: 99;
-  width: 2.6042vw;
-  height: 2.6042vw;
-  line-height: 2.6042vw;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   border-radius: 50%;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0.1042vw 0.1042vw 0.5208vw 0 #4e4e4e00;
+  box-shadow: 2px 2px 10px 0 #4e4e4e00;
   cursor: pointer;
 }
 .modal-top i {
-  width: 2.0833vw;
-  height: 2.0833vw;
-  font-size: 1.0417vw;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
   color: #34c987;
 }
 .modal-menu a {
@@ -247,15 +247,15 @@ header .inner {
   button i {
     width: 100%;
     font-size: 50px;
-    color: #fff;
+    color: #34c987;
     cursor: pointer;
   }
   #mobile-menu-box {
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
-    /* position: absolute;
+    position: absolute;
     top: 100%;
-    right: 40%; */
+    right: -12%;
     display: none;
   }
   #mobile-menu-box li {
@@ -269,6 +269,7 @@ header .inner {
     margin: 2%;
     padding: 10%;
     font-size: 20px;
+    color: #fff;
   }
   #mobile-menu-box.active {
     display: block;
@@ -586,22 +587,22 @@ header .inner {
 }
 @media all and (max-width: 1000px) {
   .visual-box .visual-inner {
-    right: 35%;
+    right: 45%;
   }
   .visual-phone {
-    width: 280px;
+    width: 290px;
     /* height: 700px; */
-    right: 0%;
+    right: 5%;
   }
   .visual-box .visual-inner h2 {
     line-height: 1.2em;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 600;
     color: #fff;
   }
   .visual-box .visual-inner p {
     margin-top: 25px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     line-height: 1.5em;
   }
@@ -609,7 +610,7 @@ header .inner {
     width: 200px;
     height: 40px;
     padding: 0 35px 0 40px;
-    margin-top: 70%;
+    margin-top: 35%;
     font-size: 12px;
   }
   .sw-visual-control button {
@@ -624,6 +625,207 @@ header .inner {
     padding: 7px 7px;
     margin-right: 13px;
     text-align: center;
+  }
+}
+@media all and (max-width: 768px) {
+  .visual-box .visual-inner {
+    right: 13%;
+    top: 20%;
+  }
+  .visual-phone {
+    width: 310px;
+    /* height: 700px; */
+    /* display: none; */
+    right: 5%;
+    top: 30%;
+  }
+  .visual-box .visual-inner h2 {
+    line-height: 1.2em;
+    font-size: 45px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .visual-box .visual-inner p {
+    margin-top: 25px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+  .visual-box .visual-inner a {
+    width: 200px;
+    height: 40px;
+    padding: 0 35px 0 40px;
+    margin-top: 32%;
+    font-size: 12px;
+  }
+  .sw-visual-control button {
+    display: none;
+  }
+  .sw-visual-pg {
+    left: 63%;
+    top: 84%;
+  }
+  .sw-visual-pg-list > li {
+    width: 40px;
+    height: 28px;
+    padding: 7px 7px;
+    margin-right: 13px;
+    text-align: center;
+  }
+}
+@media all and (max-width: 660px) {
+  .visual-box .visual-inner {
+    right: 7%;
+    top: 15%;
+  }
+  .visual-phone {
+    width: 320px;
+    /* height: 700px; */
+    /* display: none; */
+    right: 0%;
+    top: 25%;
+  }
+
+  .sw-visual-pg {
+    left: 63%;
+    top: 84%;
+  }
+  .sw-visual-pg-list > li {
+    width: 40px;
+    height: 28px;
+    padding: 7px 7px;
+    margin-right: 13px;
+    text-align: center;
+  }
+}
+@media all and (max-width: 540px) {
+  .visual-box .visual-inner {
+    right: 2%;
+    top: 15%;
+  }
+  .visual-box .visual-inner h2 {
+    line-height: 1.2em;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .visual-box .visual-inner p {
+    margin-top: 25px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+  .visual-box .visual-inner a {
+    width: 220px;
+    height: 70px;
+    padding: 0 35px 0 40px;
+    margin-top: 80%;
+    margin-left: 4%;
+    font-size: 16px;
+  }
+  .visual-phone {
+    width: 280px;
+    /* height: 700px; */
+    /* display: none; */
+    right: -3%;
+    top: 39%;
+  }
+  .sw-visual-pg {
+    left: 63%;
+    top: 84%;
+  }
+}
+@media all and (max-width: 480px) {
+  .visual-box .visual-inner {
+    right: 3%;
+    top: 15%;
+  }
+  .visual-box .visual-inner h2 {
+    font-size: 35px;
+  }
+
+  .visual-box .visual-inner a {
+    margin-top: 80%;
+    margin-left: 0%;
+  }
+  .visual-phone {
+    width: 280px;
+    /* height: 700px; */
+    /* display: none; */
+    right: -3%;
+    top: 39%;
+  }
+  .sw-visual-pg {
+    left: 63%;
+    top: 84%;
+  }
+}
+@media all and (max-width: 380px) {
+  .visual-box .visual-inner {
+    right: 5%;
+    top: 13%;
+  }
+  .visual-box .visual-inner h2 {
+    text-align: center;
+    font-size: 27px;
+  }
+  .visual-box .visual-inner p {
+    margin-top: 40px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+  .visual-box .visual-inner a {
+    margin-top: 180%;
+    text-align: center;
+    margin-left: 20%;
+  }
+  .visual-phone {
+    width: 280px;
+    /* height: 700px; */
+    /* display: none; */
+    right: 12%;
+    top: 30%;
+  }
+  .sw-visual-pg {
+    left: 63%;
+    top: 84%;
+    display: none;
+  }
+}
+@media all and (max-width: 320px) {
+  .visual-box .visual-inner {
+    right: 2%;
+    top: 13%;
+  }
+  .visual-box .visual-inner h2 {
+    text-align: center;
+    font-size: 24px;
+  }
+  .visual-box .visual-inner p {
+    margin-top: 70px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+  .visual-box .visual-inner a {
+    margin-top: 180%;
+    text-align: center;
+    margin-left: 15%;
+  }
+  .visual-phone {
+    width: 240px;
+    /* height: 700px; */
+    /* display: none; */
+    right: 10%;
+    top: 32%;
+  }
+  .sw-visual-pg {
+    left: 63%;
+    top: 84%;
+    display: none;
   }
 }
 /* ================================================================================= */
@@ -641,20 +843,20 @@ header .inner {
   align-items: center;
 }
 .introduce-txt {
-  width: 23.9583vw;
-  height: 38.0208vw;
+  width: 460px;
+  height: 730px;
 }
 .introduce-txt h2 {
-  font-size: 2.6042vw;
+  font-size: 50px;
   font-weight: bold;
-  line-height: 3.125vw;
-  margin-bottom: 1.0417vw;
+  line-height: 60px;
+  margin-bottom: 20px;
 }
 .introduce-txt > p {
-  font-size: 1.0417vw;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 1.3542vw;
-  padding: 0.5208vw 0;
+  line-height: 26px;
+  padding: 10px 0;
   /* margin: 40px 0px; */
   color: #666;
 }
@@ -663,7 +865,7 @@ header .inner {
   margin-top: 1%;
 }
 .introduce-txt > a > p {
-  font-size: 1.25vw;
+  font-size: 20px;
   color: #34c987;
 }
 .introduce-txt > a:hover {
@@ -672,16 +874,16 @@ header .inner {
 .service01 {
   position: relative;
   display: block;
-  width: 20.8333vw;
-  height: 36.4583vw;
-  border-radius: 2.6042vw;
+  width: 400px;
+  height: 700px;
+  border-radius: 50px;
   overflow: hidden !important;
   margin-left: 5%;
 }
 .service01 img {
   transition: 0.3s;
   max-width: 100%;
-  height: 36.4583vw;
+  height: 700px;
 }
 .service01 a:hover img {
   scale: 1.1;
@@ -692,7 +894,7 @@ header .inner {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.4583vw;
+  font-size: 28px;
   font-weight: bold;
   color: #fff;
 }
@@ -703,15 +905,15 @@ header .inner {
 .service02 {
   position: relative;
   display: block;
-  width: 20.8333vw;
-  height: 36.4583vw;
-  border-radius: 2.6042vw;
+  width: 400px;
+  height: 700px;
+  border-radius: 50px;
   overflow: hidden !important;
 }
 .service02 img {
   transition: 0.3s;
   max-width: 100%;
-  height: 36.4583vw;
+  height: 700px;
 }
 .service02 a:hover img {
   scale: 1.1;
@@ -722,7 +924,7 @@ header .inner {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.4583vw;
+  font-size: 28px;
   font-weight: bold;
   color: #fff;
 }
@@ -730,11 +932,471 @@ header .inner {
   color: #34c987;
   transition: linear 0.3s;
 }
+@media all and (max-width: 1625px) {
+  .modal {
+    width: 550px;
+    position: fixed;
+    top: 107%;
+    left: 37%;
+  }
+  .modal-menu {
+    width: 550px;
+  }
+  .modal-menu li {
+    float: left;
+    width: 110px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+}
+@media all and (max-width: 1500px) {
+  .introduce .inner {
+    gap: 2%;
+  }
+  .introduce-txt {
+    width: calc(100% / 3);
+    height: 70%;
+  }
+  .introduce-txt h2 {
+    font-size: 38px;
+  }
+  .introduce-txt > p {
+    font-size: 16px;
+  }
+  .introduce-txt > a > p {
+    font-size: 19px;
+  }
+  .service01 {
+    width: calc(100% / 3);
+    height: 70%;
+    margin-left: 5%;
+  }
+  .service01 img {
+    height: 100%;
+  }
+  .service01 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .service02 {
+    position: relative;
+    display: block;
+    width: calc(100% / 3);
+    height: 70%;
+    border-radius: 50px;
+    overflow: hidden !important;
+  }
+  .service02 img {
+    transition: 0.3s;
+    max-width: 100%;
+    height: 100%;
+  }
+  .service02 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+@media all and (max-width: 1240px) {
+  .modal {
+    top: 107%;
+    left: 31%;
+  }
+  .introduce .inner {
+    gap: 4%;
+  }
+  .introduce-txt {
+    width: calc(100% / 3);
+    height: 70%;
+  }
+  .introduce-txt h2 {
+    font-size: 37px;
+  }
+  .introduce-txt > p {
+    font-size: 15px;
+  }
+  .introduce-txt > a > p {
+    font-size: 18px;
+  }
+  .service01 {
+    height: 65%;
+  }
+  .service01 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .service02 {
+    height: 65%;
+  }
+  .service02 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+@media all and (max-width: 1160px) {
+  .introduce .inner {
+    gap: 3%;
+  }
+  .introduce-txt h2 {
+    font-size: 32px;
+  }
+  .introduce-txt > p {
+    font-size: 12px;
+  }
+  .introduce-txt > a > p {
+    font-size: 15px;
+  }
+}
+@media all and (max-width: 1050px) {
+  .modal {
+    top: 107%;
+    left: 26%;
+  }
+}
+@media all and (max-width: 1000px) {
+  .modal {
+    top: 107%;
+    left: 25%;
+  }
+  .introduce .inner {
+    gap: 2%;
+  }
+  .introduce-txt {
+    width: calc(100% / 3);
+    height: 60%;
+  }
+  .introduce-txt h2 {
+    font-size: 28px;
+  }
+  .introduce-txt > p {
+    font-size: 13px;
+  }
+  .introduce-txt > a > p {
+    font-size: 15px;
+  }
+  .service01 {
+    width: calc(100% / 3);
+    height: 60%;
+    margin-left: 0%;
+  }
+  .service01 span {
+    font-size: 20px;
+  }
+  .service02 {
+    height: 60%;
+  }
+  .service02 span {
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 830px) {
+  .service01 span {
+    font-size: 17px;
+  }
+  .service02 span {
+    font-size: 17px;
+  }
+}
+@media all and (max-width: 768px) {
+  .modal {
+    top: 107%;
+    left: 15%;
+  }
+  .introduce .inner {
+    position: relative;
+    display: block;
+    gap: 0%;
+  }
+  .introduce-txt {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    top: 18%;
+    left: 0%;
+  }
+  .introduce-txt h2 {
+    font-size: 50px;
+  }
+  .introduce-txt > p {
+    font-size: 20px;
+  }
+  .introduce-txt > a > p {
+    font-size: 21px;
+  }
+  .service01 {
+    position: absolute;
+    width: 45%;
+    height: 40%;
+    margin-left: 0%;
+    top: 50%;
+    left: 3%;
+  }
+  .service01 img {
+    width: 100%;
+    height: 100%;
+  }
+  .service01 span {
+    font-size: 20px;
+  }
+  .service02 {
+    position: absolute;
+    width: 45%;
+    height: 40%;
+    top: 50%;
+    left: 52%;
+  }
+  .service02 img {
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+  }
+  .service02 span {
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 650px) {
+  .modal {
+    top: 107%;
+    left: 12%;
+  }
+}
+@media all and (max-width: 580px) {
+  .modal {
+    top: 107%;
+    left: 10%;
+  }
+  .modal-menu {
+    width: 500px;
+  }
+  .modal-menu li {
+    float: left;
+    width: 100px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+  }
+  .modal-menu li a {
+    font-size: 13px;
+  }
+  .service01 {
+    position: absolute;
+    width: 45%;
+    height: 40%;
+    margin-left: 0%;
+    top: 47%;
+    left: 3%;
+  }
+  .service01 span {
+    font-size: 18px;
+  }
+  .service02 {
+    position: absolute;
+    width: 45%;
+    height: 40%;
+    top: 47%;
+    left: 52%;
+  }
+  .service02 span {
+    font-size: 18px;
+  }
+}
+@media all and (max-width: 480px) {
+  .modal {
+    top: 107%;
+    left: 12%;
+  }
+  .modal-menu {
+    width: 400px;
+  }
+  .modal-menu li {
+    float: left;
+    width: 80px;
+    margin: 3px;
+    padding: 3px;
+    text-align: center;
+  }
+  .modal-menu li a {
+    font-size: 11px;
+  }
+  .introduce-txt {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    top: 15%;
+    left: 0%;
+  }
+  .service01 {
+    position: absolute;
+    width: 45%;
+    height: 40%;
+    margin-left: 0%;
+    top: 47%;
+    left: 3%;
+  }
+  .service01 span {
+    font-size: 15px;
+  }
+  .service02 {
+    position: absolute;
+    width: 45%;
+    height: 40%;
+    top: 47%;
+    left: 52%;
+  }
+  .service02 span {
+    font-size: 15px;
+  }
+}
+@media all and (max-width: 365px) {
+  .modal {
+    top: 112%;
+    left: 5%;
+  }
+  .mobile-menu-bar {
+    right: 3%;
+  }
+  .introduce-txt {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    top: 11%;
+    left: 0%;
+  }
+  .introduce-txt h2 {
+    font-size: 40px;
+  }
+  .introduce-txt > p {
+    font-size: 16px;
+  }
+  .introduce-txt > a > p {
+    font-size: 18px;
+  }
+  .service01 {
+    position: absolute;
+    width: 45%;
+    height: 40%;
+    margin-left: 0%;
+    top: 44%;
+    left: 3%;
+  }
+  .service01 span {
+    font-size: 15px;
+    text-align: center;
+  }
+  .service02 {
+    position: absolute;
+    width: 45%;
+    height: 40%;
+    top: 44%;
+    left: 52%;
+  }
+  .service02 span {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+@media all and (max-width: 320px) {
+  .mobile-menu-bar {
+    right: 28%;
+  }
+  .modal {
+    top: 112%;
+    left: 9%;
+  }
+  .modal-top {
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    bottom: 55px;
+    display: none;
+  }
+  .modal-top i {
+    font-size: 26px;
+  }
+  .modal-menu {
+    width: 300px;
+  }
+  .modal-menu li {
+    float: left;
+    width: 64px;
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
+  }
+  .modal-menu li a {
+    font-size: 7px;
+  }
+  .introduce-txt {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    top: 15%;
+    left: 0%;
+  }
+  .introduce-txt h2 {
+    font-size: 35px;
+  }
+  .introduce-txt > p {
+    font-size: 14px;
+  }
+  .introduce-txt > a > p {
+    font-size: 16px;
+  }
+  .service01 {
+    position: absolute;
+    width: 46%;
+    height: 37%;
+    margin-left: 0%;
+    top: 47%;
+    left: 2%;
+  }
+  .service01 span {
+    font-size: 15px;
+    text-align: center;
+    line-height: 17px;
+  }
+  .service02 {
+    position: absolute;
+    width: 46%;
+    height: 37%;
+    top: 47%;
+    left: 53%;
+  }
+  .service02 span {
+    font-size: 15px;
+    text-align: center;
+    line-height: 17px;
+  }
+}
 /* ================================================================================= */
 /* 배너 */
 .banner {
   width: 100%;
-  height: 200.625vw;
+  height: 3852px;
   /* height: 100vh; */
   position: relative;
   display: block;
@@ -743,27 +1405,27 @@ header .inner {
 .bg {
   display: block;
   width: 100%;
-  height: 50.1563vw;
+  height: 100vh;
   top: 0;
   left: 0;
 }
 .bg > div {
   width: 100%;
-  height: 50.1563vw;
+  height: 100vh;
   background-attachment: fixed !important;
   position: relative;
 }
-.bg > div p strong {
-  font-size: 2.0833vw;
+/* .bg > div p strong {
+  font-size: 40px;
   font-weight: 600;
-}
+} */
 .bg > div p {
   display: inline-block;
-  padding: 0.5208vw;
-  font-size: 1.25vw;
+  padding: 10px;
+  font-size: 24px;
   font-weight: 400;
   text-align: center;
-  line-height: 1.875vw;
+  line-height: 36px;
   color: #e0e0e0;
   position: absolute;
   top: 50%;
@@ -773,7 +1435,7 @@ header .inner {
 }
 .bg > div p span {
   font-weight: bold;
-  font-size: 2.6042vw;
+  font-size: 50px;
 }
 .bg > div.bg01 {
   background: url("../images/index/banner.png") no-repeat 50% 50% / cover;
@@ -785,7 +1447,7 @@ header .inner {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50.1563vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .bg > div.bg02 {
@@ -798,7 +1460,7 @@ header .inner {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50.1563vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .bg > div.bg03 {
@@ -811,7 +1473,7 @@ header .inner {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50.1563vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .bg > div.bg04 {
@@ -824,8 +1486,190 @@ header .inner {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50.1563vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
+}
+@media all and (max-width: 1650px) {
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 50px;
+  }
+  .bg > div p {
+    width: 1000px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 50px;
+  }
+  .bg > div p {
+    width: 1000px;
+  }
+}
+@media all and (max-width: 1270px) {
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 50px;
+  }
+  .bg > div p {
+    width: 1000px;
+  }
+}
+@media all and (max-width: 1240px) {
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 50px;
+    width: 700px;
+  }
+  .bg > div p {
+    width: 1000px;
+  }
+}
+@media all and (max-width: 1100px) {
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 50px;
+  }
+  .bg > div p {
+    font-size: 24px;
+    width: 1000px;
+  }
+}
+@media all and (max-width: 1000px) {
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 50px;
+  }
+  .bg > div p {
+    font-size: 24px;
+    width: 1000px;
+  }
+}
+@media all and (max-width: 830px) {
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 50px;
+  }
+  .bg > div p {
+    font-size: 24px;
+    width: 700px;
+  }
+}
+@media all and (max-width: 768px) {
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 45px;
+  }
+  .bg > div p {
+    font-size: 24px;
+    width: 700px;
+  }
+}
+@media all and (max-width: 660px) {
+  .modal-top {
+    bottom: 10%;
+  }
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 45px;
+  }
+  .bg > div p {
+    font-size: 24px;
+    width: 700px;
+  }
+}
+@media all and (max-width: 560px) {
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 40px;
+  }
+  .bg > div p {
+    font-size: 24px;
+    width: 600px;
+  }
+}
+@media all and (max-width: 540px) {
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 35px;
+  }
+  .bg > div p {
+    font-size: 21px;
+    width: 500px;
+  }
+}
+@media all and (max-width: 480px) {
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 35px;
+  }
+  .bg > div p {
+    font-size: 18px;
+    width: 450px;
+  }
+}
+@media all and (max-width: 420px) {
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 33px;
+  }
+  .bg > div p {
+    font-size: 17px;
+    width: 430px;
+  }
+}
+@media all and (max-width: 380px) {
+  .banner {
+    width: 100%;
+    height: 3484px;
+  }
+  .bg > div p span {
+    font-size: 27px;
+  }
+  .bg > div p {
+    font-size: 14px;
+    width: 330px;
+  }
 }
 /* ======================================================================= */
 /* 앱서비스 */
@@ -846,11 +1690,11 @@ header .inner {
   --dark-brown: #915b40;
 }
 .app-service-txt p {
-  font-size: 2.6042vw;
+  font-size: 50px;
   padding-top: 8%;
   margin-top: 3%;
   margin-bottom: 2%;
-  line-height: 3.6458vw;
+  line-height: 70px;
   color: #666;
 }
 .app-service-txt span {
@@ -860,7 +1704,7 @@ header .inner {
 .swiper-full-mobile {
   position: relative;
   /* margin: 50px auto; */
-  padding-bottom: 4.1667vw;
+  padding-bottom: 50px;
   /* padding-top: 50px; */
 }
 /* .swiper-full-mobile:before {
@@ -884,24 +1728,64 @@ header .inner {
 .swiper-full-mobile .swiper-slide img {
   width: 80%;
   margin-left: 10%;
-  height: 28.6458vw;
+  height: 550px;
   object-fit: contain;
 }
 .swiper-slide.swiper-slide-active img {
-  border-radius: 2.0833vw;
+  border-radius: 40px;
 }
 .swiper-full-mobile .swiper-slide p {
   text-align: center;
-  font-size: 0.7292vw;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 0.8333vw;
+  line-height: 16px;
 }
 .swiper-full-mobile .swiper-slide p span {
-  font-size: 1.0417vw;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 2.0833vw;
+  line-height: 40px;
 }
-
+@media all and (max-width: 1650px) {
+  .app-service-txt p {
+    font-size: 50px;
+    padding-top: 8%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    line-height: 70px;
+    color: #666;
+  }
+  .app-service-txt span {
+    font-weight: bold;
+    color: #000;
+  }
+  .swiper-full-mobile {
+    position: relative;
+    padding-bottom: 50px;
+  }
+  .swiper-full-mobile .swiper-slide {
+    height: 100%;
+  }
+  .swiper-full-mobile .swiper-slide img {
+    width: 80%;
+    margin-left: 10%;
+    height: 550px;
+    object-fit: contain;
+  }
+  .swiper-slide.swiper-slide-active img {
+    border-radius: 40px;
+  }
+  .swiper-full-mobile .swiper-slide p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  .swiper-full-mobile .swiper-slide p span {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 40px;
+  }
+}
 /* ========================= */
 /* ============================================================= */
 /* 이용후기 */
@@ -931,16 +1815,16 @@ header .inner {
   width: 100%;
 }
 .review h2 {
-  font-size: 2.6042vw;
+  font-size: 50px;
   font-weight: bold;
-  line-height: 3.125vw;
+  line-height: 60px;
   padding-top: 5%;
   margin-top: 3%;
-  margin-bottom: 1.3021vw;
+  margin-bottom: 25px;
 }
 .review p {
-  font-size: 1.0417vw;
-  line-height: 1.3542vw;
+  font-size: 20px;
+  line-height: 26px;
   font-weight: 400;
   color: #666;
 }
@@ -953,21 +1837,21 @@ header .inner {
 
 .reviewswiper .swiper-slide {
   text-align: center;
-  font-size: 0.9375vw;
+  font-size: 18px;
   height: 100%;
 }
 .reviewswiper .swiper-slide img {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 2.8646vw;
+  margin-top: 55px;
   object-fit: cover;
 }
 .review-bt-box {
   display: block;
   width: 100%;
-  height: 2.6042vw;
-  border-radius: 2.0833vw;
+  height: 50px;
+  border-radius: 40px;
   margin-top: 5%;
   margin-bottom: 8%;
 }
@@ -978,7 +1862,7 @@ header .inner {
   right: 0%;
 }
 .review-more a {
-  font-size: 0.7813vw;
+  font-size: 15px;
   font-weight: 400;
   color: #34c987;
 }
@@ -986,10 +1870,10 @@ header .inner {
   border: 0.0625rem solid #34c987;
   background-color: transparent;
   width: 100%;
-  height: 2.6042vw;
-  border-radius: 2.0833vw;
+  height: 50px;
+  border-radius: 40px;
   cursor: pointer;
-  font-size: 0.9375vw;
+  font-size: 18px;
   font-weight: 550;
 }
 .review-bt-box:hover {
@@ -1002,7 +1886,7 @@ header .inner {
 /* 하단배너 */
 .bt-banner {
   width: 100%;
-  height: 10.4167vw;
+  height: 200px;
 }
 .btb-left {
   width: calc(100% / 2);
@@ -1020,7 +1904,7 @@ header .inner {
   top: 20%;
   left: 8%;
   color: #fff;
-  font-size: 1.3542vw;
+  font-size: 26px;
   font-weight: 600;
 }
 .btb-left button {
@@ -1028,12 +1912,12 @@ header .inner {
   bottom: 20%;
   right: 8%;
   color: #fff;
-  font-size: 0.9375vw;
+  font-size: 20px;
   font-weight: 550;
   border: 0.0625rem solid #fff;
-  border-radius: 2.6042vw;
-  width: 13.5417vw;
-  height: 2.3438vw;
+  border-radius: 50px;
+  width: 260px;
+  height: 50px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -1058,7 +1942,7 @@ header .inner {
   top: 20%;
   left: 8%;
   color: #fff;
-  font-size: 1.3542vw;
+  font-size: 26px;
   font-weight: 600;
 }
 .btb-right button {
@@ -1066,12 +1950,12 @@ header .inner {
   bottom: 20%;
   right: 8%;
   color: #fff;
-  font-size: 0.9375vw;
+  font-size: 20px;
   font-weight: 550;
   border: 0.0625rem solid #fff;
-  border-radius: 2.6042vw;
-  width: 13.5417vw;
-  height: 2.3438vw;
+  border-radius: 50px;
+  width: 260px;
+  height: 50px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -1088,7 +1972,7 @@ footer {
   display: block;
   background-color: #333;
   width: 100%;
-  height: 15.625vw;
+  height: 300px;
 }
 footer .inner {
   position: relative;
@@ -1102,13 +1986,13 @@ footer .inner {
 .footer-title {
   position: relative;
   display: block;
-  font-size: 2.0833vw;
+  font-size: 40px;
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto;
   color: #34c987;
   font-weight: 800;
-  margin-top: 2.0833vw;
+  margin-top: 40px;
 }
 .sns-icon {
   position: relative;
@@ -1116,10 +2000,10 @@ footer .inner {
   width: 12%;
   text-align: center;
   justify-content: space-between;
-  margin-top: 2.6042vw;
+  margin-top: 50px;
 }
 footer .inner img {
-  width: 1.8229vw;
+  width: 35px;
 }
 .email-number {
   position: relative;
@@ -1128,7 +2012,7 @@ footer .inner img {
   color: #9d9d9d;
   justify-content: space-around;
   align-items: center;
-  margin-top: 1.5625vw;
+  margin-top: 30px;
   font-weight: 200;
 }
 
@@ -1138,7 +2022,7 @@ footer .inner img {
   text-align: center;
   color: #9d9d9d;
   font-weight: 100;
-  margin-top: 2.6042vw;
+  margin-top: 50px;
 }
 
 @media all and (max-width: 1080px) {
