@@ -250,6 +250,23 @@ menuToggleBtn.addEventListener("click", function () {
       el: ".reviewswiper .swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      381: {
+        // freemode: true,
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      380: {
+        // freemode: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      320: {
+        // freemode: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+    }
     // direction: getDirection(),
     // // navigation: {
     // //   nextEl: '.swiper-button-next',
