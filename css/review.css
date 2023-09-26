@@ -43,6 +43,9 @@ header .inner {
   display: flex;
   justify-content: space-between;
 }
+.header-menu ul li a {
+  font-weight: 600;
+}
 .header-menu ul li a:hover {
   color: #34c987;
 }
@@ -304,7 +307,7 @@ header .inner {
 .addPostBtn {
   display: none;
 }
-#postContent{
+#postContent {
   padding: 100px;
 }
 fieldset,
@@ -377,7 +380,6 @@ button:hover {
   min-width: 100px;
   margin-left: 20px;
 }
-
 
 /* footer */
 footer {

@@ -12,6 +12,8 @@ window.addEventListener("load", function () {
   let kakao = document.querySelector(".kakao");
   let google = document.querySelector(".google");
 
+  let gosignupButton = document.querySelector(".gosignup");
+
   legends.forEach((legend) => {
     legend.addEventListener("click", function () {
       // 모든 legends 요소를 초기 상태로 리셋
@@ -42,13 +44,18 @@ window.addEventListener("load", function () {
       switch (legendText) {
         case "이용자":
           message = "이용자로 로그인 되었습니다.";
-          break;
+          // index.html 페이지로 이동
+          window.location.href = "index.html";
+
         case "보호자":
           message = "보호자로 로그인 되었습니다.";
-          break;
+          // index.html 페이지로 이동
+          window.location.href = "index.html";
+
         case "지원자":
           message = "지원자로 로그인 되었습니다.";
-          break;
+          // index.html 페이지로 이동
+          window.location.href = "index.html";
       }
 
       if (usernameInput.value === "") {
@@ -67,21 +74,38 @@ window.addEventListener("load", function () {
     }
   });
 
+  // 회원가입 버튼 누르면 페이지 이동
+  gosignupButton.addEventListener("click", function (event) {
+    event.preventDefault(); // 기본 동작 중지
+
+    // 확인 창 표시
+    if (confirm("회원가입 페이지로 이동하시겠습니까?")) {
+      // 사용자가 확인을 누른 경우에만 signup.html 페이지로 이동
+      window.location.href = "signup.html";
+    }
+  });
+
   naver.addEventListener("click", function () {
     if (confirm("네이버 아이디로 로그인 하시겠습니까?")) {
       alert("로그인 되었습니다.");
+      // index.html 페이지로 이동
+      window.location.href = "index.html";
     }
   });
 
   kakao.addEventListener("click", function () {
     if (confirm("카카오톡 아이디로 로그인 하시겠습니까?")) {
       alert("로그인 되었습니다.");
+      // index.html 페이지로 이동
+      window.location.href = "index.html";
     }
   });
 
   google.addEventListener("click", function () {
     if (confirm("구글 아이디로 로그인 하시겠습니까?")) {
       alert("로그인 되었습니다.");
+      // index.html 페이지로 이동
+      window.location.href = "index.html";
     }
   });
 });
