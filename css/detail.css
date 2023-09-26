@@ -94,9 +94,12 @@ header .inner {
   margin-bottom: 20%;
   background-color: #34c987;
   border: none;
+  border-radius: 10px;
   color: #fff;
   font-size: 20px;
   cursor: pointer;
+  box-shadow: 0 17px 20px -20px rgba(0, 0, 0, 0.5);    
+
 }
 .reservation-btn a {
   color: #fff;
@@ -184,6 +187,8 @@ span {
   color: #fff;
   font-size: 20px;
   cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 17px 20px -20px rgba(0, 0, 0, 0.5);   
 }
 .reservation-btn02 a {
   color: #fff;
@@ -219,6 +224,8 @@ span {
   color: #fff;
   font-size: 20px;
   cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 17px 20px -20px rgba(0, 0, 0, 0.5);   
 }
 .reservation-btn03 a {
   color: #fff;
@@ -300,6 +307,9 @@ span {
 .area-map img {
   width: 60%;
   margin-left: 20%;
+}
+.fa-solid, .fas {
+  color: #32c987;
 }
 
 /* 예약방법 슬라이드 */
@@ -560,9 +570,15 @@ footer .inner {
 }
 
 @media all and (max-width: 1024px) {
-  /* .titlename {
-    margin-top: 45%;
-  } */
+  .titlename {
+    font-size: 3vw;
+  }
+  .titlename02{
+    font-size: 3vw;
+  }
+  .titlename03{
+    font-size: 3vw;
+  }
   .explane {
     font-size: 15px;
     margin-top: 4%;
@@ -575,16 +591,22 @@ footer .inner {
     font-size: 15px;
     margin-top: 4%;
   }
+  .explane03 {
+    font-size: 15px;
+}
   .reservation-btn {
-    padding: 15px 55px;
-  }
-  /* .onfoot-txt {
-    position: relative;
-    display: inline-block;
-    color: #222;
-    width: 50%;
-    margin-left: 4%;
-} */
+    padding: 13px 45px;
+    font-size: 15px;
+}
+  .reservation-btn02 {
+    padding: 13px 55px;
+    font-size: 15px;
+}
+  .reservation-btn03 {
+    padding: 13px 55px;
+    font-size: 15px;
+}
+
   .top-txt {
     font-size: 15px;
   }
@@ -622,7 +644,11 @@ footer .inner {
     font-size: 15px;
     line-height: 1.7;
   }
+  .footer-title {
+    font-size: 30px;
 }
+}
+
 @media all and (max-width: 839px) {
   .explane {
     white-space: nowrap;
@@ -645,6 +671,7 @@ footer .inner {
   }
   .detail-img img {
     padding: 0;
+    margin-top: 10%;
     width: 70%;
   }
 
@@ -775,8 +802,7 @@ footer .inner {
     border-radius: 10px;
   }
 }
-@media all and (max-width: 655px) {
-}
+
 @media all and (max-width: 480px) {
   .detailmain02 {
     flex-direction: column;
@@ -914,7 +940,7 @@ footer .inner {
   }
   .img img {
     width: 100%;
-    padding: 65px 0 0 0;
+    padding: 45px 0 0 0;
   }
   .reservation-method-title {
     display: block;
@@ -924,12 +950,10 @@ footer .inner {
   }
   .reservation-method-title > p:nth-child(1) {
     padding-top: 20%;
-    margin-left: 10%;
     font-size: 6vw;
     font-weight: 600;
   }
   .reservation-method-title > p:nth-child(2) {
-    margin-left: 10%;
     margin-top: 3%;
     font-size: 15px;
   }
@@ -958,7 +982,7 @@ footer .inner {
     font-size: 20px;
   }
   .bt-txt {
-    font-size: 14px;
+    font-size: 2.9167vw;
   }
   .img {
     width: 100%;
@@ -970,11 +994,11 @@ footer .inner {
   }
   .swiper-button-next,
   .swiper-container-rtl .swiper-button-prev {
-    right: 0%;
+    right: 4%;
   }
   .swiper-button-prev,
   .swiper-container-rtl .swiper-button-next {
-    left: 7%;
+    left: 5%;
   }
   .inner {
     width: 80%;
@@ -987,8 +1011,8 @@ footer .inner {
     width: 100%;
     height: 16.8542vw;
     margin-top: 50px;
-    margin-bottom: 15px;
-    border-radius: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
     background-color: #34c987;
   }
   .right-btn {
@@ -997,9 +1021,14 @@ footer .inner {
     height: 16.8542vw;
     margin-top: 15px;
     margin-bottom: 50px;
-    border-radius: 15px;
+    border-radius: 10px;
   }
   .footer-title {
     font-size: 30px;
+  }
+}
+@media all and (max-width: 340px){
+  .email-number p{
+    white-space: nowrap;
   }
 }
