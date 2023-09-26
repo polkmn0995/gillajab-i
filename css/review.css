@@ -292,7 +292,7 @@ header .inner {
   margin-left: 80%;
   /* margin-right: 1%; */
   padding: 13px 0;
-  background-color: #32c876;
+  background-color: #34c876;
   font-size: 15px;
   text-align: center;
   cursor: pointer;
@@ -352,7 +352,7 @@ button:hover {
   background-color: #34c876;
 }
 #postImage {
-  margin-right: 170px;
+  margin-right:0px;
 }
 #postList {
   /* height: 800px; */
@@ -387,7 +387,6 @@ footer {
   width: 100%;
   height: 300px;
   min-width: 320px;
-  margin-top: 200px;
 }
 footer .inner {
   position: relative;
@@ -402,7 +401,6 @@ footer .inner {
   position: relative;
   display: block;
   font-size: 40px;
-  text-transform: uppercase;
   text-align: center;
   margin: 0 auto;
   color: #34c987;
@@ -426,7 +424,7 @@ footer .inner {
 .email-number {
   position: relative;
   display: flex;
-  width: 40%;
+  width: 400px;
   color: #fff;
   justify-content: space-around;
   align-items: center;
@@ -440,8 +438,72 @@ footer .inner {
   text-align: center;
   color: #fff;
   font-weight: 100;
-  bottom: 20px;
+  bottom: 45px;
 }
 .reservation-method-title {
   display: none;
+}
+.fa-solid, .fas {
+  color: #32c987;
+}
+@media all and (max-width: 1024px){
+  .footer-title {
+    font-size: 30px;
+}
+}
+@media all and (max-width: 768px){
+  .write-btn {
+    font-size: 13px;
+}
+button {
+  font-size: 13px;
+}
+}
+@media all and (max-width: 656px){
+  #postImage {
+    margin-right: 115px;
+    margin-bottom: 20px;
+}
+}
+@media all and (max-width: 480px){
+  .write-btn {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0%;
+    padding: 15px 0;
+    border-radius: 5px;
+}
+button {
+  width: 100%;
+  padding: 15px 0;
+  margin-top: 40px;
+  white-space: nowrap;
+  margin-left: 0;
+  border-radius: 5px;
+}
+.post-form {
+  padding: 0px;
+}
+footer {
+  margin-top: 40px;
+}
+
+.footer-title {
+  font-size: 30px;
+}
+.email-number p{
+  white-space: nowrap;
+}
+.email-number {
+  position: relative;
+  display: flex;
+  /* width: 400px; */
+  color: #fff;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  font-weight: 200;
+  flex-direction: column;
+  line-height: 1.5;
+}
 }
