@@ -2,7 +2,6 @@
 
 .inner {
   position: relative;
-  width: 100%;
   padding: 0px 25px;
   margin: 0 auto;
   max-width: 1000px;
@@ -48,6 +47,7 @@ header {
 }
 header .inner {
   display: flex;
+  width: 80%;
   justify-content: space-between;
   align-items: center;
   max-width: 1500px;
@@ -70,6 +70,7 @@ header .inner {
 }
 .header-menu ul li a {
   transition: color 0.15s ease-in-out !important;
+  font-weight: 600;
 }
 .header-menu ul li a:hover {
   color: #34c987;
