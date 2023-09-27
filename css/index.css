@@ -20,12 +20,14 @@ body {
   height: 300px;
   z-index: 9999;
   padding: 10px 0;
+  margin-right: 1.5%;
 }
 .modal li {
   text-align: right;
   margin: 10% 0;
   width: 95px;
   padding: 5px;
+  /* background-color: #e89a3d; */
 }
 /* .modal li:last-child {
   margin-bottom: 0;
@@ -245,7 +247,8 @@ header .inner {
     /* padding-bottom: 4%; */
     background-color: transparent;
     border: none;
-    margin-left: 105%;
+    /* margin-left: 105%; */
+    float: right;
   }
   button i {
     width: 100%;
@@ -277,7 +280,38 @@ header .inner {
   #mobile-menu-box.active {
     display: block;
   }
-  @media all and (max-width: 480px) {
+}
+@media all and (max-width: 768px) {
+  header .inner {
+    width: 100%;
+  }
+}
+@media all and (max-width: 480px) {
+  .logo h1 {
+    font-size: 25px;
+  }
+  button i {
+    font-size: 28px;
+    margin-top: 5%;
+  }
+}
+@media all and (max-width: 330px) {
+  button i {
+    margin-top: 20%;
+  }
+  button {
+    margin: 0 auto;
+  }
+  .nav {
+    width: 50px;
+  }
+}
+@media all and (max-width: 320px) {
+  button i {
+    margin-left: 170%;
+  }
+  .logo h1 {
+    float: left;
   }
 }
 /* ================================================================================= */
@@ -1231,7 +1265,7 @@ header .inner {
     border-radius: 30px;
   }
 }
-@media all and (max-width: 365px) {
+/* @media all and (max-width: 365px) {
   .modal {
     top: 112%;
     left: 5%;
@@ -1353,7 +1387,7 @@ header .inner {
     text-align: center;
     line-height: 17px;
   }
-}
+} */
 /* ================================================================================= */
 /* 배너 */
 .banner {
@@ -1786,6 +1820,10 @@ header .inner {
   .modal {
     right: 10%;
   }
+  .inner {
+    padding: 0px 0px !important;
+  }
+
   .app-service-txt p {
     font-size: 40px;
     padding-top: 10%;
@@ -1816,7 +1854,7 @@ header .inner {
     line-height: 40px;
   }
 }
-@media all and (max-width: 530px) {
+/* @media all and (max-width: 530px) {
   .modal {
     top: 111%;
     right: 10%;
@@ -1850,14 +1888,12 @@ header .inner {
   }
   .swiper-full-mobile {
     position: relative;
-    /* margin: 50px auto; */
     height: 600px;
     padding-bottom: 50px;
     margin-bottom: 45px;
-    /* padding-top: 50px; */
   }
-}
-@media all and (max-width: 480px) {
+} */
+/* @media all and (max-width: 480px) {
   .app-service-txt p {
     font-size: 30px;
     text-align: center;
@@ -1887,11 +1923,11 @@ header .inner {
   }
   .swiper-full-mobile {
     position: relative;
-    /* margin: 50px auto; */
+
     height: 600px;
     padding-bottom: 50px;
     margin-bottom: 45px;
-    /* padding-top: 50px; */
+
   }
 }
 @media all and (max-width: 420px) {
@@ -1907,11 +1943,11 @@ header .inner {
   }
   .swiper-full-mobile {
     position: relative;
-    /* margin: 50px auto; */
+
     height: 600px;
     padding-bottom: 50px;
     margin-bottom: 50px;
-    /* padding-top: 50px; */
+
   }
 }
 @media all and (max-width: 380px) {
@@ -1925,7 +1961,7 @@ header .inner {
     margin-bottom: 5%;
     line-height: 35px;
   }
-}
+} */
 /* ========================= */
 /* ============================================================= */
 /* 이용후기 */
@@ -2031,10 +2067,9 @@ header .inner {
   }
 }
 @media all and (max-width: 1440px) {
-  /* .modal {
-    top: 111%;
-    right: 0%;
-  } */
+  .modal {
+    top: 50%;
+  }
 }
 @media all and (max-width: 1240px) {
   .review-more {
@@ -2043,12 +2078,22 @@ header .inner {
     top: 76%;
     right: 1%;
   }
+  .modal {
+    top: 45%;
+  }
 }
 @media all and (max-width: 1000px) {
+  .modal {
+    top: 110%;
+    left: 25%;
+  }
+  .modal-top {
+    bottom: 1%;
+  }
   .review-more {
     display: block;
     position: absolute;
-    top: 76%;
+    top: 63%;
     right: 1%;
   }
   .review-bt {
@@ -2061,63 +2106,101 @@ header .inner {
     left: -0%;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 865px) {
+  .review h2 {
+    font-size: 5.7803vw;
+  }
+  .review p {
+    font-size: 2.3121vw;
+  }
 }
-@media all and (max-width: 540px) {
+@media all and (max-width: 768px) {
+  .modal {
+    top: 110%;
+    left: 16%;
+  }
+}
+@media all and (max-width: 600px) {
+  .modal {
+    top: 110%;
+    left: 8%;
+  }
+  .modal-top {
+    bottom: 1%;
+    right: 1%;
+  }
+  .review h2 {
+    line-height: 1.3;
+  }
+  .review p {
+    line-height: 1.3;
+  }
+}
+@media all and (max-width: 520px) {
+  .review h2 {
+    font-size: 5.7692vw;
+  }
+  .review p {
+    font-size: 3.0769vw;
+  }
+  .modal-top {
+    bottom: 5%;
+    right: 1%;
+  }
+  .review-more {
+    top: 48%;
+    right: 1%;
+  }
 }
 @media all and (max-width: 480px) {
+  .review h2 {
+    font-size: 6.25vw;
+    margin-top: 15%;
+    text-align: center;
+  }
+  .review p {
+    font-size: 3.3333vw;
+    text-align: center;
+  }
+  .review-more {
+    top: 72%;
+    right: 1%;
+  }
+  .review-more a {
+    font-size: 12px;
+  }
+  .review .inner {
+    align-content: flex-start;
+  }
+}
+@media all and (max-width: 400px) {
+  .review h2 {
+    font-size: 5.5vw;
+  }
+  .review p {
+    font-size: 3.75vw;
+  }
 }
 @media all and (max-width: 380px) {
-  .review .inner {
-    gap: 1%;
-    justify-content: center;
-    flex-direction: column;
-  }
   .review-sw {
     position: relative;
     overflow: hidden;
     padding-top: 5%;
+    margin-top: 10%;
     width: 100%;
     height: 40%;
   }
   .review-txt {
     width: 90%;
   }
-  .review h2 {
-    width: 300px;
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 40px;
-    padding-top: 5%;
-    margin-top: 3%;
-    margin-bottom: 25px;
+  .modal-menu li {
+    width: 70px;
   }
-  .review p {
-    font-size: 15px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #666;
-    margin-top: 20px;
-  }
-  .reviewswiper {
-    /* position: relative; */
-    display: block;
-    height: 50%;
-  }
-  .review-more {
-    top: 55%;
-    left: 70%;
-  }
-  .review-more a {
-    font-size: 12px;
-  }
-  .review-bt-box {
-    width: 200px;
-    position: absolute;
-    top: 80%;
-    left: -15%;
+  .modal-menu li a {
+    font-size: 10px;
   }
 }
+
 /* ====================================================== */
 /* 하단배너 */
 .bt-banner {
@@ -2199,6 +2282,8 @@ header .inner {
 .btb-right button:hover {
   color: #34c987;
   border: 0.0625rem solid #34c987;
+}
+@media all and (max-width: 1000px) {
 }
 /* ====================================================== */
 /* 푸터 */
