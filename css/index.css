@@ -242,7 +242,7 @@ header .inner {
     height: 54px;
     background-color: transparent;
   }
-  button {
+  #menuToggleBtn {
     width: 50px;
     /* padding-bottom: 4%; */
     background-color: transparent;
@@ -250,7 +250,7 @@ header .inner {
     /* margin-left: 105%; */
     float: right;
   }
-  button i {
+  #menuToggleBtn i {
     width: 100%;
     font-size: 30px;
     color: #34c987;
@@ -296,10 +296,10 @@ header .inner {
   }
 }
 @media all and (max-width: 330px) {
-  button i {
+  #menuToggleBtn i {
     margin-top: 20%;
   }
-  button {
+  #menuToggleBtn {
     margin: 0 auto;
   }
   .nav {
@@ -307,7 +307,7 @@ header .inner {
   }
 }
 @media all and (max-width: 320px) {
-  button i {
+  #menuToggleBtn i {
     margin-left: 170%;
   }
   .logo h1 {
@@ -1434,7 +1434,7 @@ header .inner {
   font-size: 50px;
 }
 .bg > div.bg01 {
-  background: url("../images/index/banner 1.png") no-repeat 50% 50% / cover;
+  background: url("../images/index/cleanbanner.png") no-repeat 50% 50% / cover;
   z-index: 10;
 }
 /* .bg > div.bg01::after {
@@ -1447,7 +1447,7 @@ header .inner {
   background-color: rgba(0, 0, 0, 0.5);
 } */
 .bg > div.bg02 {
-  background: url("../images/index/banner 1.png") no-repeat 50% 50% / cover;
+  background: url("../images/index/cleanbanner.png") no-repeat 50% 50% / cover;
   z-index: 20;
 }
 /* .bg > div.bg02::after {
@@ -1460,7 +1460,7 @@ header .inner {
   background-color: rgba(0, 0, 0, 0.5);
 } */
 .bg > div.bg03 {
-  background: url("../images/index/banner 1.png") no-repeat 50% 50% / cover;
+  background: url("../images/index/cleanbanner.png") no-repeat 50% 50% / cover;
   z-index: 30;
 }
 /* .bg > div.bg03::after {
@@ -1473,7 +1473,7 @@ header .inner {
   background-color: rgba(0, 0, 0, 0.5);
 } */
 .bg > div.bg04 {
-  background: url("../images/index/banner 1.png") no-repeat 50% 50% / cover;
+  background: url("../images/index/cleanbanner.png") no-repeat 50% 50% / cover;
   z-index: 40;
 }
 /* .bg > div.bg04::after {
@@ -1650,6 +1650,12 @@ header .inner {
   .bg > div p {
     font-size: 17px;
     width: 430px;
+  }
+  .modal-menu li {
+    width: 80px;
+  }
+  .modal-menu li a {
+    font-size: 12px;
   }
 }
 @media all and (max-width: 375px) {
@@ -2283,8 +2289,102 @@ header .inner {
   color: #34c987;
   border: 0.0625rem solid #34c987;
 }
+
 @media all and (max-width: 1000px) {
+  .btb-left p {
+    font-size: 2.5vw;
+  }
+  .btb-left button {
+    width: 25vw;
+    font-size: 1.5vw;
+  }
+  .btb-left button i {
+    font-size: 1.5vw;
+  }
+
+  .btb-right p {
+    font-size: 2.5vw;
+  }
+  .btb-right button {
+    width: 25vw;
+    font-size: 1.5vw;
+  }
+  .btb-right button i {
+    font-size: 1.5vw;
+  }
 }
+@media all and (max-width: 768px) {
+  .btb-left p {
+    font-size: 2.6042vw;
+  }
+  .btb-left button {
+    width: 32.5521vw;
+    font-size: 1.9531vw;
+  }
+  .btb-left button i {
+    font-size: 1.9531vw;
+  }
+  .btb-right p {
+    font-size: 2.6042vw;
+  }
+  .btb-right button {
+    width: 32.5521vw;
+    font-size: 1.9531vw;
+  }
+  .btb-right button i {
+    font-size: 1.9531vw;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .btb-left p {
+    font-size: 3.9667vw;
+    margin-right: 1%;
+  }
+  .btb-left button {
+    width: 41.6667vw;
+    font-size: 3.125vw;
+  }
+  .btb-left button i {
+    font-size: 3.125vw;
+  }
+  .btb-right p {
+    font-size: 3.9667vw;
+    margin-right: 1%;
+  }
+  .btb-right button {
+    width: 41.6667vw;
+    font-size: 3.125vw;
+  }
+  .btb-right button i {
+    font-size: 3.125vw;
+  }
+}
+@media all and (max-width: 380px) {
+  .btb-left p {
+    font-size: 3.9368vw;
+    margin-right: 1%;
+  }
+  .btb-left button {
+    width: 44.7368vw;
+    font-size: 3.6842vw;
+  }
+  .btb-left button i {
+    font-size: 3.6842vw;
+  }
+  .btb-right p {
+    font-size: 3.9368vw;
+    margin-right: 1%;
+  }
+  .btb-right button {
+    width: 44.7368vw;
+    font-size: 3.6842vw;
+  }
+  .btb-right button i {
+    font-size: 3.6842vw;
+  }
+}
+
 /* ====================================================== */
 /* 푸터 */
 /* footer */
@@ -2344,7 +2444,4 @@ footer .inner img {
   color: #9d9d9d;
   font-weight: 100;
   margin-top: 50px;
-}
-
-@media all and (max-width: 1080px) {
 }
