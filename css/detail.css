@@ -1,5 +1,10 @@
 @charset "utf-8";
-
+@font-face {
+  font-family: '3YangPyeongB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/3YangPyeongB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 /* 헤더 */
 header {
   position: fixed;
@@ -24,6 +29,7 @@ header .inner {
   text-align: center;
   line-height: 40px;
   color: #34c987;
+  font-family: '3YangPyeongB';
 }
 .header-menu {
   width: 500px;
