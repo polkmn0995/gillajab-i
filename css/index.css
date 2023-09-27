@@ -173,7 +173,6 @@ header .inner {
 }
 /* 상단베뉴바 스크롤시 바와 글자 색상변경 */
 .navbar {
-  background-color: rgba(0, 0, 0, 0.3); /* Set your default color */
   transition: background-color 0.3s ease; /* Add a smooth transition */
 }
 .header-menu ul li a.active {
@@ -203,12 +202,16 @@ header .inner {
   }
   header .inner {
     display: flex;
+    width: 90%;
+  }
+  #menuToggleBtn {
+    margin-top: 5%;
   }
   .logo {
     width: 150px;
   }
   .logo h1 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     text-align: center;
     line-height: 30px;
@@ -242,11 +245,11 @@ header .inner {
     /* padding-bottom: 4%; */
     background-color: transparent;
     border: none;
-    margin-left: 75%;
+    margin-left: 105%;
   }
   button i {
     width: 100%;
-    font-size: 50px;
+    font-size: 30px;
     color: #34c987;
     cursor: pointer;
   }
@@ -835,16 +838,18 @@ header .inner {
   height: 700px;
   border-radius: 50px;
   overflow: hidden !important;
+
   margin-left: 5%;
 }
 .service01 img {
   transition: 0.3s;
   max-width: 100%;
   height: 700px;
+  object-fit: cover;
 }
 .service01 a:hover img {
   scale: 1.1;
-  filter: brightness(50%);
+  /* filter: brightness(50%); */
 }
 .service01 span {
   position: absolute;
@@ -871,6 +876,7 @@ header .inner {
   transition: 0.3s;
   max-width: 100%;
   height: 700px;
+  object-fit: cover;
 }
 .service02 a:hover img {
   scale: 1.1;
@@ -1186,51 +1192,43 @@ header .inner {
   }
 }
 @media all and (max-width: 480px) {
-  .modal {
-    top: 107%;
-    left: 12%;
-  }
-  .modal-menu {
-    width: 400px;
-  }
-  .modal-menu li {
-    float: left;
-    width: 80px;
-    margin: 3px;
-    padding: 3px;
-    text-align: center;
-  }
-  .modal-menu li a {
-    font-size: 11px;
-  }
   .introduce-txt {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    height: 50%;
-    top: 15%;
-    left: 0%;
+    top: 10%;
+  }
+
+  .introduce-txt h2 {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  .introduce-txt > p {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .introduce-txt > a > p {
+    margin-top: 7%;
+    font-size: 17px;
   }
   .service01 {
-    position: absolute;
-    width: 45%;
-    height: 40%;
-    margin-left: 0%;
-    top: 47%;
-    left: 3%;
-  }
-  .service01 span {
-    font-size: 15px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 30%;
+    width: 90%;
+    height: 25%;
+    left: 0;
+    object-fit: cover;
+    top: 35%;
+    border-radius: 30px;
   }
   .service02 {
-    position: absolute;
-    width: 45%;
-    height: 40%;
-    top: 47%;
-    left: 52%;
-  }
-  .service02 span {
-    font-size: 15px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 30%;
+    width: 90%;
+    height: 25%;
+    left: 0;
+    object-fit: cover;
+    top: 25%;
+    border-radius: 30px;
   }
 }
 @media all and (max-width: 365px) {
