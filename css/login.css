@@ -256,10 +256,101 @@ input:focus {
   background-color: #4884ed10;
 }
 
+/* footer */
+footer {
+  position: relative;
+  display: block;
+  background-color: #333;
+  width: 100%;
+  height: 300px;
+  min-width: 320px;
+  margin-top: 120px;
+}
+footer .inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  color: #9d9d9d;
+}
+
+.footer-title {
+  position: relative;
+  display: block;
+  font-size: 40px;
+  text-align: center;
+  margin: 0 auto;
+  color: #34c987;
+  font-weight: 800;
+  margin-top: 40px;
+}
+.sns-icon {
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.sns-icon img {
+  width: 35px;
+}
+.sns-icon img:nth-child(2) {
+  margin: 0 30px;
+}
+.email-number {
+  position: relative;
+  display: flex;
+  width: 400px;
+  color: #fff;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  font-weight: 200;
+}
+
+.copy {
+  position: absolute;
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-weight: 100;
+  bottom: 45px;
+}
+.reservation-method-title {
+  display: none;
+}
+.fa-solid,
+.fas {
+  color: #32c987;
+}
+
 @media all and (max-width: 480px) {
   .login-form {
     border: 0;
     box-shadow: none;
+  }
+  .footer-title {
+    font-size: 30px;
+  }
+  .email-number p {
+    white-space: nowrap;
+  }
+  .email-number {
+    position: relative;
+    display: flex;
+    /* width: 400px; */
+    color: #fff;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    font-weight: 200;
+    flex-direction: column;
+    line-height: 1.5;
+  }
+  .copy {
+    font-size: 13px;
   }
 }
 @media all and (max-width: 434px) {
