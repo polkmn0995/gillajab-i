@@ -206,10 +206,20 @@ menuToggleBtn.addEventListener("click", function () {
         slidesPerView: 3,
         spaceBetween: 50,
       },
-      531: {
+      769: {
         // freemode: true,
         slidesPerView: 3,
-        spaceBetween: 50,
+        spaceBetween: 10,
+      },
+      768: {
+        // freemode: true,
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      531: {
+        // freemode: true,
+        slidesPerView: 2,
+        spaceBetween: 10,
       },
       530: {
         // freemode: true,
@@ -251,9 +261,24 @@ menuToggleBtn.addEventListener("click", function () {
       clickable: true,
     },
     breakpoints: {
-      381: {
+      769: {
         // freemode: true,
         slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      768: {
+        // freemode: true,
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      481: {
+        // freemode: true,
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      480: {
+        // freemode: true,
+        slidesPerView: 1,
         spaceBetween: 10,
       },
       380: {
