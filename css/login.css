@@ -1,5 +1,10 @@
 @charset "utf-8";
-
+@font-face {
+  font-family: 'KorailRoundGothicBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
 .inner {
   position: relative;
   padding: 0px 0px;
@@ -17,62 +22,127 @@ body {
 header {
   position: fixed;
   display: block;
-  width: 100%;
-  height: 60px;
-  z-index: 9999;
   top: 0;
+  height: 60px;
   background-color: #fff;
+  width: 100%;
+  z-index: 9999;
 }
 header .inner {
   display: flex;
-  width: 80%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  max-width: 1500px;
-  padding: 0px 25px;
 }
 .logo {
-  width: 160px;
+  width: 120px;
 }
 .logo h1 {
-  font-size: 40px;
+  font-size: 33px;
+  font-weight: 700;
   text-align: center;
-  line-height: 40px;
+  font-family: 'KorailRoundGothicBold';
+  line-height: 30px;
   color: #34c987;
 }
 .header-menu {
-  width: 500px;
+  width: 40%;
 }
 .header-menu ul {
   display: flex;
   justify-content: space-between;
 }
 .header-menu ul li a {
-  transition: color 0.15s ease-in-out !important;
+  font-size: 16px;
   font-weight: 600;
+  color: #333;
 }
 .header-menu ul li a:hover {
   color: #34c987;
 }
+.header-menu ul li {
+  position: relative;
+}
+.header-menu ul li::after {
+  content: "";
+  display: block;
+  /* absolute는 너비높이에 영행을 안준다 */
+  position: absolute;
+  left: 0;
+  top: 120%;
+  width: 100%;
+  height: 2px;
+  background: #34c987;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.header-menu ul li:hover::after {
+  opacity: 1;
+}
 .log-in {
-  width: 120px;
+  width: 90px;
 }
 .log-in ul {
   display: flex;
   justify-content: space-around;
 }
 .log-in ul li {
-  border-right: 1px solid #000;
-  padding-right: 4.65px;
+  border-right: 0.0625rem solid #fff;
+  padding: 0 9%;
 }
 .log-in ul li:last-child {
   border-right: 0;
 }
 .log-in ul li a {
-  transition: color 0.15s ease-in-out !important;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
 }
 .log-in ul li a:hover {
   color: #34c987;
+}
+.log-in ul li {
+  position: relative;
+}
+.log-in ul li::after {
+  content: "";
+  display: block;
+  /* absolute는 너비높이에 영행을 안준다 */
+  position: absolute;
+  left: 7px;
+  bottom: -4px;
+  width: 75%;
+  padding-right: 6%;
+  height: 2px;
+  background: #34c987;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.log-in ul li:hover::after {
+  opacity: 1;
+}
+/* 상단베뉴바 스크롤시 바와 글자 색상변경 */
+.navbar {
+  transition: background-color 0.3s ease; /* Add a smooth transition */
+}
+.header-menu ul li a.active {
+  color: #000;
+}
+/* Style for the navbar when scrolled */
+.navbar.active {
+  background-color: #fff; /* Set the color when scrolled */
+}
+.navbar a {
+  color: #fff; /* Set your default text color */
+  transition: color 0.3s ease; /* Add a smooth transition */
+}
+
+/* Style for the navbar text when scrolled */
+.navbar.scrolled a {
+  color: #000; /* Set the text color when scrolled */
+}
+.mobile-menu-bar {
+  display: none;
 }
 
 /* 전체 컨텐츠 */
@@ -129,7 +199,8 @@ legend {
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out !important;
 }
 legend:hover {
-  background-color: #08ca73 !important;
+  background-color: #09bd6c !important;
+  color: #fff !important;
 }
 legend:active {
   background-color: #06a75f !important;
@@ -325,8 +396,109 @@ footer .inner {
 .fas {
   color: #32c987;
 }
+/* 헤더 반응형 */
+@media all and (max-width: 1000px) {
+  .modal{
+    display: none;
+  }
+  header {
+    width: 100%;
+    height: 60px;
+  }
+  header .inner {
+    display: flex;
+    width: 90%;
+  }
+  #menuToggleBtn {
+    margin-top: 5%;
+  }
+  .logo {
+    width: 150px;
+  }
+  .logo h1 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+    color: #34c987;
+  }
+  .header-menu {
+    display: none;
+  }
+  .log-in {
+    display: none;
+  }
+  .stepbox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-menu-bar {
+    position: relative;
+    display: block;
+    /* top: 10%;
+    left: 88%; */
+    z-index: 999;
+  }
+  .nav {
+    width: 200px;
+    height: 54px;
+    background-color: transparent;
+  }
+  #menuToggleBtn {
+    width: 50px;
+    /* padding-bottom: 4%; */
+    background-color: transparent;
+    border: none;
+    /* margin-left: 105%; */
+    float: right;
+  }
+  #menuToggleBtn i {
+    width: 100%;
+    font-size: 30px;
+    color: #34c987;
+    cursor: pointer;
+  }
+  #mobile-menu-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    right: -12%;
+    display: none;
+  }
+  #mobile-menu-box li {
+    /* margin: 10% 10% 10% 10%; */
+    width: 100%;
+  }
+  #mobile-menu-box li a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 2%;
+    padding: 10%;
+    font-size: 20px;
+    color: #fff;
+  }
+  #mobile-menu-box.active {
+    display: block;
+  }
+}
+@media all and (max-width: 768px) {
+  header .inner {
+    width: 100%;
+  }
+}
 
 @media all and (max-width: 480px) {
+  .logo h1 {
+    font-size: 25px;
+  }
+  button i {
+    font-size: 28px;
+    margin-top: 5%;
+  }
+
   .login-form {
     border: 0;
     box-shadow: none;
@@ -387,5 +559,24 @@ footer .inner {
   .kakao,
   .google {
     padding: 15px 13px 15px 18px;
+  }
+}
+@media all and (max-width: 330px) {
+  #menuToggleBtn i {
+    margin-top: 20%;
+  }
+  #menuToggleBtn {
+    margin: 0 auto;
+  }
+  .nav {
+    width: 50px;
+  }
+}
+@media all and (max-width: 320px) {
+  #menuToggleBtn i {
+    margin-left: 170%;
+  }
+  .logo h1 {
+    float: left;
   }
 }
