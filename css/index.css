@@ -1466,6 +1466,12 @@ header .inner {
 }
 
 @media all and (max-width: 480px) {
+  .bg > div{
+    background-image: url("../images/index/cleanbanner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
   .bg > div p span {
     /* font-size: 30px; */
     font-size: 7.55vw;
@@ -1686,6 +1692,14 @@ header .inner {
     font-size: 18px;
     font-weight: 600;
     line-height: 40px;
+  }
+}
+@media all and (max-width:559px) {
+  .service01 span{
+    text-align: center;
+  }
+  .service02 span{
+    text-align: center;
   }
 }
 /* ========================= */
