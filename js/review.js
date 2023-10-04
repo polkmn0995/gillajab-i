@@ -151,13 +151,13 @@ addPostBtn.addEventListener("click", function () {
         };
 
         // 배열에 게시글 추가
-        posts.push(newPost);
+        // posts.push(newPost);
 
         // 로컬 스토리지에 게시글 저장
-        localStorage.setItem("posts", JSON.stringify(posts));
+        // localStorage.setItem("posts", JSON.stringify(posts));
 
         // 화면에 게시글 추가
-        addPostToDOM(newPost);
+        // addPostToDOM(newPost);
 
         // 입력 필드 초기화
         postTitleInput.value = "";
@@ -173,21 +173,7 @@ addPostBtn.addEventListener("click", function () {
     }
     }
 });
-// 검색기능
-searchBtn.addEventListener("click", function () {
-    const searchTerm = searchInput.value.toLowerCase();
-    const filterdePosts = posts.filter((post) => {
-    return (
-        // 배열내에서 지정된 값또는 요소가 포함되어 있는지 확인
-        post.title.toLowerCase().includes(searchTerm) ||
-        post.content.toLowerCase().includes(searchTerm)
-    );
-    });
-    postList.innerHTML = "";
-    for (const post of filterdePosts) {
-    addPostToDOM(post);
-    }
-});
+
 // 지우기 버튼에 클릭 이벤트 리스너를 추가
 clearBtn.addEventListener("click", function () {
     // 검색입력 필드를 지우기
