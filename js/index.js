@@ -147,10 +147,10 @@ menuToggleBtn.addEventListener("click", function () {
       // 이것을 방지해 주기위한 처리
       disableOnInteraction: false,
     },
-    // navigation: {
-    //   nextEl: ".sw-visual-next",
-    //   prevEl: ".sw-visual-prev",
-    // },
+    navigation: {
+      nextEl: ".sw-visual-next",
+      prevEl: ".sw-visual-prev",
+    },
   });
   // swiper 가 최초 실행될때
   // 1번 li 의 흰색 라인이 늘어나는 모션을 실행
@@ -246,14 +246,14 @@ menuToggleBtn.addEventListener("click", function () {
     centeredSlides: true,
     loop: true,
     autoplay: {
-      delay: 2500, // 3초마다 자동 슬라이딩
+      delay: 2000, // 3초마다 자동 슬라이딩
       disableOnInteraction: false,
     },
     keyboard: {
       enabled: true,
       onlyInViewport: true,
     },
-    speed: 800, // 슬라이드 이동 속도 (밀리초)
+    speed: 900, // 슬라이드 이동 속도 (밀리초)
     grabCursor: true, // 마우스 커서를 손가락 모양으로 변경
     // preventInteractionOnTransition: true, // 슬라이딩 중에 사용자의 상호 작용을 방지하여 끊김 없는 슬라이딩
     pagination: {

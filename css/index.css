@@ -517,6 +517,8 @@ header .inner {
   transition: width 1.5s;
   width: 100% !important;
 }
+.sw-visual-pg-list > li {
+}
 /* 비주얼 반응형 */
 @media all and (max-width: 1550px) {
   .visual-box .visual-inner {
@@ -792,9 +794,9 @@ header .inner {
     line-height: 1.5em;
   }
   .visual-box .visual-inner a {
-    margin-top: 180%;
+    margin-top: 65%;
     text-align: center;
-    margin-left: 21%;
+    margin-left: 18%;
   }
   .visual-phone {
     width: 185px;
@@ -802,6 +804,11 @@ header .inner {
     /* display: none; */
     right: 26%;
     top: 40%;
+  }
+  .sw-visual-control {
+    position: absolute;
+    bottom: 0%;
+    left: 89%;
   }
   .sw-visual-pg {
     left: 63%;
@@ -1466,18 +1473,26 @@ header .inner {
   }
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 480px) 
+  .banner {
+    width: 100%;
+    height: 2732px;
+  }
   .bg > div.bg01,
   .bg > div.bg02,
   .bg > div.bg03,
   .bg > div.bg04 {
     width: 100%;
-    height: 100%;
+    height: 80%;
     /* position: absolute; */
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
   }
+  /* .bg > div.bg01 p{
+    top: 10%;
+    z-index: 999;
+  } */
   .bg > div p span {
     /* font-size: 30px; */
     font-size: 7.55vw;
@@ -1754,7 +1769,7 @@ header .inner {
 .reviewswiper {
   /* position: relative; */
   display: block;
-  height: 70%;
+  height: 90%;
 }
 
 .reviewswiper .swiper-slide {
@@ -1778,10 +1793,13 @@ header .inner {
   margin-bottom: 8%;
 }
 .review-more {
-  display: block;
+  width: 100%;
+  height: 15%;
+  display: inline;
+  text-align: right;
   position: absolute;
-  top: 82%;
-  right: 0%;
+  bottom: 0; /* 위치를 하단에 고정 */
+  margin-bottom: 10px; /* 하단과의 간격 조절 */
 }
 .review-more a {
   font-size: 15px;
@@ -1805,24 +1823,22 @@ header .inner {
   color: #fff;
 }
 @media all and (max-width: 1650px) {
-  .review-more {
-    display: block;
-    position: absolute;
-    top: 92%;
-    right: 1%;
-  }
+  /* .review-more {
+    top: 90%;
+    left: 90%;
+  } */
 }
 @media all and (max-width: 1440px) {
   .modal {
     top: 50%;
   }
+  /* .review-more {
+    top: 85%;
+  } */
 }
 @media all and (max-width: 1240px) {
   .review-more {
-    display: block;
-    position: absolute;
-    top: 76%;
-    right: 1%;
+    top: 75%;
   }
   .modal {
     top: 45%;
@@ -1836,10 +1852,7 @@ header .inner {
     bottom: 1%;
   }
   .review-more {
-    display: block;
-    position: absolute;
-    top: 63%;
-    right: 1%;
+    top: 75%;
   }
   .review-bt {
     margin: 0;
@@ -1858,12 +1871,18 @@ header .inner {
   .review p {
     font-size: 2.3121vw;
   }
+  .review-more {
+    top: 55%;
+  }
 }
 @media all and (max-width: 768px) {
   .review-bt-box {
     width: 90%;
     margin: 10% auto;
     margin-left: 5%;
+  }
+  .review-more {
+    top: 65%;
   }
 }
 @media all and (max-width: 600px) {
@@ -1877,6 +1896,9 @@ header .inner {
   .review p {
     line-height: 1.3;
   }
+  .review-more {
+    top: 55%;
+  }
 }
 @media all and (max-width: 520px) {
   .review h2 {
@@ -1889,10 +1911,10 @@ header .inner {
     bottom: 5%;
     right: 1%;
   }
-  .review-more {
+  /* .review-more {
     top: 48%;
     right: 1%;
-  }
+  } */
 }
 @media all and (max-width: 480px) {
   .review h2 {
@@ -1907,8 +1929,7 @@ header .inner {
     padding-top: 10%;
   }
   .review-more {
-    top: 72%;
-    right: 1%;
+    top: 65%;
   }
   .review-more a {
     font-size: 12px;
@@ -1925,6 +1946,9 @@ header .inner {
   .review p {
     font-size: 3.75vw;
   }
+  .review-more {
+    top: 55%;
+  }
 }
 @media all and (max-width: 380px) {
   .review-sw {
@@ -1933,7 +1957,6 @@ header .inner {
     padding-top: 5%;
     margin-top: 10%;
     width: 100%;
-    height: 40%;
   }
   .review-txt {
     width: 90%;
