@@ -1467,11 +1467,16 @@ header .inner {
 }
 
 @media all and (max-width: 480px) {
-  .bg > div {
-    background-image: url("../images/index/cleanbanner.png");
-    background-size: contain;
+  .bg > div.bg01,
+  .bg > div.bg02,
+  .bg > div.bg03,
+  .bg > div.bg04 {
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
   }
   .bg > div p span {
     /* font-size: 30px; */
