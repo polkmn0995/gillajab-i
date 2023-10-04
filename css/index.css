@@ -374,7 +374,7 @@ header .inner {
 }
 .visual-box .visual-inner a {
   position: absolute;
-  top: 20%;
+  bottom: 0;
 }
 .visual-phone {
   position: absolute;
@@ -435,6 +435,9 @@ header .inner {
   border: none;
   border-radius: 50px;
   background-color: #34c987;
+}
+.visual-box .visual-inner a i{
+  color: #fff;
 }
 /* sw-visual 콘트롤 */
 .sw-visual-control {
@@ -658,13 +661,13 @@ header .inner {
   }
   .visual-box .visual-inner h2 {
     line-height: 1.2em;
-    font-size: 35px;
+    font-size: 3.5000vw;
     font-weight: 600;
     color: #fff;
   }
   .visual-box .visual-inner p {
     margin-top: 25px;
-    font-size: 14px;
+    font-size: 1.4000vw;
     font-weight: 300;
     line-height: 1.5em;
   }
@@ -691,7 +694,8 @@ header .inner {
 }
 @media all and (max-width: 768px) {
   .visual-box .visual-inner {
-    right: 13%;
+    width: 95%;
+    right: 0%;
     top: 20%;
   }
   .visual-phone {
@@ -699,14 +703,14 @@ header .inner {
   }
   .visual-box .visual-inner h2 {
     line-height: 1.2em;
-    font-size: 45px;
+    font-size: 5.8594vw;
     font-weight: 600;
     margin: 1% 0;
     color: #fff;
   }
   .visual-box .visual-inner p {
     margin-top: 25px;
-    font-size: 15px;
+    font-size: 1.9531vw;
 
     font-weight: 300;
     line-height: 1.5em;
@@ -750,15 +754,16 @@ header .inner {
 }
 @media all and (max-width: 560px) {
   .visual-box .visual-inner h2 {
+    width: 100%;
     line-height: 1.2em;
-    font-size: 8vw;
+    font-size: 5.3571vw;
     font-weight: 600;
     margin: 1% 0;
     color: #fff;
   }
   .visual-box .visual-inner p {
     margin-top: 25px;
-    font-size: 14px;
+    font-size: 2.5000vw;
 
     font-weight: 300;
     line-height: 1.5em;
@@ -768,36 +773,36 @@ header .inner {
 @media all and (max-width: 480px) {
   .visual-box .visual-inner h2 {
     line-height: 1.2em;
-    font-size: 7.5vw;
+    font-size: 5.2083vw;
     font-weight: 600;
     margin: 1% 0;
     color: #fff;
   }
   .visual-box .visual-inner p {
     margin-top: 25px;
-    font-size: 13px;
+    font-size: 2.7083vw;
   }
 }
 @media all and (max-width: 380px) {
   .visual-box .visual-inner {
-    right: 10%;
+    right: 3%;
     top: 13%;
   }
   .visual-box .visual-inner h2 {
     text-align: center;
-    font-size: 27px;
+    font-size: 7.1053vw;
   }
   .visual-box .visual-inner p {
     margin-top: 40px;
-    font-size: 14px;
+    font-size: 3.1579vw;
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.5em;
   }
   .visual-box .visual-inner a {
     margin-top: 65%;
     text-align: center;
-    margin-left: 18%;
+    margin-left: 23%;
   }
   .visual-phone {
     width: 185px;
@@ -815,17 +820,6 @@ header .inner {
     left: 63%;
     top: 84%;
     display: none;
-  }
-}
-@media all and (max-width: 350px) {
-  .visual-box .visual-inner {
-    right: 10%;
-    top: 13%;
-  }
-  .visual-box .visual-inner a {
-    margin-top: 65%;
-    text-align: center;
-    margin-left: 15%;
   }
 }
 @media all and (max-width: 320px) {
@@ -1493,19 +1487,21 @@ header .inner {
 
 @media all and (max-width: 480px) {
   .banner {
-    max-width: 480px;
-    height: 1708px;
+    width: 100%;
+    height: 3416px;
+    background-color: rgba(0,0,0,0.12);
   }
   .bg > div.bg01,
   .bg > div.bg02,
   .bg > div.bg03,
   .bg > div.bg04 {
-    max-width: 480px;
-    height: 50%;
+    max-width: 100%;
+    height: 100%;
     /* position: absolute; */
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: cover;
+    background-size: contain;
+
   }
   /* .bg > div.bg01 p{
     top: 10%;
@@ -1516,7 +1512,7 @@ header .inner {
     font-size: 7.55vw;
   }
   .bg > div p {
-    font-size: 18px;
+    font-size: 3.7500vw;
     width: 450px;
     line-height: 1.3;
   }
@@ -1743,7 +1739,7 @@ header .inner {
 }
 @media all and (max-width: 480px) {
   .app-service-txt p {
-    font-size: 6.25vw;
+    font-size: 4.8vw;
     line-height: 1.3;
     text-align: center;
     margin-bottom: 5%;
@@ -1944,6 +1940,10 @@ header .inner {
   } */
 }
 @media all and (max-width: 480px) {
+  .reviewswiper .swiper-slide img{
+    width: 90%;
+    margin-left: 6%;
+  }
   .review h2 {
     font-size: 4.8vw;
     margin: 30%;
@@ -1959,7 +1959,7 @@ header .inner {
     top: 65%;
   }
   .review-more a {
-    font-size: 12px;
+    font-size: 17px;
   }
   .review .inner {
     align-content: center;
@@ -2213,6 +2213,7 @@ footer {
 footer .inner {
   position: relative;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   padding: 0;
