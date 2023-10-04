@@ -1,8 +1,9 @@
 @charset "utf-8";
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @font-face {
-  font-family: 'KorailRoundGothicBold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+  font-family: "KorailRoundGothicBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2")
+    format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -28,9 +29,9 @@ header {
 header .inner {
   display: flex;
   width: 100%;
-  
   justify-content: space-between;
   align-items: center;
+  max-width: 1500px !important;
 }
 .logo {
   width: 120px;
@@ -40,10 +41,11 @@ header .inner {
   font-weight: 700;
   text-align: center;
 
-    font-family: 'KorailRoundGothicBold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "KorailRoundGothicBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
   line-height: 30px;
   color: #34c987;
 }
@@ -435,7 +437,7 @@ button:hover {
   background-color: #34c876;
 }
 #postImage {
-  margin-right:0px;
+  margin-right: 0px;
 }
 #postList {
   /* height: 800px; */
@@ -526,16 +528,17 @@ footer .inner {
 .reservation-method-title {
   display: none;
 }
-.fa-solid, .fas {
+.fa-solid,
+.fas {
   color: #32c987;
 }
-@media all and (max-width: 1024px){
+@media all and (max-width: 1024px) {
   .footer-title {
     font-size: 30px;
-}
+  }
 }
 @media all and (max-width: 1000px) {
-  .modal{
+  .modal {
     display: none;
   }
   header {
@@ -622,25 +625,24 @@ footer .inner {
   }
 }
 
-@media all and (max-width: 768px){
+@media all and (max-width: 768px) {
   .write-btn {
     font-size: 13px;
+  }
+  button {
+    font-size: 13px;
+  }
+  header .inner {
+    width: 100%;
+  }
 }
-button {
-  font-size: 13px;
-}
-header .inner {
-  width: 100%;
-}
-
-}
-@media all and (max-width: 656px){
+@media all and (max-width: 656px) {
   #postImage {
     margin-right: 115px;
     margin-bottom: 20px;
+  }
 }
-}
-@media all and (max-width: 480px){
+@media all and (max-width: 480px) {
   .logo h1 {
     font-size: 25px;
   }
@@ -655,40 +657,40 @@ header .inner {
     margin-left: 0%;
     padding: 15px 0;
     border-radius: 5px;
-}
-button {
-  width: 100%;
-  padding: 15px 0;
-  margin-top: 40px;
-  white-space: nowrap;
-  margin-left: 0;
-  border-radius: 5px;
-}
-.post-form {
-  padding: 0px;
-}
-footer {
-  margin-top: 40px;
-}
+  }
+  button {
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 40px;
+    white-space: nowrap;
+    margin-left: 0;
+    border-radius: 5px;
+  }
+  .post-form {
+    padding: 0px;
+  }
+  footer {
+    margin-top: 40px;
+  }
 
-.footer-title {
-  font-size: 30px;
-}
-.email-number p{
-  white-space: nowrap;
-}
-.email-number {
-  position: relative;
-  display: flex;
-  /* width: 400px; */
-  color: #fff;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 30px;
-  font-weight: 200;
-  flex-direction: column;
-  line-height: 1.5;
-}
+  .footer-title {
+    font-size: 30px;
+  }
+  .email-number p {
+    white-space: nowrap;
+  }
+  .email-number {
+    position: relative;
+    display: flex;
+    /* width: 400px; */
+    color: #fff;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    font-weight: 200;
+    flex-direction: column;
+    line-height: 1.5;
+  }
 }
 @media all and (max-width: 330px) {
   #menuToggleBtn i {

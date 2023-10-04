@@ -1,7 +1,8 @@
 @charset "utf-8";
 @font-face {
-  font-family: 'KorailRoundGothicBold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+  font-family: "KorailRoundGothicBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2")
+    format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -54,6 +55,7 @@ header .inner {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  max-width: 1500px;
 }
 .logo {
   width: 120px;
@@ -62,7 +64,7 @@ header .inner {
   font-size: 33px;
   font-weight: 700;
   text-align: center;
-  font-family: 'KorailRoundGothicBold';
+  font-family: "KorailRoundGothicBold";
   line-height: 30px;
   color: #34c987;
 }
@@ -673,7 +675,7 @@ footer .inner {
   }
 }
 @media all and (max-width: 1000px) {
-  .modal{
+  .modal {
     display: none;
   }
   header {
