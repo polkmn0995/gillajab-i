@@ -1467,11 +1467,11 @@ header .inner {
 }
 
 @media all and (max-width: 480px) {
-  .bg > div{
+  .bg > div {
     background-image: url("../images/index/cleanbanner.png");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
   }
   .bg > div p span {
     /* font-size: 30px; */
@@ -1695,11 +1695,11 @@ header .inner {
     line-height: 40px;
   }
 }
-@media all and (max-width:559px) {
-  .service01 span{
+@media all and (max-width: 559px) {
+  .service01 span {
     text-align: center;
   }
-  .service02 span{
+  .service02 span {
     text-align: center;
   }
 }
