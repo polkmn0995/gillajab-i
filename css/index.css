@@ -717,10 +717,10 @@ header .inner {
     margin-bottom: 30%;
   }
   .visual-box .visual-inner a {
-    width: 200px;
-    height: 40px;
+    width: 230px;
+    height: 60px;
     padding: 0 35px 0 40px;
-    font-size: 12px;
+    font-size: 17px;
   }
   .sw-visual-control {
     width: 100%;
@@ -785,24 +785,24 @@ header .inner {
 }
 @media all and (max-width: 380px) {
   .visual-box .visual-inner {
-    right: 3%;
+    right: 0%;
     top: 20%;
   }
   .visual-box .visual-inner h2 {
-    text-align: center;
+    /* text-align: center; */
     font-size: 6.6053vw;
   }
   .visual-box .visual-inner p {
     margin-top: 40px;
     font-size: 3.1579vw;
-    text-align: center;
+    /* text-align: center; */
     font-weight: 400;
     line-height: 1.5em;
   }
   .visual-box .visual-inner a {
     margin-top: 55%;
     text-align: center;
-    margin-left: 22%;
+    margin-left: 19%;
     font-size: 3.9474vw;
     width: 55.2632vw;
     height: 14.4737vw;
@@ -2202,7 +2202,6 @@ header .inner {
 /* ====================================================== */
 /* 푸터 */
 /* footer */
-/* footer */
 footer {
   position: relative;
   display: block;
@@ -2210,14 +2209,13 @@ footer {
   width: 100%;
   height: 300px;
   min-width: 320px;
-  padding-bottom: 2%;
 }
 footer .inner {
   position: relative;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  justify-content: flex-start;
   padding: 0;
   color: #9d9d9d;
 }
@@ -2263,20 +2261,19 @@ footer .inner {
   text-align: center;
   color: #fff;
   font-weight: 100;
-  bottom: 5%;
+  bottom: 45px;
 }
 .reservation-method-title {
   display: none;
 }
-.fa-solid,
-.fas {
+.fa-solid, .fas {
   color: #32c987;
 }
 @media all and (max-width: 480px) {
   .footer-title {
     font-size: 30px;
   }
-  .email-number p {
+  .email-number p{
     white-space: nowrap;
   }
   .email-number {
@@ -2290,8 +2287,8 @@ footer .inner {
     font-weight: 200;
     flex-direction: column;
     line-height: 1.5;
-  }
-  .copy {
-    font-size: 13px;
-  }
+}
+.copy {
+  font-size: 13px;
+}
 }
