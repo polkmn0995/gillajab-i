@@ -44,18 +44,15 @@ window.addEventListener("load", function () {
       switch (legendText) {
         case "이용자":
           message = "이용자로 로그인 되었습니다.";
-          // index.html 페이지로 이동
-          window.location.href = "index.html";
+          break;
 
         case "보호자":
           message = "보호자로 로그인 되었습니다.";
-          // index.html 페이지로 이동
-          window.location.href = "index.html";
+          break;
 
         case "지원자":
           message = "지원자로 로그인 되었습니다.";
-          // index.html 페이지로 이동
-          window.location.href = "index.html";
+          break;
       }
 
       if (usernameInput.value === "") {
@@ -68,6 +65,9 @@ window.addEventListener("load", function () {
         // 아이디와 비밀번호 입력 필드를 지움
         usernameInput.value = "";
         passwordInput.value = "";
+
+        // 아이디와 비밀번호가 모두 입력되었을 때에만 페이지 이동
+        window.location.href = "index.html";
       }
     } else {
       alert("선택된 역할이 없습니다. 역할을 선택해 주세요.");
@@ -113,7 +113,7 @@ window.addEventListener("load", function () {
   const menuToggleBtn = document.getElementById("menuToggleBtn");
   const mobileMenubox = document.getElementById("mobile-menu-box");
   menuToggleBtn.addEventListener("click", function () {
-  // Toggle the 'active' class to show/hide the mobile menu
-  mobileMenubox.classList.toggle("active");
+    // Toggle the 'active' class to show/hide the mobile menu
+    mobileMenubox.classList.toggle("active");
   });
 });
