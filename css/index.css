@@ -279,32 +279,63 @@ header .inner {
   }
   #mobile-menu-box {
     background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
+    width: 290%;
+    height: 100vh;
     position: absolute;
-    top: 100%;
-    right: -12%;
-    display: none;
+    top: 105%;
+    right: -140%;
+    transition: right 0.3s ease-in-out;
   }
   #mobile-menu-box li {
     /* margin: 10% 10% 10% 10%; */
     width: 100%;
+    height: 155px;
   }
   #mobile-menu-box li a {
     display: inline-block;
     width: 100%;
+    height: 100%;
     text-align: center;
     margin: 2%;
-    padding: 10%;
-    font-size: 20px;
+    font-size: 30px;
+    line-height: 500%;
     color: #fff;
   }
   #mobile-menu-box.active {
     display: block;
+    right: -36%;
   }
 }
 @media all and (max-width: 768px) {
   header .inner {
     width: 100%;
+  }
+  #mobile-menu-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 290%;
+    position: absolute;
+    top: 105%;
+    right: -140%;
+    transition: right 0.3s ease-in-out;
+  }
+  #mobile-menu-box.active {
+    display: block;
+    right: 0%;
+  }
+}
+@media all and (max-width: 580px) {
+  #mobile-menu-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 105%;
+    right: -140%;
+    transition: right 0.3s ease-in-out;
+  }
+  #mobile-menu-box.active {
+    display: block;
+    right: 0%;
   }
 }
 @media all and (max-width: 480px) {
@@ -314,6 +345,23 @@ header .inner {
   button i {
     font-size: 28px;
     margin-top: 5%;
+  }
+}
+@media all and (max-width: 380px) {
+  #mobile-menu-box li {
+    /* margin: 10% 10% 10% 10%; */
+    width: 380px;
+    height: 105px;
+  }
+  #mobile-menu-box li a {
+    display: inline-block;
+    width: 100vw;
+    height: 100%;
+    text-align: center;
+    margin: 2%;
+    font-size: 30px;
+    line-height: 350%;
+    color: #fff;
   }
 }
 @media all and (max-width: 330px) {
@@ -2266,14 +2314,15 @@ footer .inner {
 .reservation-method-title {
   display: none;
 }
-.fa-solid, .fas {
+.fa-solid,
+.fas {
   color: #32c987;
 }
 @media all and (max-width: 480px) {
   .footer-title {
     font-size: 30px;
   }
-  .email-number p{
+  .email-number p {
     white-space: nowrap;
   }
   .email-number {
@@ -2287,8 +2336,8 @@ footer .inner {
     font-weight: 200;
     flex-direction: column;
     line-height: 1.5;
-}
-.copy {
-  font-size: 13px;
-}
+  }
+  .copy {
+    font-size: 13px;
+  }
 }
