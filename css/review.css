@@ -145,6 +145,9 @@ header .inner {
 .navbar.scrolled a {
   color: #000; /* Set the text color when scrolled */
 }
+.navbar_overlay{
+  display: none;
+}
 .navbar_burger{
   display: none;
 }
