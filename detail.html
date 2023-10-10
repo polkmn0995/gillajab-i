@@ -33,9 +33,9 @@
       name="twitter:description"
       content="더 편리한 교통약자 동행 서비스, 길라잡이"
     />
-    
+
     <!-- favicon -->
-    <link rel="stortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link rel="stortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
     <meta
       name="viewport"
@@ -129,27 +129,41 @@
               <li><a href="signup.html">회원가입</a></li>
             </ul>
           </div>
-          <div class="mobile-menu-bar">
-            <div class="stepbox">
-              <nav class="nav">
-                <button id="menuToggleBtn"><i class="fa-solid fa-bars"></i></button>
-              </nav>
-                <div id="mobile-menu-box">
-                  <ul>
-                    <li>
-                      <a href="detail.html">서비스소개</a>
-                    </li>
-                    <li>
-                      <a href="reservation.html">예약하기</a>
-                    </li>
-                    <li>
-                      <a href="review.html">이용후기</a>
-                    </li>
-                    <li><a href="login.html">로그인</a></li>
-                    </li>
-                    <li><a href="signup.html">회원가입</a></li>
-                  </ul>
-                </div>
+          <div class="navbar_overlay"></div>
+          <div class="navbar_burger">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </div>
+          <div class="navbar_menu">
+            <a href="detail.html">서비스소개</a>
+            <a href="reservation.html">예약하기</a>
+            <a href="review.html">이용후기</a>
+            <a href="login.html">로그인</a>
+            <a href="signup.html">회원가입</a>
+            <div class="navbar_burger_back">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                />
+              </svg>
             </div>
           </div>
         </div>
@@ -392,7 +406,10 @@
           </div>
           <div class="email-number">
             <p><i class="fa-solid fa-phone"></i>&nbsp;053-5xx-64xx</p>
-            <p><i class="fa-solid fa-location-dot"></i>&nbsp;대구광역시 중구 동성로</p>
+            <p>
+              <i class="fa-solid fa-location-dot"></i>&nbsp;대구광역시 중구
+              동성로
+            </p>
           </div>
           <p class="copy">Copyrightⓒ gilajab-i All Rights Reserved</p>
         </div>

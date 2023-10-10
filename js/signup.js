@@ -1,10 +1,23 @@
 window.addEventListener("load", function () {
-    // 헤더
-    const menuToggleBtn = document.getElementById("menuToggleBtn");
-    const mobileMenubox = document.getElementById("mobile-menu-box");
-    menuToggleBtn.addEventListener("click", function () {
-    // Toggle the 'active' class to show/hide the mobile menu
-    mobileMenubox.classList.toggle("active");
-    }); 
+  // 모바일 메뉴버튼 기능
+  const navbarBurger = document.querySelector(".navbar_burger");
+  const navbarburgerback = document.querySelector(".navbar_burger_back");
+  const navbarMenu = document.querySelector(".navbar_menu");
+  const navbarOverlay = document.querySelector(".navbar_overlay");
+
+  navbarBurger.addEventListener("click", () => {
+    navbarMenu.classList.toggle("active");
+    navbarOverlay.classList.toggle("active");
+  });
+
+  navbarburgerback.addEventListener("click", () => {
+    navbarMenu.classList.remove("active");
+    navbarOverlay.classList.remove("active");
+  });
+
+  navbarOverlay.addEventListener("click", () => {
+    navbarMenu.classList.remove("active");
+    navbarOverlay.classList.remove("active");
+  });
 });
 
