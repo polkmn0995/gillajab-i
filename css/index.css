@@ -278,28 +278,36 @@ header .inner {
     cursor: pointer;
   }
   #mobile-menu-box {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     width: 290%;
     height: 100vh;
     position: absolute;
-    top: 105%;
-    right: -140%;
+    top: -5%;
+    right: -330%;
     transition: right 0.3s ease-in-out;
+    z-index: -1;
   }
   #mobile-menu-box li {
     /* margin: 10% 10% 10% 10%; */
     width: 100%;
-    height: 155px;
+    height: 100px;
+    border-bottom: 1px dotted #fff;
   }
   #mobile-menu-box li a {
     display: inline-block;
     width: 100%;
-    height: 100%;
+    height: 77%;
     text-align: center;
     margin: 2%;
-    font-size: 30px;
-    line-height: 500%;
+    font-size: 25px;
+    line-height: 300%;
     color: #fff;
+  }
+  #mobile-menu-box li a span{
+    font-size: 18px;
+  }
+  #mobile-menu-box li:first-child{
+    margin-top: 10%;
   }
   #mobile-menu-box.active {
     display: block;
@@ -311,12 +319,26 @@ header .inner {
     width: 100%;
   }
   #mobile-menu-box {
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 290%;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 200%;
     position: absolute;
-    top: 105%;
-    right: -140%;
+    top: -5%;
+    right: -390%;
     transition: right 0.3s ease-in-out;
+    z-index: -1;
+  }
+  #mobile-menu-box li a {
+    display: inline-block;
+    width: 100%;
+    height: 84%;
+    margin: 2%;
+    font-size: 25px;
+    line-height: 300%;
+    color: #fff;
+    text-align: center !important;
+  }
+  #mobile-menu-box li:first-child{
+    margin-top: 12%;
   }
   #mobile-menu-box.active {
     display: block;
@@ -325,13 +347,28 @@ header .inner {
 }
 @media all and (max-width: 580px) {
   #mobile-menu-box {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     width: 100vw;
     height: 100vh;
     position: absolute;
-    top: 105%;
-    right: -140%;
+    top: -5%;
+    right: -290%;
     transition: right 0.3s ease-in-out;
+  }
+  #mobile-menu-box li {
+    /* margin: 10% 10% 10% 10%; */
+    width: 100%;
+    height: 100px;
+  }
+  #mobile-menu-box li a {
+    display: inline-block;
+    width: 100%;
+    height: 78%;
+    margin: 2%;
+    font-size: 25px;
+    line-height: 300%;
+    color: #fff;
+    text-align: center !important;
   }
   #mobile-menu-box.active {
     display: block;
@@ -359,7 +396,7 @@ header .inner {
     height: 100%;
     text-align: center;
     margin: 2%;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 350%;
     color: #fff;
   }
@@ -374,6 +411,19 @@ header .inner {
   .nav {
     width: 50px;
   }
+  .visual-bt{
+    width: 200px;
+    height: 50px;
+  }
+  #mobile-menu-box {
+    position: absolute;
+    top: -5%;
+    right: -660%;
+  }
+  /* #mobile-menu-box.active {
+    display: block;
+    right: 370%;
+  } */
 }
 @media all and (max-width: 320px) {
   #menuToggleBtn i {
@@ -393,6 +443,7 @@ header .inner {
 }
 /* Swiper */
 .sw-visual {
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -419,10 +470,7 @@ header .inner {
   position: relative;
   display: block;
   margin-left: 10%;
-}
-.visual-box .visual-inner a {
-  position: absolute;
-  bottom: 0;
+  margin-bottom: 10%;
 }
 .visual-phone {
   position: absolute;
@@ -467,24 +515,27 @@ header .inner {
   line-height: 1.5em;
   color: #e2e2e2;
 }
-.visual-box .visual-inner a {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
+.visual-bt {
+  position: absolute;
+  display: block;
+  z-index: 999;
+  left: 10%;
+  bottom: 25%;
   align-items: center;
   width: 255px;
   height: 55px;
+  text-align: center;
+  line-height: 55px;
   opacity: 1;
   visibility: visible;
   padding: 0 45px 0 50px;
-  margin-top: 7%;
   font-size: 16px;
   color: #fff;
   border: none;
   border-radius: 50px;
   background-color: #34c987;
 }
-.visual-box .visual-inner a i {
+.visual-bt i {
   color: #fff;
 }
 /* sw-visual 콘트롤 */
@@ -764,11 +815,13 @@ header .inner {
     line-height: 1.5em;
     margin-bottom: 30%;
   }
-  .visual-box .visual-inner a {
+  .visual-bt {
     width: 230px;
     height: 60px;
     padding: 0 35px 0 40px;
     font-size: 17px;
+    bottom: 40%;
+    left: 5%;
   }
   .sw-visual-control {
     width: 100%;
@@ -847,13 +900,11 @@ header .inner {
     font-weight: 400;
     line-height: 1.5em;
   }
-  .visual-box .visual-inner a {
-    margin-top: 55%;
+  .visual-bt {
     text-align: center;
-    margin-left: 19%;
-    font-size: 3.9474vw;
+    font-size: 3.5474vw;
     width: 55.2632vw;
-    height: 14.4737vw;
+    height: 15.9737vw;
   }
   .visual-phone {
     width: 185px;
@@ -873,6 +924,16 @@ header .inner {
     display: none;
   }
 }
+@media all and (max-width: 330px){
+  .visual-bt {
+    text-align: center;
+    font-size: 3.1474vw;
+    width: 60.2632vw;
+    height: 50px;
+    line-height: 50px;
+
+  }
+}
 @media all and (max-width: 320px) {
   /* #menuToggleBtn{
     margin-right: 2%;
@@ -881,24 +942,19 @@ header .inner {
     padding-right: 5%;
   }
   .visual-box .visual-inner {
-    right: 10%;
+    right: 0%;
     top: 13%;
   }
   .visual-box .visual-inner h2 {
-    text-align: center;
+    /* text-align: center; */
     font-size: 24px;
   }
   .visual-box .visual-inner p {
     margin-top: 70px;
     font-size: 12px;
-    text-align: center;
+    /* text-align: center; */
     font-weight: 300;
     line-height: 1.5em;
-  }
-  .visual-box .visual-inner a {
-    margin-top: 130%;
-    text-align: center;
-    margin-left: 15%;
   }
   .visual-phone {
     width: 240px;
