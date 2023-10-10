@@ -68,9 +68,7 @@ window.addEventListener("load", function () {
     const writeBtn = document.querySelector(".write-btn")
     const postForm = document.querySelector(".post-form")
     const postTitleInput = document.getElementById("postTitle");
-    const postContentInput = document.getElementById("postContent");
     const postImageInput = document.getElementById("postImage");
-    const addPostBtn = document.getElementById("addPostBtn");
     const postList = document.getElementById("postList");
     const postDateInput = document.getElementById("postDate"); // Add this line
     const searchInput = document.getElementById("searchInput");
@@ -174,16 +172,7 @@ addPostBtn.addEventListener("click", function () {
     }
 });
 
-// 지우기 버튼에 클릭 이벤트 리스너를 추가
-clearBtn.addEventListener("click", function () {
-    // 검색입력 필드를 지우기
-    searchInput.value = "";
-    // 기존 게시물 목록을 지우고 모든 게시물 표시
-    postList.innerHTML = "";
-    for (const post of posts) {
-    addPostToDOM(post);
-    }
-});
+
 
     // 헤더
     const menuToggleBtn = document.getElementById("menuToggleBtn");
@@ -191,5 +180,17 @@ clearBtn.addEventListener("click", function () {
     menuToggleBtn.addEventListener("click", function () {
     // Toggle the 'active' class to show/hide the mobile menu
     mobileMenubox.classList.toggle("active");
+    });
+
+    var addButton = document.getElementById("addPostBtn");
+    var postContentInput = document.getElementById("postContent");
+
+    addButton.addEventListener("click", function() {
+        var postContent = postContentInput.value.trim(); 
+        if (postContent === "") {
+            alert("빈칸을 채워주세요");
+        } else {
+            alert("게시글이 작성되었습니다");
+        }
     });
     });
