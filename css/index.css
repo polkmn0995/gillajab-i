@@ -539,7 +539,11 @@ header .inner {
   transition: width 1.5s;
   width: 100% !important;
 }
-.sw-visual-pg-list > li {
+.sw-visual-control .sw-visual-prev .fa-solid, .fas{
+  color: #fff;
+}
+.sw-visual-control .sw-visual-next .fa-solid, .fas{
+  color: #fff;
 }
 /* 비주얼 반응형 */
 @media all and (max-width: 1550px) {
@@ -1552,6 +1556,10 @@ header .inner {
 .inner {
   position: relative;
 }
+
+.introduce-txt a p .fa-solid, .fas{
+  color: #34c987;
+}
 :root {
   --dark-green: #9cc675;
   --dark-yellow: #e89a3d;
@@ -2293,7 +2301,7 @@ footer .inner {
 }
 .fa-solid,
 .fas {
-  color: #32c987;
+  color: #34c987;
 }
 @media all and (max-width: 480px) {
   .footer-title {
