@@ -669,11 +669,6 @@ footer .inner {
 }
 
 /* 반응형 */
-@media all and (max-width: 1000px) {
-  .inner {
-    width: 85%;
-  }
-}
 @media all and (max-width: 1100px) {
   .buttons {
     margin-top: 140px;
@@ -681,6 +676,9 @@ footer .inner {
   }
 }
 @media all and (max-width: 1000px) {
+  .inner {
+    width: 85%;
+  }
   /* 모바일메메뉴 */
 .navbar_overlay {
   position: fixed;
@@ -774,7 +772,7 @@ footer .inner {
     font-size: 20px;
   }
   input:not([type="checkbox"], [type="radio"]) {
-    width: 85%;
+    width: 89.5%;
   }
 
   .datetime input {
